@@ -2,9 +2,7 @@ Vim Shortcuts
 Two good visual images:
 https://cdn.shopify.com/s/files/1/0165/4168/files/preview.png
 http://www.viemu.com/vi-vim-cheat-sheet.gif
-```
-Control: <C> Command: <D> Shift: <S> Option/Alt: <A> Carriage Return: <CR>
-```
+
 Movement | Description 
 --- | ---
 h|Move left
@@ -24,8 +22,8 @@ ge|Move backwards to next word, with cursor on <span>last</span> character (use 
 { |    	 	Move to beginning of previous paragraph. Use } to go to next paragraph 
 + |    		Move forward to the first character on the next line
 -  |       Move backwards to the first character on the previous line
-<C>+u|   	Move up by half a page 
-<C>+d |  	Move down by half a page 
+``<C>``+u|   	Move up by half a page 
+``<C>``+d |  	Move down by half a page 
 H|         Move cursor to <span>header</span> (top) line of current visible window
 M |        Move cursor to <span>middle</span> line of current visible window 
 L  |       Move cursor to <span>last</span> line of current visible window 
@@ -38,7 +36,7 @@ ma    |   	Set a marker at cursor position to come back to later. a can be any c
 
 Search | Desc 
 --- | ---
-*      |      	Search forward for word under cursor                                                                                                      
+*     |      	Search forward for word under cursor                                                                                                      
 #       |     	Search backwards for word under cursor 
 /word   |  	Search forward for word. Accepts regular expressions to search 
 ?word   | 	Search backwards for word. Accepts regular expressions to search
@@ -77,7 +75,7 @@ Visual Mode | Desc
 --- | ---
 v	|	Enter visual mode and highlight characters
 V	|	Enter visual mode and highlight lines
-<C>+v	|	Enter visual block mode and highlight exactly where the cursor moves
+``<C>``+v	|	Enter visual block mode and highlight exactly where the cursor moves
 o	|	Switch cursor from first and last character of highlight block while in visual mode
 vat	|	Highlight all text up to and including the parent element
 vit	|	Highlight all text up to the parent element, excluding the element
@@ -85,23 +83,27 @@ vac	|	Highlight all text including the pair marked with c (like va<, va’, or v
 
 Window Management | Desc
 --- | ---
-<C>+w s	|Split current window horizontally
-<C>+w v|	Split current window vertically
-<C>+w c|Close current window
-<C>+w m	|Move to window according to motion
-<C>+w o	|Maximize current window (note: this overwrites your current window configuration)
+``<C>``+w s	| Split current window horizontally
+``<C>``+w v|	Split current window vertically
+``<C>``+w c|Close current window
+``<C>``+w m	|Move to window according to motion
+``<C>``+w o	|Maximize current window (note: this overwrites your current window configuration)
 
 Miscellaneous | Desc
 --- | ---
 u	|	Undo
 U	|	Undo all changes on current line
-<C>+r	|	Redo
+``<C>``+r	|	Redo
 .	|	Repeat last change or delete
 ;	|	Repeat last f, t, F, or T command
 ,	|	Repeat last f, t, F, or T command in opposite direction
 gg=G	|	Format HTML. Make sure FileType is set to html with :setf html
-<C>+n	|	Press after typing part of a word. It scrolls down the list of all previous used words
-<C>+p	|	Press after typing part of a word. It scrolls up the list of all previous used words
+``<C>``+n	|	Press after typing part of a word. It scrolls down the list of all previous used words
+``<C>``+p	|	Press after typing part of a word. It scrolls up the list of all previous used words
 ``	|	Jump between the last two line jump positions
 [[	|	Goes to top of function
 gg=G 	|	Autoindent all lines in file (gg goes to top, = is the indent command, G applies it to all lines)
+
+```
+Control: <C> Command: <D> Shift: <S> Option/Alt: <A> Carriage Return: <CR>
+```
