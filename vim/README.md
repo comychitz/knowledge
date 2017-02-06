@@ -4,6 +4,8 @@
 * https://cdn.shopify.com/s/files/1/0165/4168/files/preview.png
 * http://www.viemu.com/vi-vim-cheat-sheet.gif
 
+For my vim configuration, see https://github.com/comychitz/dotfiles/tree/master/vim
+
 Movement | Description 
 --- | ---
 h|Move left
