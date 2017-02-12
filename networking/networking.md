@@ -1,262 +1,119 @@
-# cs232 notes
-My notes from my graduate networking class CS 232 at UC Irvine, taught by Dr.  Marco Levorato.
+# networking notes
 
-##232 Notes
-Transport Layer
+#232 Notes
+###Transport Layer
 3.1: interaction between transport and network layers, overview. 
-transport layer provides logical communication between processes
-network layer provides logical communication between hosts
-transport layer protocols are implemented in the end systems but not in network
-routers
+* transport layer provides logical communication between processes
+* network layer provides logical communication between hosts
+* transport layer protocols are implemented in the end systems but not in network routers
 
 3.2: connection-oriented and connectionless multiplexing and demultiplexing. 
-demultiplexing is done by the destination and is the job of delivering the data
-in a transport-layer segment to the correct socket
-multiplexing is done at the source and is the job of gathering data chunks at
-the source host from different sockets, encapsulating each data chunk with
-header information to create segments, and passing the segments to the network
-layer
-Connectionless/UDP multiplexing/demultiplexing is very simple. The transport
-layer segment includes the application data, the source port number, the
-destination port numbers, length and checksum.
-Connection-oriented/TCP multiplexing/demultiplexing. The segment in the
-transport layer of the source sends the four values in the connection-request
-segment: the source port number, the source IP address, the destination port
-number and the destination IP address.
+* demultiplexing is done by the destination and is the job of delivering the data in a transport-layer segment to the correct socket
+* multiplexing is done at the source and is the job of gathering data chunks at the source host from different sockets, encapsulating each data chunk with
+* header information to create segments, and passing the segments to the network layer
+
+* Connectionless/UDP multiplexing/demultiplexing is very simple. The transport layer segment includes the application data, the source port number, the destination port numbers, length and checksum.
+* Connection-oriented/TCP multiplexing/demultiplexing. The segment in the transport layer of the source sends the four values in the connection-request segment: the source port number, the source IP address, the destination port number and the destination IP address.
 
 3.3: UDP services, pro and cons of connectionless transport 
-aside from multiplexing and demultiplexing and some light error checking, UDP
-adds nothing to IP. 
-some reasons UDP is used: 
-Finer application-level control over what data is sent and when.
-No connection establishment. no delay to establish connection. DNS likes this.
-No connection state. UDP can then support more clients
-Small packet header overhead. only 8 bytes, versus TCPs 20.
-UDP has no congestion control
-it is possible to have reliable data transfer when using UDP if the reliability
-is built into the application itself.
+* aside from multiplexing and demultiplexing and some light error checking, UDP adds nothing to IP. 
+* some reasons UDP is used: 
+  * Finer application-level control over what data is sent and when.
+  * No connection establishment. no delay to establish connection. DNS likes this.
+  * No connection state. UDP can then support more clients
+  * Small packet header overhead. only 8 bytes, versus TCPs 20.
+* UDP has no congestion control
+* it is possible to have reliable data transfer when using UDP if the reliability is built into the application itself.
 
-3.4: Principles of reliable data transfer (retransmission, feedback, error
-detection, numbering, timeouts), stop and-wait, Go-Back-N, selective repeat
- Automatic Repeat reQuest (ARQ) protocols require three additional protocol
- capabilities to handle bit errors:
- Error detection - checksum
- Receiver Feedback - positive or negative acknowledgment 
- retransmission - a packet that has an error will be resent by the sender
- Stop and wait protocols are when the protocol consists of steps where we are
- waiting for acknowledgement.
- Sequence numbering is used to allow the receiver to know if a packet is a
- retransmission or not. This is used to solve the problem that there is
- corruption in the acknowledgement stage.
- Timeout - using a timer to recover from lost data or for acknowledgement
- packets
- Go-Back-N is a protocol used for pipelined error recovery. The basic idea is
- that the sender is allowed to transmit multiple packets without waiting for an
- acknowledgement, but the number of packets it sends in a row is constrained to
- some number N. Also called the sliding window protocol. GBN has the problem
- when the window size and bandwidth delay are both large. Many packets are in
- the pipeline and if one has an error then a large number of packets are
- retransmitted.
- Selective repeat avoids unnecessary retransmissions by having the sender
- retransmit only those packets that it suspects were received in error at the
- receiver. We use a window size of N like in GBN, but the receiver now
- individually acknowledges packets, thus both sender and receiver both have
- windows. A problem with SR is the synchronization between windows. Also large
- windows is a problem here too. TCP is classified as a hybrid of GBN and SR.
+3.4: Principles of reliable data transfer (retransmission, feedback, error detection, numbering, timeouts), stop and-wait, Go-Back-N, selective repeat
+* Automatic Repeat reQuest (ARQ) protocols require three additional protocol capabilities to handle bit errors: 
+  * Error detection - checksum
+  * Receiver Feedback - positive or negative acknowledgment 
+  * retransmission - a packet that has an error will be resent by the sender
+* Stop and wait protocols are when the protocol consists of steps where we are waiting for acknowledgement.
+* Sequence numbering is used to allow the receiver to know if a packet is a retransmission or not. This is used to solve the problem that there is corruption in the acknowledgement stage.
+* Timeout - using a timer to recover from lost data or for acknowledgement packets
+* Go-Back-N is a protocol used for pipelined error recovery. The basic idea is that the sender is allowed to transmit multiple packets without waiting for an  acknowledgement, but the number of packets it sends in a row is constrained to some number N. Also called the sliding window protocol. GBN has the problem when the window size and bandwidth delay are both large. Many packets are in the pipeline and if one has an error then a large number of packets are retransmitted. Selective repeat avoids unnecessary retransmissions by having the sender retransmit only those packets that it suspects were received in error at the receiver. We use a window size of N like in GBN, but the receiver now individually acknowledges packets, thus both sender and receiver both have windows. A problem with SR is the synchronization between windows. Also large windows is a problem here too. TCP is classified as a hybrid of GBN and SR.
 
- 3.5: timeout and RTT, timeout and fast retransmit, flow control 
- TimeoutInterval = EstimatedRTT + 4 * DevRTT
- DevRTT is the RTT variation, which is an estimate of how much SampleRTT
- typically deviates from EstimatedRTT. 
- EstimatedRTT = 0.875 * EstimatedRTT + 0.125*SampleRTT (weighted combination of
- the previous value of EstimatedRTT and the new value for SampleRTT.
- fast retransmit - retransmitting the missing segment before the segment’s timer
- expires. The sender is able to do this whenever it receives three ACKs (which
- indicates that the packet after the three ACKs has been lost).
- Flow control is a speed matching service - matching the rate at which the
- sender is sending against the rate at which the receiving application is
- reading. TCP uses a variable called the receive window which is used to give
- the sender an idea of how much free buffer space is available at the receiver.
+3.5: timeout and RTT, timeout and fast retransmit, flow control 
+* TimeoutInterval = EstimatedRTT + 4 * DevRTT
+* DevRTT is the RTT variation, which is an estimate of how much SampleRTT typically deviates from EstimatedRTT. 
+* EstimatedRTT = 0.875 * EstimatedRTT + 0.125*SampleRTT (weighted combination of the previous value of EstimatedRTT and the new value for SampleRTT. 
+* fast retransmit - retransmitting the missing segment before the segment’s timer expires. The sender is able to do this whenever it receives three ACKs (which indicates that the packet after the three ACKs has been lost).
+* Flow control is a speed matching service - matching the rate at which the sender is sending against the rate at which the receiving application is reading. TCP uses a variable called the receive window which is used to give the sender an idea of how much free buffer space is available at the receiver.
 
- 3.6: congestion control principles and approaches 
- Congestion - too many sources attempting to send data at too high a rate. 
- Costs of congestion include:
- Large queueing delays are experienced as the packet-arrival rate nears the link
- capacity.
- the sender must perform retransmissions in order to compensate for dropped
- packets due to buffer overflow.
- unneeded retransmissions by the sender in the face of large delays may cause a
- router to use its link bandwidth to forward unneeded copies of a packet.
- its possible two hosts throughput may go to zero
- when a packet is dropped along a path, the transmission capacity that was used
- at each of the upstream links to forward that packet to the point at which is
- dropped ends up having been wasted
- Approaches:
- end-to-end congestion control - network layer provides no explicit support to
- the transport layer for congestion control purposes. TCP uses this approach
- since its in the transport layer.
- network-assisted congestion control - network layer components (routers)
- provide explicit feedback to the sender regarding the congestion state in the
- network. Two ways: direct feedback using choke packets, or a router
- marks/updates a field in a packet flowing from sender to receiver indicating
- congestion.
+3.6: congestion control principles and approaches 
+* Congestion - too many sources attempting to send data at too high a rate. 
+* Costs of congestion include:
+  * Large queueing delays are experienced as the packet-arrival rate nears the link capacity.
+  * the sender must perform retransmissions in order to compensate for dropped packets due to buffer overflow.
+  * unneeded retransmissions by the sender in the face of large delays may cause a
+  * router to use its link bandwidth to forward unneeded copies of a packet.
+  * its possible two hosts throughput may go to zero
+  * when a packet is dropped along a path, the transmission capacity that was used at each of the upstream links to forward that packet to the point at which is dropped ends up having been wasted
+* Approaches:
+  * end-to-end congestion control - network layer provides no explicit support to the transport layer for congestion control purposes. TCP uses this approach since its in the transport layer.
+  * network-assisted congestion control - network layer components (routers) provide explicit feedback to the sender regarding the congestion state in the network. Two ways: direct feedback using choke packets, or a router marks/updates a field in a packet flowing from sender to receiver indicating congestion.
 
-  3.7: TCP congestion control: principles of congestion estimation (lost
-  segment, acknowledgment, probing), slow start, congestion avoidance, fast
-  recovery. TCP Reno
-  The approach TCP takes is to have each sender limit the rate at which it sends
-  traffic into its connection as a function of perceived network congestion. It
-  uses a variable known as the congestion window. The amount of unacknowledged
-  data at a sender may not exceed the minimum of the congestion window and the
-  receive window (LastByteSent - LastByteAcked <= min{cwnd, rwnd}
-   But how does a TCP sender know what rate to send at? We use the following
-   techniques:
-   lost segment - a lost segment implies congestion, and hence, the TCP sender’s
-   rate should be decreased when a segment is lost
-   acknowledged segment - an acknowledged segment indicates that the network is
-   delivering the sender’s segments to the receiver, and hence, the sender’s
-   rate can be increased when an ACK arrives for a previous unacknowledged
-   segment.
-   Bandwidth probing - TCP’s strategy for adjusting its transmission rate is to
-   increase its rate in response to arriving ACKs until a loss event occurs, at
-   which point, the transmission rate is decreased.
-   Above is the overview of TCP congestion control. Now we discuss the TCP
-   congestion control algorithm:
-   Slow start - is the first state of the algorithm and starts off slow by
-   giving cwnd a small value (1 MSS) and increase it by 1 MSS every time an ACK
-   comes in. This is exponential though. When it looses a segment before the
-   threshold is reached it starts over at 1 MSS and threshold to half the cwnd.
-   If the threshold is reached or a loss occurred then it transitions into
-   congestion avoidance mode.
-   Congestion Avoidance - Congestion avoidance increases the congestion window
-   linearly. If a timeout occurs it is the same as in the slow state. But if a
-   triple ACK occurs it halves the cwnd and threshold becomes half cwnd. Then it
-   enters Fast Recovery.
-   Fast recovery - in fast recovery the value of condo is increase by 1 MSS for
-   every duplicate ACK received for the missing segment that caused TCP to enter
-   the fast recovery state. Eventually, when an ACK arrives for the missing
-   segment, TCP enters the congestion avoidance state. If a timeout occurred, it
-   will go to slow start state and do the same thing that it did in the previous
-   loss scenarios, set cwnd to 1 MSS and threshold to half condo
-   TCP reno is the newest version of TCP and incorporated fast recovery.
+3.7: TCP congestion control: principles of congestion estimation (lost  segment, acknowledgment, probing), slow start, congestion avoidance, fast recovery. TCP Reno
+* The approach TCP takes is to have each sender limit the rate at which it sends  traffic into its connection as a function of perceived network congestion. It  uses a variable known as the congestion window. The amount of unacknowledged data at a sender may not exceed the minimum of the congestion window and the receive window (LastByteSent - LastByteAcked <= min{cwnd, rwnd}
+* But how does a TCP sender know what rate to send at? We use the following techniques:
+  * lost segment - a lost segment implies congestion, and hence, the TCP sender’s   rate should be decreased when a segment is lost
+  * acknowledged segment - an acknowledged segment indicates that the network is delivering the sender’s segments to the receiver, and hence, the sender’s rate can be increased when an ACK arrives for a previous unacknowledged segment.
+  * Bandwidth probing - TCP’s strategy for adjusting its transmission rate is to increase its rate in response to arriving ACKs until a loss event occurs, at which point, the transmission rate is decreased.
+* Above is the overview of TCP congestion control. Now we discuss the TCP congestion control algorithm:
+  * Slow start - is the first state of the algorithm and starts off slow by giving cwnd a small value (1 MSS) and increase it by 1 MSS every time an ACK comes in. This is exponential though. When it looses a segment before the threshold is reached it starts over at 1 MSS and threshold to half the cwnd.
+  * If the threshold is reached or a loss occurred then it transitions into congestion avoidance mode.
+  * Congestion Avoidance - Congestion avoidance increases the congestion window linearly. If a timeout occurs it is the same as in the slow state. But if a   triple ACK occurs it halves the cwnd and threshold becomes half cwnd. Then it enters Fast Recovery.
+  * Fast recovery - in fast recovery the value of condo is increase by 1 MSS for every duplicate ACK received for the missing segment that caused TCP to enter the fast recovery state. Eventually, when an ACK arrives for the missing segment, TCP enters the congestion avoidance state. If a timeout occurred, it will go to slow start state and do the same thing that it did in the previous loss scenarios, set cwnd to 1 MSS and threshold to half condo
+* TCP reno is the newest version of TCP and incorporated fast recovery.
+* TCP used by applications that want packet retransmission and packet reordering and are willing to put up with congestion control. i.e. email, http, ftp
+* UDP used by applications that are not willing to put up with congestion control and dont need packet retransmission and packet reordering. i.e. streaming, VoIP, video conferencing, gaming
 
-   TCP used by applications that want packet retransmission and packet
-   reordering and are willing to put up with congestion control. i.e. email,
-   http, ftp
-   UDP used by applications that are not willing to put up with congestion
-   control and dont need packet retransmission and packet reordering. i.e.
-   streaming, VoIP, video conferencing, gaming
+###Network Layer
+2.5 - DNS: servies, overview, hierarchical architecture
+* DNS is (1) a distributed database implemented in a hierarchy of DNS servers and (2) it is an application layer protocol that allows hosts to query the distributed database.
+* DNS provides services other than translating host names to IP addresses:
+  * Host aliasing - a host with a complicated name can have one or more alias names. It takes the longer (canonical hostname) and makes it an easy one like cnn.com  or www.cnn.com 
+  * Mail server aliasing - allows for mnemonic email addresses
+  * Load distribution - busy sites can be distributed among many different servers
+* Hierarchical architecture
+  * If there was only a centralized DNS server then we would have the following problems: a single point of failure, traffic volume, distant centralized database, maintenance. 
+* Three main classes of hierarchy: Root DNS servers, Top Level domain servers, Authoritative DNS servers (for each website), local DNS (for universities, or local ISPs).
 
+5.4.1 - Link layer addressing: MAC addresses, ARP protocol (overview), sending a datagram off the subnet.
+* link-layer addresses are called LAN addresses, physical addresses or MAC addresses. They are 6 bytes long giving 248 possibilities. No two MAC addresses are the same. IEEE manages the address space.
+* ARP - address resolution protocol is designed to resolve an IP address to a MAC address. It takes in a corresponding IP address as an input and returns the corresponding MAC address. ARP is considered a protocol in between the link and network layer. It has both link layer addresses and network layer addresses.
+* To send from one subnet to another we must send the datagram to the first hop router (find the MAC address of that using ARP), then the router uses the forwarding table to find out that the datagram is to be forwarded using the specific routing interface. Then it send the datagram into subnet 2 to the correct host using ARP once again.
 
+4.2 - connection and connectionless network layers, transport layer vs  network layer services, virtual circuit vs datagram networks, virtual circuit   (connection state, addressing, connection phases), datagram networks (forwarding tables, forwarding rules)
+* In the network layer the services are host-to-host, not process-to-process like in the transport layer.
+* Connection and connectionless network layer services:
+  * network layer services provide either a host-to-host connectionless service or connection service, but not both.
+  * Virtual circuits are connection-oriented service in the network layer and datagram networks provide only connectionless service
+* Virtual Circuits
+  * A VC consists of (1) a path (a series of links and routers) between source and destination hosts, (2) VC numbers, one for each link along the path, and (3) entries in the forwarding table in each router along the path. A packet belonging to a virtual circuit will carry a VC number in its header. As a packet travels through a path each routering interface (both incoming and outgoing) must replace the VC number. The new VC number is obtained from the forwarding table. 
+  * In a VC network, the network’s routers must maintain connection state information for the ongoing connections. That is, each time a new connection is establish across a router, a new connection entry must be added to the router’s forwarding table, and each time a connection is released it is removed from the routing table.
+  * Three phases in a virtual circuit:
+     * VC setup - in this phase the sending transport layer contacts the network  layer, specifies the receiver’s address, and waits for the network to set up the VC. The network layer determines the path between the sender and reciever, all the links and routers, determines the VC number for each link and adds an entry in the forwarding table in each router along the path.
+     * Data transfer - once it has been set up, data starts to be flowed through the path.
+     * VC teardown - when the sender or receiver informs the network layer of its desire to terminate the VC, the network layer will then update all forwarding tables for routers on the path letting them know the VC no longer exists.
+* Datagram Networks:
+   * in a datagram network each time an end system wants to send a packet it stamps the packet with he address of the destination end system and send the packet into the network routers in datagram networks maintain no connection state information, they nevertheless maintain forwarding state information in their forwarding tables. The time that these forwarding state information changes is relatively slow in comparison to VCs.
 
+4.3 - Routers: architecture and components, input processing, switching, output processing, queueing 
+* Architecture and components, 4 main components:
+   * Input ports - input ports perform several functions: it performs the physical layer function of terminating an incoming physical link. It also performs link layer functions needed to interoperate with the link later. And it also performs the lookup function (consulting the look up table to see which output port a packet will be forwarded to via the switching fabric).
+   * Switching fabric - connects the router’s input ports and output ports
+   * Output ports - stores the packets received from the switching fabric and transmits these packets on the outgoing link by performing the necessary link-layer and physical-layer functions.
+   * Routing processor - this executes the routing protocols and is done in software by an onboard CPU.
+   * Forwarding vs routing functions: forwarding is done by input ports, switching fabric and output ports (router forwarding plane). routing functions are done by the routing processor (router control plane). 
+   * Input processing: consists of three main steps: line termination, data link processing (protocol, decapsulation), and lookup, forwarding & queueing. Then it is sent to the switching fabric.
+   * Switching: switching can be done in several ways: switching via memory (under direct control of the CPU), switching via a bus, and switching via an interconnection network (crossbar).
+   * Output processing: includes three main steps: queueing (buffer management), data link processing (protocol, encapsulation) and line termination (link and network layer functions).
+   * Queueing: queueing occurs in both the input and output ports of a router. It here where there is packet loss. 
 
-
-   Network Layer
-   2.5 - DNS: servies, overview, hierarchical architecture
-   DNS is (1) a distributed database implemented in a hierarchy of DNS servers
-   and (2) it is an application layer protocol that allows hosts to query the
-   distributed database.
-   DNS provides services other than translating host names to IP addresses:
-   Host aliasing - a host with a complicated name can have one or more alias
-   names. It takes the longer (canonical hostname) and makes it an easy one like
-   cnn.com  or www.cnn.com 
-   Mail server aliasing - allows for mnemonic email addresses
-   Load distribution - busy sites can be distributed among many different
-   servers
-   Hierarchical architecture
-   If there was only a centralized DNS server then we would have the following
-   problems: a single point of failure, traffic volume, distant centralized
-   database, maintenance. 
-   Three main classes of hierarchy: Root DNS servers, Top Level domain servers,
-   Authoritative DNS servers (for each website), local DNS (for universities, or
-   local ISPs).
-   5.4.1 - Link layer addressing: MAC addresses, ARP protocol (overview),
-   sending a datagram off the subnet.
-   link-layer addresses are called LAN addresses, physical addresses or MAC
-   addresses. They are 6 bytes long giving 248 possibilities. No two MAC
-   addresses are the same. IEEE manages the address space.
-   ARP - address resolution protocol is designed to resolve an IP address to a
-   MAC address. It takes in a corresponding IP address as an input and returns
-   the corresponding MAC address. ARP is considered a protocol in between the
-   link and network layer. It has both link layer addresses and network layer
-   addresses.
-   To send from one subnet to another we must send the datagram to the first hop
-   router (find the MAC address of that using ARP), then the router uses the
-   forwarding table to find out that the datagram is to be forwarded using the
-   specific routing interface. Then it send the datagram into subnet 2 to the
-   correct host using ARP once again.
-   4.2 - connection and connectionless network layers, transport layer vs
-   network layer services, virtual circuit vs datagram networks, virtual circuit
-   (connection state, addressing, connection phases), datagram networks
-   (forwarding tables, forwarding rules)
-   In the network layer the services are host-to-host, not process-to-process
-   like in the transport layer.
-   Connection and connectionless network layer services:
-   network layer services provide either a host-to-host connectionless service
-   or connection service, but not both.
-   Virtual circuits are connection-oriented service in the network layer and
-   datagram networks provide only connectionless service
-   Virtual Circuits
-   A VC consists of (1) a path (a series of links and routers) between source
-   and destination hosts, (2) VC numbers, one for each link along the path, and
-   (3) entries in the forwarding table in each router along the path. A packet
-   belonging to a virtual circuit will carry a VC number in its header. As a
-   packet travels through a path each routering interface (both incoming and
-   outgoing) must replace the VC number. The new VC number is obtained from the
-   forwarding table.
-   In a VC network, the network’s routers must maintain connection state
-   information for the ongoing connections. That is, each time a new connection
-   is establish across a router, a new connection entry must be added to the
-   router’s forwarding table, and each time a connection is released it is
-   removed from the routing table.
-   Three phases in a virtual circuit:
-   VC setup - in this phase the sending transport layer contacts the network
-   layer, specifies the receiver’s address, and waits for the network to set up
-   the VC. The network layer determines the path between the sender and
-   reciever, all the links and routers, determines the VC number for each link
-   and adds an entry in the forwarding table in each router along the path.
-   Data transfer - once it has been set up, data starts to be flowed through the
-   path.
-   VC teardown - when the sender or receiver informs the network layer of its
-   desire to terminate the VC, the network layer will then update all forwarding
-   tables for routers on the path letting them know the VC no longer exists.
-   Datagram Networks:
-   in a datagram network each time an end system wants to send a packet it
-   stamps the packet with he address of the destination end system and send the
-   packet into the network
-   routers in datagram networks maintain no connection state information, they
-   nevertheless maintain forwarding state information in their forwarding
-   tables. The time that these forwarding state information changes is
-   relatively slow in comparison to VCs.
-   4.3 - Routers: architecture and components, input processing, switching,
-   output processing, queueing
-   Architecture and components, 4 main components:
-   Input ports - input ports perform several functions: it performs the physical
-   layer function of terminating an incoming physical link. It also performs
-   link layer functions needed to interoperate with the link later. And it also
-   performs the lookup function (consulting the look up table to see which
-   output port a packet will be forwarded to via the switching fabric).
-   Switching fabric - connects the router’s input ports and output ports
-   Output ports - stores the packets received from the switching fabric and
-   transmits these packets on the outgoing link by performing the necessary
-   link-layer and physical-layer functions.
-   Routing processor - this executes the routing protocols and is done in
-   software by an onboard CPU.
-   Forwarding vs routing functions: forwarding is done by input ports, switching
-   fabric and output ports (router forwarding plane). routing functions are done
-   by the routing processor (router control plane). 
-   Input processing: consists of three main steps: line termination, data link
-   processing (protocol, decapsulation), and lookup, forwarding & queueing. Then
-   it is sent to the switching fabric.
-   Switching: switching can be done in several ways: switching via memory (under
-   direct control of the CPU), switching via a bus, and switching via an
-   interconnection network (crossbar).
-   Output processing: includes three main steps: queueing (buffer management),
-   data link processing (protocol, encapsulation) and line termination (link and
-   network layer functions).
-   Queueing: queueing occurs in both the input and output ports of a router. It
-   here where there is packet loss. 
-   4.4 - ICMP (overview) Internet Control Message Protocol
+4.4 - ICMP (overview) Internet Control Message Protocol
    Is used by hosts and routers to communicate network-layer information to each
    other, for network layer information gathering and reporting. The most
    typical use for ICMP is for error reporting. Ping & traceroute use ICMP.
