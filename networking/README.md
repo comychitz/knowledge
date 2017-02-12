@@ -198,127 +198,47 @@ Multiple classes of service (motivation, scheduling, policing), DiffServ
 
 ###Link Layer and Local Area Networks (LAN)
 services, adapter and interfaces
-   two types of network links: point-to-point (single sender and receiver) and
-   broadcast links (multiple senders and receivers on the same broadcast
-   channel).
-   services provided by the link layer:
-   Framing - putting network layer datagrams into a link layer frame before
-   transmission over the link.
-   Link access - rules by which a frame is transmitted onto the link
-   Reliable Delivery - when a link layer protocol provides reliable delivery
-   service, it guarantees to move each network-layer datagram across the link
-   without error.
-   Error detection and correction - receivers not only detect when bit errors
-   have occurred in the farebeat also determines exactly where in the frame the
-   errors have occurred.
-   link layer is implemented in a network adapter, also known as a network
-   interface card. at the heart of the network adapter is the link layer
-   controller, usually a single, special-purpose chip that implements many of
-   the link-layer services.
-   5.2 - error detection and correction principles, checksum and CRC
-   in the link layer error detection and correction are done at the bit level.
-   three technique for error detection and correction:
-   Checksum - in checksumming techniques we tree the d bits as a sequence of
-   k-bit integers. The Internet checksum method is to sum these k-bit integers
-   and use the resulting sum s the error-detection bits. checksumming is used in
-   the transport layer.
-   Cyclic redundancy check (CRC) - In CRC we treat the bits as a polynomial
-   whose coefficients are 0 or 1. then we perform polynomial arithmetic (more
-   specifically, we perform a division in modulo-2 arithmetic to see if the
-   result is non zero, meaning there is an error).
-   5.3 - MAC protocols: taking turns and random access protocols, TDMA and FDMA,
-   slotted aloha, aloha, carrier sensing, collision detections
-   how to coordinate the access of multiple sending and receiving nodes to a
-   shared broadcast channel is know as the multiple access problem. Three main
-   ways to do this:
-   Channel Partitioning protocols - split up a broadcast channel’s bandwidth
-   among the nodes.
-   TDMA - divides time into time frames and each time frame into N time slots.
-   Each time slot is then assigned to one of the nodes. Nodes will then send
-   packets only during its assigned time slot (usually only able to send one
-   packet).Two major drawbacks (1) a node is limited to an average rate of R/N
-   bps, even when its the only node to send (2) when its the only node it still
+* two types of network links: point-to-point (single sender and receiver) and broadcast links (multiple senders and receivers on the same broadcast channel).
+* services provided by the link layer:
+    * Framing - putting network layer datagrams into a link layer frame before transmission over the link.
+    * Link access - rules by which a frame is transmitted onto the link
+    * Reliable Delivery - when a link layer protocol provides reliable delivery service, it guarantees to move each network-layer datagram across the link without error.
+    * Error detection and correction - receivers not only detect when bit errors have occurred in the farebeat also determines exactly where in the frame theerrors have occurred.
+   * link layer is implemented in a network adapter, also known as a network interface card. at the heart of the network adapter is the link layer controller, usually a single, special-purpose chip that implements many of  the link-layer services.
+
+error detection and correction principles, checksum and CRC
+ * in the link layer error detection and correction are done at the bit level.
+ * three techniques for error detection and correction:
+    * Checksum - in checksumming techniques we tree the d bits as a sequence of k-bit integers. The Internet checksum method is to sum these k-bit integers and use the resulting sum s the error-detection bits. checksumming is used in the transport layer.
+    * Cyclic redundancy check (CRC) - In CRC we treat the bits as a polynomial whose coefficients are 0 or 1. then we perform polynomial arithmetic (more specifically, we perform a division in modulo-2 arithmetic to see if the result is non zero, meaning there is an error).
+
+MAC protocols: taking turns and random access protocols, TDMA and FDMA, slotted aloha, aloha, carrier sensing, collision detections
+* how to coordinate the access of multiple sending and receiving nodes to a shared broadcast channel is know as the multiple access problem. Three main ways to do this:
+    * Channel Partitioning protocols - split up a broadcast channel’s bandwidth among the nodes.
+    * TDMA - divides time into time frames and each time frame into N time slots. Each time slot is then assigned to one of the nodes. Nodes will then send packets only during its assigned time slot (usually only able to send one packet).Two major drawbacks (1) a node is limited to an average rate of R/N bps, even when its the only node to send (2) when its the only node it still
    needs to wait for its time to transmit.
-   FDMA - splits the R bps channels into different frequencies (each with a
-   bandwidth of R/N). same advantages and drawbacks as TDMA. It avoids
-   collisions and divides the bandwidth fairly, however, a node is limited to
-   its bandwidth (R/N) even when its the only node with packets to send.
-   CDMA - code division multiple access - CDMA assigns codes (like times or
-   frequencies) to nodes. if the codes are chosen carefully, then different
-   nodes can transmit simultaneously and have their respective receiver receive
-   a sender’s encoded data bits.
-   Random access protocols - In a random access protocol, a transmitting node
-   always transmits at the full rate of the channel, R bps. When there is a
-   collision, each node involved in the collision repeatedly retransmits its
-   frame until its frame gets through without a collision. When a collision
-   occurs it doesn’t retransmit right away. It waits a random amount of time
-   (independent of each other).
-   Slotted ALOHA - assumptions: frames have the same size, time divided into
-   equal size, nodes start to transmit only at the beginning of slots.
-   operation: when there is a new frame, attempt to transmit. if there is no
-   collision we are good, if there is collision each node will retransmit in the
-   next slot with probability of p until there is a success. pros: single active
-   node can continuously transmit at full rate, highly decentralized, simple.
-   cons: collisions, wastes slots, idle slots, clock synchronization
-   ALOHA - without the slots. transmission begins right away with probability p.
-   there is higher probability of collision without the slots. less efficiency
-   then slotted ALHOA.
-   CSMA - Carrier Sense Multiple Access - two important rules used in CSMA (1)
-   listen before speaking (2) if someone else being talking at the same time,
-   stop talking. Collision detection still occurs because propagation delay
-   means two nodes may not hear each other’s transmission. when there is
-   collision channel resource is wasted
-   CSMA/CD - collisions are detected within a short time. colliding transmission
-   are aborted, reducing channel wastage. 
-   collision detection - easy in wired LANS (measure signal strengths, compare
-   transmitted and received signals), but not in wireless LANs (received signal
-   strength is overwhelmed by local transmission strength).
-   Taking-turns protocols
-   Polling protocol - required one of the nodes to be designated as a master
-   node. The master node polls each of the nodes in a round robin fashion.
-   eliminated the collisions and empty slots in random access protocols. two
-   drawbacks: polling delay, and if the master node fail the entire channel is
-   inoperative.
-   Token passing protocol - in this protocol there is a special frame known as
-   the token, which is exchanged in some specific order (a ring). when a node
-   receives a token it will hold on to the token until it has no   more packets
-   to transmit or it has sent a certain maximum amount of packets. token passing
-   is decentralized and highly efficient.
-   5.4 - switched local area networks: MAC addressing and ARP, ethernet (hub and
-   switches), link layer switches, and switches vs routers
-   MAC addressing and ARP already covered above.
-   Ethernet
-   Hub -  a physical layer device that acts on individual bits rather than
-   frames. When a pit arrives from one interface, the hub simply re-creates the
-   bit, boosts its energy strength, and transmits the bit onto all the other
-   interfaces. Ethernet with a hub-based star topology is also a broadcast LAN.
-   No CS or CD in a hub. 
-   Switch - is not only “collision-less” but is also a bona-fide store and
-   forward packet switch. Switches can receive packets from multiple lines at
-   the same time, with no collisions. It determines where the packet should go,
-   and only sends it to that line. Switches can also transmit packets on
-   multiple lines at the same time. switches queue packets as needed. switches
-   drop packets when its queue fills up.
-   Switches vs Routers - both of them are store-and-forward packet devices,
-   however, a switch forwards packets using MAC addresses. A router is a layer 3
-   packet switch, a switch is a layer 2 packet switch. Routers provide a more
-   robust isolation of traffic, control broadcast storms, and use more
-   “intelligent” routes among the hosts in a network. Switch topologies are
-   limited to a spanning tree. switches are plug in play, can provide high
-   filtering and forwarding rates. 
-   6.3 - architecture, 802.11 MAC protocol, RTS and CTS
-   architecture - base stations, access points, SSIDs, Wifi Jungle, beacon
-   frames (APs send out become frames which includes its SSID and MAC address,
-   then devices can use these beacon frames through active or passive scanning
-   to find APs in its range).
-   802.11 MAC protocol
-   uses CSMA/CA. uses collision avoidance instead of collision detection.
-   because wireless networks have higher bit error rates, we use link layer
-   acknowledgement/retransmission (ARQ) schemes.
-   collision avoidance method 1: uses truncated binary exponential backoff in
-   conjunction with carrier sensing. 
-   collision avoid method 2: using RTS and CTS
-   indicate desire to transmit a packet using a small RTS (request to transmit)
-   packet. use carrier sensing to determine when to send RTS packets.
-   if RTS does collide access point sends out a clear to transmit (CTS) to all
-    users, then the one who sent the RTS transmits its data.
+   * FDMA - splits the R bps channels into different frequencies (each with a bandwidth of R/N). same advantages and drawbacks as TDMA. It avoids collisions and divides the bandwidth fairly, however, a node is limited to its bandwidth (R/N) even when its the only node with packets to send.
+   * CDMA - code division multiple access - CDMA assigns codes (like times or frequencies) to nodes. if the codes are chosen carefully, then different nodes can transmit simultaneously and have their respective receiver receive a sender’s encoded data bits.
+   * Random access protocols - In a random access protocol, a transmitting node always transmits at the full rate of the channel, R bps. When there is a collision, each node involved in the collision repeatedly retransmits its frame until its frame gets through without a collision. When a collision occurs it doesn’t retransmit right away. It waits a random amount of time (independent of each other).
+   * Slotted ALOHA - assumptions: frames have the same size, time divided into equal size, nodes start to transmit only at the beginning of slots. operation: when there is a new frame, attempt to transmit. if there is no collision we are good, if there is collision each node will retransmit in the next slot with probability of p until there is a success. pros: single active node can continuously transmit at full rate, highly decentralized, simple. cons: collisions, wastes slots, idle slots, clock synchronization
+   * ALOHA - without the slots. transmission begins right away with probability p. there is higher probability of collision without the slots. less efficiency then slotted ALHOA.
+   * CSMA - Carrier Sense Multiple Access - two important rules used in CSMA (1) listen before speaking (2) if someone else being talking at the same time, stop talking. Collision detection still occurs because propagation delay means two nodes may not hear each other’s transmission. when there is collision channel resource is wasted
+   * CSMA/CD - collisions are detected within a short time. colliding transmission are aborted, reducing channel wastage. 
+   * collision detection - easy in wired LANS (measure signal strengths, compare transmitted and received signals), but not in wireless LANs (received signal strength is overwhelmed by local transmission strength).
+* Taking-turns protocols
+    * Polling protocol - required one of the nodes to be designated as a master node. The master node polls each of the nodes in a round robin fashion. eliminated the collisions and empty slots in random access protocols. two drawbacks: polling delay, and if the master node fail the entire channel is inoperative.
+    * Token passing protocol - in this protocol there is a special frame known as the token, which is exchanged in some specific order (a ring). when a node receives a token it will hold on to the token until it has no   more packets to transmit or it has sent a certain maximum amount of packets. token passing is decentralized and highly efficient.
+
+switched local area networks: MAC addressing and ARP, ethernet (hub and switches), link layer switches, and switches vs routers
+* MAC addressing and ARP already covered above.
+* Ethernet
+    * Hub -  a physical layer device that acts on individual bits rather than frames. When a pit arrives from one interface, the hub simply re-creates the bit, boosts its energy strength, and transmits the bit onto all the other interfaces. Ethernet with a hub-based star topology is also a broadcast LAN. No CS or CD in a hub. 
+   * Switch - is not only “collision-less” but is also a bona-fide store and forward packet switch. Switches can receive packets from multiple lines at the same time, with no collisions. It determines where the packet should go, and only sends it to that line. Switches can also transmit packets on multiple lines at the same time. switches queue packets as needed. switches drop packets when its queue fills up.
+   * Switches vs Routers - both of them are store-and-forward packet devices, however, a switch forwards packets using MAC addresses. A router is a layer 3 packet switch, a switch is a layer 2 packet switch. Routers provide a more robust isolation of traffic, control broadcast storms, and use more “intelligent” routes among the hosts in a network. Switch topologies are limited to a spanning tree. switches are plug in play, can provide high filtering and forwarding rates. 
+   
+architecture, 802.11 MAC protocol, RTS and CTS
+* architecture - base stations, access points, SSIDs, Wifi Jungle, beacon  frames (APs send out become frames which includes its SSID and MAC address, then devices can use these beacon frames through active or passive scanning to find APs in its range).
+* 802.11 MAC protocol
+   * uses CSMA/CA. uses collision avoidance instead of collision detection. because wireless networks have higher bit error rates, we use link layer acknowledgement/retransmission (ARQ) schemes.
+   * collision avoidance method 1: uses truncated binary exponential backoff in conjunction with carrier sensing. 
+   * collision avoid method 2: using RTS and CTS indicate desire to transmit a packet using a small RTS (request to transmit) packet. use carrier sensing to determine when to send RTS packets. if RTS does collide access point sends out a clear to transmit (CTS) to all    users, then the one who sent the RTS transmits its data.
