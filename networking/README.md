@@ -18,7 +18,7 @@ Presenation|Encryption & formatting|Data|JPEG,MPEG,GIF
 Session|Establish connection|Data|Apple Talk
 Transport|Delevery & sequence|Segments|UDP,TCP
 Network|Routing to destination|Packets|IP
-Data Link|Locak network|Frame|ARP,EthernetmPPP
+Data Link|Local network|Frame|ARP,EthernetmPPP
 Physical|Access media|Bits|Ethernet|10Base-T,1000Base-T,USB
 
 ###Transport Layer
