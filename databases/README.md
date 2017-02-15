@@ -153,7 +153,20 @@ Parallel Database Systems
 
 ##Papers
 ###Graefe paper: Modern B-Tree Techniques
-* binary trees are used for in memory data and B-trees for on disk data. B-trees are good for on disk data because they can match the node size to the page size. B-trees are indexes optimized for pages environments. B-trees are balanced, with a uniform path length in root-to-leaf searches. This guarantees uniformly efficient search. B+ trees are different from traditional B-trees because they only stored user data in the leaves. if a b-tree contains N records and L records per leaf, the B-tree required N/L leaf nodes. The average number of children per parent is F, the number of branch levels is logF(N/L). often more than 99% of nodes in a B-tree are leaf nodes. B-trees vs Hash indexes: hash indexes should save IO costs due to a single IO per look-up whereas B-trees require a complete root-to-leaf traversal for each search. B-trees have advantages over hash indexes with respect to index creation, range predicates, sorted retrieval, phantom protection in concurrency control. The strongest argument for B-trees over hashed indexes pertain to multi-field indexes and to nonuniform distributions of key values. B-tree indexes are ubiquitous, whereas hash indexes are not, even though has indexes promise exact-match look up with direct address calculation in the hash directory and a single IO. page/node size is access time x transfer bandwidth. normalized keys - implementations of B-trees transform keys into a binary string such that simply binary comparisons suffice to sort the records during index creation and to guide a search in the B-tree to the correct record. duplicate keys are not desirable in B-trees because they lead to ambiguities especially when navigating from a primary to secondary index or during a deletion.
+* binary trees are used for in memory data and B-trees for on disk data. 
+* B-trees are good for on disk data because they can match the node size to the page size. 
+* B-trees are indexes optimized for pages environments. 
+* B-trees are balanced, with a uniform path length in root-to-leaf searches. This guarantees uniformly efficient search. 
+* B+ trees are different from traditional B-trees because they only stored user data in the leaves. 
+* if a b-tree contains N records and L records per leaf, the B-tree required N/L leaf nodes. 
+* The average number of children per parent is F, the number of branch levels is logF(N/L). often more than 99% of nodes in a B-tree are leaf nodes. 
+* B-trees vs Hash indexes: hash indexes should save IO costs due to a single IO per look-up whereas B-trees require a complete root-to-leaf traversal for each search. 
+* B-trees have advantages over hash indexes with respect to index creation, range predicates, sorted retrieval, phantom protection in concurrency control. 
+* The strongest argument for B-trees over hashed indexes pertain to multi-field indexes and to nonuniform distributions of key values. 
+* B-tree indexes are ubiquitous, whereas hash indexes are not, even though has indexes promise exact-match look up with direct address calculation in the hash directory and a single IO. 
+* page/node size is access time x transfer bandwidth. 
+* normalized keys - implementations of B-trees transform keys into a binary string such that simply binary comparisons suffice to sort the records during index creation and to guide a search in the B-tree to the correct record. 
+* duplicate keys are not desirable in B-trees because they lead to ambiguities especially when navigating from a primary to secondary index or during a deletion.
 
 ###Litwin paper - Linear Hashing
 * if the hashing function is dynamically modified in the course of insertions or deletions we call it a virtual hashing function. 
