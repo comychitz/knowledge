@@ -8,6 +8,9 @@ readings.
    * physical vs logical topology
 * network byte order is big-endian (MSB first)
 
+## Network Security
+For network security see this page -> [networksecurity](https://github.com/comychitz/knowledge/blob/master/networking/networksecurity.md)
+
 ## Layer-by-layer Notes
 OSI 7-Layer Model
 
