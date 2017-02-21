@@ -179,6 +179,7 @@ some notes on network security
       * honeychecker is minimalist
       * conceptually simple
 
-
+###web authentication and kerberos 
+TODO
 
 
