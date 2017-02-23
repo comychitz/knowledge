@@ -119,7 +119,7 @@ some notes on network security
     * port scanning, network mapping, DoS attack
   * can be set up using multiple IDSs to do different types of checking at different places
 
-##User Authentication
+### User Authentication
 * Password Based authentication
   * Unix Password system
     * Uses DES encryption as a hash function
@@ -179,7 +179,116 @@ some notes on network security
       * honeychecker is minimalist
       * conceptually simple
 
-###web authentication and kerberos 
-TODO
+## web auth
+* web authentication using HTTP
+  * Stateless request/response protocol - each requisition is independent on previous requests, statelessness has a significant impact on design and implementation of applications
+* Authenticators
+  * after a user logs into a website they are given a special URL containing the authenticator, which are global sequence numbers. They can be easily guessed if using weak authenticator generators, need to be random.
+  * Encoding states in URL is a bad idea. urls frequently change, are vulnerable to eavesdropping and there is no guarantee that a URL is private
+* Cookies - file created by website to store information in your browser
+  * used for authentication, personalization, and tracking
+  * cookies saved on your client device can only be read by the website. anyone can write a secure cookie though. secure cookies are set over HTTPS
+  * there are temporary cookies, persistent cookies, and third-party cookies
+  * Storing states in browser cookies is good, but potentially brings up the risk of users being able to edit the cookie in some way to benefit them. To fix this there is a MAC tied to every cookie computer with the server’s secret key. 
+  * better cookie authenticator makes the cookie have: capability, expiration, Hash(server secret, capability, expiration).
+* Kerberos
+  * many to many authentication protocol design. 
+  * requirements of many to many authentication
+    * security - must be secure against attacks by passive eavesdroppers and actively malicious attackers (including rogue users)
+    * reliability - must be always available.
+    * transparency - users should not notice its taking place
+    * scalability - should handle lots of users and servers
+  * threats in a simple many to many authentication system
+    * user impersonation, network address impersonation, eavesdropping, tampering and replay
+    * solution to this was to build a model with a trusted third party
+  * Important ideas in Kerberos
+    * short term session keys
+    * proofs of identity are based on authenticators
+    * symmetric crypto only
+  * Problems in Kerberos
+    * dictionary attacks on client master keys
+    * replay of authenticators
+      * 5 minute lifetimes long enough for replay
+      * timestamps assume global, secure synchronized clocks
+      * challenge response would make it batter
+    * same user server key used for all sessions
+    * double encryption of tickets
+    * no ticket delegation
+  * Practical uses: email, FTP, network file systems, local authentication (login, su), authentication for network protocols (rlogin, rsh, telnet), secure windowing systems
 
+## Spam
+* Open relays: an SMTP relay forwards mail to destination, can send as a list of recipients.
+* SMPT header consists of to, cc, bcc, from, sender, receiver, return-path
+* Open proxy - spammer must send message to each recipient through the proxy where open relay can take a list of addresses and send to all. can host an open relay on a zombie
+* Bobax worm:
+  * infects machines with high bandwidth, is slow spreading and hard to detect, installs hacked open really on infected zombies
+* IP blacklisting is not enough. more than half of client IPs appear less than twice
+* Most bots send little span regardless of how long they are alive
+* IP addresses of spam sources only appear once or twice
+* vast majority of spam originates from a small fraction of IP address space that most legitimate email comes from
+* spammers exploit routing infrastructure by either creating short lived connection to mail relay or hijack a large chunk of unallocated “dark” space
+* Spambot behavior has a strong correlation with Bobax infections. they are typically active for a short amount of time. 
+* Stormbot spam architecture - work bots generate unique messages for each address, try to deliver, report results to their proxies
+* countermeasures:
+  * CAN-SPAM act - bans email harvesting, misleading header information, deceptive subject lines, use of proxies. requires opt-out identification of advertising, imposes up to $11k penalties. only 50 cases from 2003-2005 report. no impact on spam originating outside the US
+  * SPF (Sender Policy Framework)
+Process where the recipeints email gateway does a DNS query on example.com and checks the list of returned IP addresses to the one in the email.
+  * Domain Keys (DKIM)
+    * sender’s server has to sign email
+    * recipients email gateway does a DNS query on example.com to get a public key. then attempts to verify the digital signature using the public key returned from the DNS server
+  * S/MIME
+    * sender obtains public key certificate from public certificate authority. senders email server applies an S/MIME digital signature to the email using the signing certificate. recipients email client will then see if the valid signature icon appears or not. 
+  * DKIM and SPF don’t help with spammers creating email accounts, CAPTCHAs do.
+* graylists - recipient’s mail server records triple in its database (configurable for let’s say 3 days).  first time tries to send will get busy reply, second time will let email pass.
+* puzzles and captchas
 
+##Phishing
+* phishing techniques
+  * use confusing URLs
+  * use URL with multiple redirection
+  * host phishing sites on botnet zombies
+  * pharming - poison DNS tables so that victim’s address points to the phishing site
+* Defenses against phishing
+  * whitelist of trusted sites
+  * passmark/siteKey (if you don’t recognize your personalized sitekey, don’t enter your password
+  * PIN Guard - use your mouse or keyboard numbers to type letters
+  * Scramble pad
+  * virtual keyboard
+  * Bharosa slide - on first login, user picks a symbol, on subsequent logins all letters and numbers in the PIN must be chosen using the correct symbol
+* Warnings
+  * active vs passive
+* PwdHash - like a one password kind of deal
+
+## Network Attacks
+* Security issues in TCP/IP
+  * network packets pass by and thru untrusted hosts (eavesdropping/packet sniffing)
+  * IP addresses are pubic (smurf attacks)
+  * TCP connection requires state (SYN flooding)
+  * TCP state easy to guess (TCP spoofing and connection hijacking)
+* Smurf Attack
+  * is a distributed denial-of-service attack in which large numbers of Internet Control Message Protocol (ICMP) packets with the intended victim's spoofed source IP are broadcast to a computer network using an IP Broadcast address. 
+* Ping of Death
+  * in old Windows machine that would crash when received an ICMP packet with payload over 64k
+* Teardrop and Bonk
+  * changing the offset field of a TCP fragment to either overlap values (bad/old implementation of TCP/IP stack would crash when attempting to re-assemble) or to very large values so that the target system will crash
+* LAND
+  * single packet denial of service attack triggered when ip packet with source address and destination address are the same. SYN flag set. fixed with loopback implementation
+* TCP handshake
+  1. SYN from client
+  2. SYNACK from server
+  3. ACK from client
+* SYN flooding
+  * an example of an asymmetric vulnerability that causes a DoS attack
+* Preventing DoS 
+  * it is caused by asymmetric state allocation
+  * cookies allow server to remain stateless until client produces to server the cookie with its ACK.
+  * Anti-spoofing cookies basic patter
+    * client sends request to server
+    * server responds with hashed connection data and doesn’t allocate any resource yet
+    * client confirms by returning cookie
+    * server reconfirms the cookie is correct
+  * Passive defense: random deletion
+    * if SYN queue is full, delete random entry of half-open connections
+      * legitimate connections have a change to complete
+      * fake addresses will eventually be deleted
+    * easy to implement
