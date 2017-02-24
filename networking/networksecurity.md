@@ -292,3 +292,206 @@ Process where the recipeints email gateway does a DNS query on example.com and c
       * legitimate connections have a change to complete
       * fake addresses will eventually be deleted
     * easy to implement
+* tcp connection spoofing
+  * each tcp connection has associate state (sequence number, port number)
+  * TCP state is easy to guess (port numbers are standard, seq numbers predictable)
+  * can inject packets into existing connections
+    * if attacker knows initial sequence number and amount of traffic he can guess the current sequence number. it is a 32 bit number and hard to guess but since most systems accept a large window of sequence numbers its possible. typical move is to send a flood of packets with likely sequence numbers
+  * Blind IP spoofing attack - assuming trusted connection between alice and bob using predictable sequence numbers
+    1. open connection to alice to get initial sequence number
+    2. SYN-flood Bob’s queue
+    3. Send packets to Alice that resemble Bob’s packets
+  * DOS by Connection Reset
+    * if an attacker can guess the current sequence number for an existing connection it can send a Reset packet to close the connection
+* UDP - basics of UDP, DoS with UDP connections is a simple UDP data flood
+* Countermeasures
+  * Above transport layer - Kerberos
+    * provides authentication, protects against application-layer spoofing
+    * Does not protect against connect hijacking
+  * Above network layer: SSL/TLS and SSH
+    * protects against connection hijacking and injected data
+    * Does not protect adjacent DoS by spoofed packets
+  * Network layer: IPsec
+    * protects against hijacking, injection, DoS using connection rests, IP address spoofing, but has poor key management
+* IP Routing
+  * 32-bit host identifiers (128-bit in IPv6)
+  * Routers use a forward table (FIB) where each entry = [destination, nxt hop, interface, metric]
+* Distance vector routing
+  * each nodes keeps vector with distance to all nodes
+  * periodically sends vector to all neighbors, while neighbors do the same
+  * Bellman-Ford: for each destination, router picks the neighbor advertising the cheapest route, adds his entry into its own routing table and re-advertises. used in RIP (routing information protocol)
+  * Split horizon update: do not advertise a route on a an interface from which you learned the route in the first place
+  * good news travels fast and bad news travels slow
+* BGP - Border Gateway Protocol
+  * a path-vector INTER-AS protocol
+  * just like distance-vecotr, but routing updates for each entry also contains an AS-level path to destination
+  * each BGP router receives UPDATE messages from neighbors, selects one “best” path for each prefix and advertises to its neighbors
+* BGP Security
+  * update messages contain no authentication, however, today they are sent over secure tunnels
+  * attackers can falsify advertised routes
+    * modify UP prefixes associate with the route, causing a blackhole
+    * change AS path. i.e. an ISP wants to dump its traffic on other ISPs without routing their traffic in exchange
+    * re-advertise/propagate AS path without permission
+* DNS - Domain Name Servers
+  * root name servers for top-level domains
+  * authoritative name servers for subdomains
+  * local name resolvers contact authoritative servers when they do not know a name
+  * when making query there is a transaction ID (TXID) that is 16 bits that goes alongside the request and response
+  * attackers can perform DNS spoofing by making multiple guesses on the TXID and trick the client into looking up a malicious site. if the attacker eventually wins, the DNS cache is poisoned for a long time.
+  * Reverse DNS spoofing
+    * lots of rsh or login arrive from numeric source addresses.
+    * system does reverse DNS lookup to see if host name requesting is in .rhosts
+    * if attacker can spoof the answer to reverse DNS query, he can fool target machine to think it is an authorized host
+  * Pharming: redirecting a website traffic to a fake one. usually done by DNS spoofing or poisoning
+  * Vulnerabilities summary:
+    * corrupting data in zone file
+    * unauthorized updates when performing dynamic updates
+    * impersonating master of slaves
+    * cache pollution by data spoofing
+    * cache impersonation
+  * Solving the DNS spoofing problem
+    * Long TTL for legitimate responses (but shouldn’t be too long)
+    * randomize port in addition to TXID - 32 bits or randomness for TXID
+    * DNSSEC - cryptographic authentication of host-address mappings
+      * PK-DNSSEC
+        * DNS server signs its data (can be done in advance)
+      * SK-DNSSEC
+        * encryption and MAC: Ek(m, MAC(m))
+        * each message contains a nonce to avoid replay
+        * each DNS node shares a symmetric key with its parent
+        * Zone root server has a public key (hybrid approach)
+        
+##Firewall
+* idea: separate local network from the Internet (or, in general, separate one network from another)
+* restricts access from the outside and also access going to the outside
+* locations:
+  * between internal and external networks
+  * at gateways of sensitive sub-networks within corporate network
+  * end-user machines
+* firewall types
+  * packet or session-filtering router (filters)
+  * proxy gateway
+    * all incoming traffic directed to firewall, all outgoing traffic appears to come from firewall
+    * Application-level: separate proxy for each application
+    * circuit-level: application-independent
+  * personal firewall with application specific rules
+* packet filtering
+  * for each packet, firewall decides whether to allow it. decision made on per-packet basis
+  * uses information available in a packet (ip source, destination, protocol identifiers, TCP flags, ICMP message type)
+  * filtering rules are based on pattern-matching
+  * weaknesses of packet filtering:
+    * do not prevent application specific attacks
+    * no user authentication mechanisms
+    * vulnerable to TCP/IP attacks such as spoofing
+    * security breaches due to mis-configuration
+  * fragmentation attack
+    * sending two pieces of data right next to each other, making the receiving end reassemble the packets which can cause, let’s say, SYN flag to be set or something
+    * other types:
+      * split ICMP message into two fragments, the assembled message is too large causing buffer overflow or OS crash
+      * fragment a URL or FTP “put” command. firewall may not realize what is going on because it would need to understand the application-specific commands to catch this
+      * Denial of service: connecting to itself, causing CPU locking
+  * stateless filtering is not enough
+    * for TCP connections, port numbers les than 1024 are used for servers and anything above 1024 is used for client ports
+    * firewalls have to allow for access out to port, let’s say, 5151. can’t tell if this is malicious or not because there is no states
+  * session filtering
+    * decision still made on packet by packet basis, but in the context of a connection
+    * if a connection is new, then check against security policy
+    * if a connection is existing, check the table
+    * hard to filter stateless protocols (UDP) and ICMP
+    * these can be bypassed with IP tunneling
+  * application level gateway
+    * need separate proxy for each application. high overhead but can log and audit all activity
+    * simpler filtering rules
+  * circuit level gateway
+    * works at the session leader, between the transport layer and the TCP/IP stack
+    * they monitor TCP handshaking between packets
+    * does not examine contents of TCP segments
+  * bastion host (single, double-homed, screened subnet)
+    * a hardened system implementing application-level gateway behind packet filter
+      * all non essential services are turned off
+      * application-specific proxies for supported services
+      * support for user authentication
+    * all traffic flows through bastion host
+
+* general problems:
+  * interfere with networked application
+  * don’t solve some real problems: buggy software, bad protocol design
+  * generally don’t prevent denial of service
+  * don’t prevent many types of insider attacks
+  * increased complexity and potential for mis-configuration
+  
+## anonymity
+* applications: privacy, untraceable email, law enforcement and intelligence, digital cash, electronic voting, censorship resistant publishing, crypto-anarchy, porn, linel, propaganda, sale of illegal stuff, tax avoidance, etc.
+* anonymity is the inability to identify someone with a set of subjects
+  * differs from privacy - the right to be left alone
+  * one cannot be anonymous alone (anonymity vs confidentiality)
+  * unlinkability of action and identity
+  * unobservability (hard to achieve) observer cannot tell whether a certain action took place
+* attacks on anonymity
+  * passive traffic analysis
+  * active traffic analysis
+  * compromise of network nodes (routers)
+* chaum’s mix
+* mixes can be cascaded to prevent from the possibility that an attacker has control to one
+* disadvantages:
+  * public key encryption and decryption at each mix are computationally expensive
+  * basic minxes have high latency for web traffic. works fine for email
+* Onion Routing and Tor
+  * configuring a tor circuit (one onion router at a time, each succeeding set up is tunneled through the previous one
+* tor management issues
+  * many application can share one circuit
+  * Tor router doesn’t need root privileges (encourages people to set up their own routers, more participants = better anonymity for everyone)
+  * directory servers
+      * maintain lists of active onion routers, their locations, current public keys, etc.
+      * control how new routers join the network
+      * directory servers’ keys ship with Tor code — point of vulnerability
+* local hidden servers
+  * Goal: deploy a server on the Internet that anyone can connect to without knowing where it is or who runs it
+  * accessible from anywhere
+  * resistant to censorship
+  * can survive full-blown DoS attack
+  * resistant to physical attacks (i.e. can’t find the physical server)
+* the Dining cryptographers problem & three-person DC protocol
+* super posed sending
+  * DC protocol extended to any group of size N
+  * for each bit of the message, every user generates 1 random bit and sends it to ONE neighbor
+    * every user learns 2 bits
+  * each user announces own bit XOR neighbor’s bit
+  * sender announces own bit XOR neighbor’s bit XOR message bit
+  * XOR all announcements = message bit
+
+### some privacy notes
+* stylometric privacy
+  * definition - the study of the chronology and development of an author’s work based especially on the recurrence of particular turns of expression or trends of thought
+* authorship likability
+* authorship anonymization
+  * crowdsourcing
+  * machine translation
+  * writing helper
+* genomic privacy
+  * using a person’s genome sequence as an identifier
+  * bad news about it:
+    * once leaked you can’t revoke it
+    * contains lots of information about who you are (race, diseases, conditions, phenotypical traits)
+    * leaking one’s genome leaks a relative’s genome
+  * uses:
+    * personalized medicine
+    * testing (i.e. paternity tests)
+  * challenges and open problems
+    * patients refuse to unconditionally release their genomes
+    * private personalized medicine testing requires searching a few DNA markers, while:
+      * hiding position of tested markers
+      * how many markers are being tested
+      * subset of matched markers (in case of negative test)
+      
+### e-cash
+* to allow for anonymous payments where the bank doesn’t know where the cash came from and the user’s identity is never revealed, unless there are double spenders. 
+* coin holds the following:
+  * public info:
+    * N - large composite number
+    * H() - hash function
+  * private minting information:
+    * key = p,q   such that N=pq
+  * a coin has the form: (x, H(x)1/3 mod N), 1 < x < N
+* two payments with the same coin yield’s the buyers identity
+  * i.e. r = ak + b, r’ = ak’ + b is just two equations with two unknowns
