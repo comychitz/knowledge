@@ -51,5 +51,7 @@ some notes for using emacs
   * ctrl-u ctrl-c ctrl-x ctrl-j show recent tasks & jump to them
   * ctrl-u ctrl-c ctrl-x ctrl-j i shows the most recently interrupted task
   * use shift and up/down arrow to adjust time, use shift left/right arrow to adjust day
+  * use meta left/right arrows to change the depth of a subtree 
+  * use meta up/down arrows to change the index of the subtree
 
 Note: M = meta (which is alt/option or escape)
