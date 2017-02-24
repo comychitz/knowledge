@@ -361,7 +361,7 @@ Process where the recipeints email gateway does a DNS query on example.com and c
         * each DNS node shares a symmetric key with its parent
         * Zone root server has a public key (hybrid approach)
         
-##Firewall
+## Firewalls
 * idea: separate local network from the Internet (or, in general, separate one network from another)
 * restricts access from the outside and also access going to the outside
 * locations:
@@ -412,7 +412,6 @@ Process where the recipeints email gateway does a DNS query on example.com and c
       * application-specific proxies for supported services
       * support for user authentication
     * all traffic flows through bastion host
-
 * general problems:
   * interfere with networked application
   * don’t solve some real problems: buggy software, bad protocol design
@@ -459,6 +458,24 @@ Process where the recipeints email gateway does a DNS query on example.com and c
   * each user announces own bit XOR neighbor’s bit
   * sender announces own bit XOR neighbor’s bit XOR message bit
   * XOR all announcements = message bit
+
+## certificates & revocation
+* X.509 certificate fields:
+  * version, serial number, signature algorithm ID, issuer name, validity period, user name, subject public key information, issuer unique identifier, subject unique identifier, extensions, signature on the above fields
+* revocation
+  * timeliness
+  * efficiency (computation, bandwidth and storage, availability)
+  * security
+  * methods of revocation:
+    * CRL - certificate revocation list
+      * offline mechanism
+      * pros: simple, don’t need secure channel for CRL distribution
+      * cons: timelineess (window of vulnerability), CRLs can be huge, how to distribute CRLs reliably?
+    * OCSP - online certificate status protocol
+    * CRS - certificate revocation system
+  * CRT - certificate revocation tree
+    * based on Merkle’s hash tree
+    * length of proof is O(log n)
 
 ### some privacy notes
 * stylometric privacy
