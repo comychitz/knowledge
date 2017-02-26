@@ -7,6 +7,79 @@ See this page -> [wine](https://github.com/comychitz/knowledge/blob/master/food/
 ##Recipes
 Some of my own recipes that I have compiled since starting to cook on my own...
 
+### Hashbrowns
+
+| Ingredient | Amount | Note |
+| --- | --- | --- |
+| russet potatoes | |
+| egg whites | |
+| shallot | | can use onion instead, but less amount
+| flower | |
+| salt & pepper | |
+
+#### Directions
+* Grate potatoes and place in cold water (~10 min)
+* Remove from water and squeeze all water/starch out
+* Mix all ingredients in a bowl
+* Place in a heated and covered with oil pan for 5-7 min on each side
+
+### Marinated Mushrooms
+
+| Ingredient | Amount | Notes |
+| --- | --- | --- |
+| cremini mushrooms |  1 pound |
+| olive oil | 1/4 cup |
+| white wine vinegar | 1/4 cup |
+| garlic | 2 cloves, minced |
+| brown sugar | 2 teaspoons, packed |
+| dried oregano | 1/2 teaspoon |
+| whole black peppercorn | 1/2 teaspoon |
+| crushed red pepper flakes | 1/4 teaspoon |
+| bay leaf | 1 | 
+| kosher salt & ground black pepper | to taste |
+
+#### Directions
+* Cook mushrooms in boiling water with salt for 3-4 min, drain water
+* in a large bowl combine mushrooms, olive oil, vinegar, red onion, garlic, sugar, orgenao, peppercorns, red pepper, bay lear
+* place mixed contentinto an air tight container in the fridge for 8 hrs, or up to 5 days
+* serve with freshly chopped parsley
+
+### Pickeled Jalapenos
+
+| Ingredient | Amount | Notes |
+| --- | --- | --- |
+| jalepenos | 15 medium sized |
+| garlic | 2 cloves |
+| water | 1 cup |
+| white wine vinegar | 1 cup | since vinegar is in the pickled contents, it should last a couple months
+| sugar | 4 tblspoon |
+
+#### Directions
+* trim off the tops & slice the peppers
+* in a sauce pan place the following ingredients:
+  * the garlic cloves, slightly crushed
+  * 1 cup of water
+  * 1 cup of white wine vinegar
+  * 4 tblspoon sugar
+  * 2 tblspoon salt
+* bring it to a boil 
+* add the sliced peppers and remove it off of the heat
+* let sit for 10-15 minutes, until the rings are darker green
+* place into the jar, but don't close lid or put it into the fridge until they cool down to room temperature
+* feel free to each them whenever you like!! 
+  
+### Chicken Wraps
+
+| Ingredient | Amount | Notes |
+| --- | --- | --- |
+| cooked chicken | | preferably slow cooked, so that its easily shreddable
+| cucumber | |
+| fetta cheese | |
+| sun dried tomatoes | |
+| lettuce | |
+| pesto/vinegrette | |
+| tortilla | |
+
 ### Chicken Fried Brown Rice
 
 | Ingredient | Amount | Notes |
