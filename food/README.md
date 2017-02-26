@@ -8,7 +8,8 @@ See this page -> [wine](https://github.com/comychitz/knowledge/blob/master/food/
 See this page -> [beer](https://github.com/comychitz/knowledge/blob/master/food/beer.md)
 
 # Recipes
-Some of my own recipes that I have compiled since starting to cook on my own...
+Some of my own recipes that I have compiled since starting to cook on my own. Typically these recipes are for easy meal preps, but sometimes they get fancy :) 
+
 ### Hashbrowns
 
 | Ingredient | Amount | Note |
