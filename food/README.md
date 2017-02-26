@@ -1,6 +1,7 @@
-Table of Contents
-=================
-  * [Food](#food)
+# Food
+Recipes, food ideas, good general knowledge about foods/nutrients, wine, beer & alcohol too!
+
+## Table of Contents
   * [Wine](#wine)
   * [Beer](#beer)
   * [Recipes](#recipes)
@@ -19,9 +20,6 @@ Table of Contents
     * [Directions](#directions-5)
     * [Simple Spaghetti Sauce](#simple-spaghetti-sauce)
 * [Table of Contents](#table-of-contents)
-
-#Food
-Recipes, food ideas, good general knowledge about foods/nutrients, wine, beer & alcohol too!
 
 ## Wine
 See this page -> [wine](https://github.com/comychitz/knowledge/blob/master/food/wine.md)
