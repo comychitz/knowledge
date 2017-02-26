@@ -1,3 +1,25 @@
+Table of Contents
+=================
+   * [Food](#food)
+      * [Wine](#wine)
+      * [Beer](#beer)
+   * [Recipes](#recipes)
+         * [Hashbrowns](#hashbrowns)
+            * [Directions](#directions)
+         * [Marinated Mushrooms](#marinated-mushrooms)
+            * [Directions](#directions-1)
+         * [Pickeled Jalapenos](#pickeled-jalapenos)
+            * [Directions](#directions-2)
+         * [Chicken Wraps](#chicken-wraps)
+         * [Chicken Fried Brown Rice](#chicken-fried-brown-rice)
+            * [Directions](#directions-3)
+         * [Lasagna](#lasagna)
+            * [Directions](#directions-4)
+         * [Meatballs](#meatballs)
+            * [Directions](#directions-5)
+         * [Simple Spaghetti Sauce](#simple-spaghetti-sauce)
+   * [Table of Contents](#table-of-contents)
+
 #Food
 Recipes, food ideas, good general knowledge about foods/nutrients, wine, beer & alcohol too!
 
@@ -154,3 +176,5 @@ preheat oven to 450 F. Put olive oil into baking dish and use hand to evenly coa
 
 ### Simple Spaghetti Sauce
 Combine ground beef, onion, garlic, and green pepper in a large saucepan. Cook and stir until meat is brown and vegetables are tender. Drain grease
+
+
