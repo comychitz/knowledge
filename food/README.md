@@ -1,12 +1,14 @@
 #Food
 Recipes, food ideas, good general knowledge about foods/nutrients, wine, beer & alcohol too!
 
-##Wine
+## Wine
 See this page -> [wine](https://github.com/comychitz/knowledge/blob/master/food/wine.md)
 
-##Recipes
-Some of my own recipes that I have compiled since starting to cook on my own...
+## Beer
+See this page -> [beer](https://github.com/comychitz/knowledge/blob/master/food/beer.md)
 
+# Recipes
+Some of my own recipes that I have compiled since starting to cook on my own...
 ### Hashbrowns
 
 | Ingredient | Amount | Note |
@@ -22,6 +24,7 @@ Some of my own recipes that I have compiled since starting to cook on my own...
 * Remove from water and squeeze all water/starch out
 * Mix all ingredients in a bowl
 * Place in a heated and covered with oil pan for 5-7 min on each side
+
 
 ### Marinated Mushrooms
 
@@ -43,6 +46,7 @@ Some of my own recipes that I have compiled since starting to cook on my own...
 * in a large bowl combine mushrooms, olive oil, vinegar, red onion, garlic, sugar, orgenao, peppercorns, red pepper, bay lear
 * place mixed contentinto an air tight container in the fridge for 8 hrs, or up to 5 days
 * serve with freshly chopped parsley
+
 
 ### Pickeled Jalapenos
 
@@ -67,7 +71,8 @@ Some of my own recipes that I have compiled since starting to cook on my own...
 * let sit for 10-15 minutes, until the rings are darker green
 * place into the jar, but don't close lid or put it into the fridge until they cool down to room temperature
 * feel free to each them whenever you like!! 
-  
+
+
 ### Chicken Wraps
 
 | Ingredient | Amount | Notes |
@@ -79,6 +84,7 @@ Some of my own recipes that I have compiled since starting to cook on my own...
 | lettuce | |
 | pesto/vinegrette | |
 | tortilla | |
+
 
 ### Chicken Fried Brown Rice
 
@@ -100,6 +106,7 @@ Some of my own recipes that I have compiled since starting to cook on my own...
 #### Directions
 * Heat 1 tablespoon of vegetable oil in a large skillet over medium heat. Add chicken, bell pepper, green onion and garlic. Cook and stir until chicken is cook through, about 5 minutes. Remove the chicken to a plate and keep warm.
 * Heat the remaining tablespoon of oil in the same skillet over medium-high heat. Add the rice; cook and stir to heat through. Stir in the soy sauce, rice vinegar and peas, and continue to cook for 1 minute. Return the chicken mixture to the skillet and stir to blend with the rice and heat through before serving
+
 
 ### Lasagna
 Makes 8 servings
@@ -140,8 +147,9 @@ Makes about 2 dozen 1 1/2 inch balls
 | crushed red pepper | 1/4 teaspoon |
 | classic tomato sauce | 4 cups
 
-####Directions
+#### Directions
 preheat oven to 450 F. Put olive oil into baking dish and use hand to evenly coat the entire surface. Combine all the ingredients EXCEPT the tomato sauce and mix until throughly incorporated. Roll into balls about golf ball size (1 1/2 inches) and place on dish snugly next to each other - they should be touching each other. Roast for 20 minutes, or until the they are firm and cooked through (if a meat thermometer is used then center of meatball should read 165 F. During this time warm up the tomato sauce, stirring often as it is heating on medium heat. When the meatballs are initially cooked remove and apply tomato sauce and then put back into oven to roast for another 15 minutes.
+
 
 ### Simple Spaghetti Sauce
 Combine ground beef, onion, garlic, and green pepper in a large saucepan. Cook and stir until meat is brown and vegetables are tender. Drain grease
