@@ -8,6 +8,11 @@ readings.
    * physical vs logical topology
 * network byte order is big-endian (MSB first)
 
+### Sockets
+The stages of creating a socket and connecting on that socket as a client/server.
+![serverclientsockets](https://github.com/comychitz/knowledge/blob/master/networking/img/networking.png)
+
+
 ## Network Security
 For network security see this page -> [networksecurity](https://github.com/comychitz/knowledge/blob/master/networking/networksecurity.md)
 
