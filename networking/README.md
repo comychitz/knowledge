@@ -7,7 +7,7 @@ readings.
 * network topology: the arragement of the various elements (links, nodes, etc.) of a computer network. 
    * physical vs logical topology
 * network byte order is big-endian (MSB first)
-  [hosttonetwork](https://github.com/comychitz/knowledge/blob/master/networking/img/hosttonetwork.png)
+  ![hosttonetwork](https://github.com/comychitz/knowledge/blob/master/networking/img/hosttonetwork.png)
 
 ### Sockets
 The stages of creating a socket and connecting on that socket as a client/server.
