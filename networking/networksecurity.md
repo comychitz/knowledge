@@ -10,7 +10,8 @@ some notes on network security
   * authentication - sender and reciever want to confirm their identities
   * message integrity - sender/receiver wants to ensure that messages are not alrtered without detection
   * access & availability - services must be access and available to users
-[netsecviews](https://github.com/comychitz/knowledge/blob/master/networking/img/netsecveiws.png)
+  
+![netsecviews](https://github.com/comychitz/knowledge/blob/master/networking/img/netsecviews.png)
   
 
 ### cryptography
