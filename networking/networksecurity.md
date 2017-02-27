@@ -11,7 +11,7 @@ some notes on network security
   * message integrity - sender/receiver wants to ensure that messages are not alrtered without detection
   * access & availability - services must be access and available to users
   
-![netsecviews](https://github.com/comychitz/knowledge/blob/master/networking/img/netsecviews.png)
+![netsecviews](https://github.com/comychitz/knowledge/blob/master/networking/img/netsecviews2.png)
   
 
 ### cryptography
