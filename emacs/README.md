@@ -10,6 +10,9 @@ to export something:
 to run a terminal emulator in emacs
 * M-x term to run 
 
+to use the iedit feature:
+* hit ctrl-; on a word, and then when you edit it, all other instances of the word is also being edited at the same time
+
 ##basic controls  
   * ctrl-h t for help/tutorial in emacs
   * ctrl-x ctrl-c to exit
