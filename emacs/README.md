@@ -1,6 +1,12 @@
 #emacs basics & notes
 some notes for using emacs
 
+## evil-org-mode keys
+see -> https://github.com/edwtjo/evil-org-mode
+
+to export something:
+* ctrl-c ctrl-e (requires ox-md)
+
 ##basic controls  
   * ctrl-h t for help/tutorial in emacs
   * ctrl-x ctrl-c to exit
