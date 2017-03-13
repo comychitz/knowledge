@@ -7,6 +7,9 @@ see -> https://github.com/edwtjo/evil-org-mode
 to export something:
 * ctrl-c ctrl-e (requires ox-md)
 
+to run a terminal emulator in emacs
+* M-x term to run 
+
 ##basic controls  
   * ctrl-h t for help/tutorial in emacs
   * ctrl-x ctrl-c to exit
