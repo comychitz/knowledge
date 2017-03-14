@@ -10,6 +10,9 @@ to export something:
 to run a terminal emulator in emacs
 * M-x term to run 
 
+to fill paragraph/line wrap
+* M-q
+
 to use the iedit feature:
 * hit ctrl-; on a word, and then when you edit it, all other instances of the word is also being edited at the same time
 
