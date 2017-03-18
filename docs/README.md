@@ -9,3 +9,4 @@ Some useful and fun links to articles/websites, mostly related to computers.
 ## Tools
 * [Sketchboard Diagram Maker](https://sketchboard.me)
 * [Entr](https://github.com/clibs/entr) - A utility for running arbitrary commands when files change.
+* [draw.io](https://www.draw.io) - A another diagram maker, but supposedly totally free and supports exporting to github
