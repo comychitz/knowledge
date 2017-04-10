@@ -16,4 +16,4 @@ School notes are from my undergraduate studies from the Computer Engineering pro
 ### Diagrams
 Diagrams made using [sketchboard.io](https://sketchboard.io)
 
-###Happy reading!
+### Happy reading!
