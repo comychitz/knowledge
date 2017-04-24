@@ -8,7 +8,7 @@ Good reads and big contributors to these notes:
 
 * use the c++ linter that enforces the Google C++ style code can be found [here](https://raw.githubusercontent.com/google/styleguide/gh-pages/cpplint/cpplint.py)
 
-###Style Notes
+## Style Notes
 * optimize for the reader not the writer!
 * don't forget about the header guard in header files (#ifndef...)
 * don't do work in the constructors that can result in a crash, it's better to safely exit
@@ -30,7 +30,7 @@ Good reads and big contributors to these notes:
 * Never assign a braced-init-list to an auto local variable
 
 
-##Language Notes (and related programming notes)
+## Language Notes (and related programming notes)
 * as in all object oriented code should be, we want high cohesion but low coupling of our modules/classes
 * declaring a variable in a global un-named namespace is the C++ way of doing static functions. Everything in the anonymous namespace gets mangled with a compile-generated string, and those functions are only accessible by other functions in the same translation unit
 * l-values and r-values
