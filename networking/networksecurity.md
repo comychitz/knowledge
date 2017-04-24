@@ -10,9 +10,17 @@ some notes on network security
   * authentication - sender and reciever want to confirm their identities
   * message integrity - sender/receiver wants to ensure that messages are not alrtered without detection
   * access & availability - services must be access and available to users
-  
+* metcalfe's law
+  * states that the value of a telecommunications network is proportional to the square of the number of connected users of the system (n^2).
 ![netsecviews](https://github.com/comychitz/knowledge/blob/master/networking/img/netsecviews2.png)
   
+## VPNs
+* [wikipedia - vpn](https://en.wikipedia.org/wiki/Virtual_private_network)
+* virtual private networks allows a private network to be accessed through a public network
+* created by establishing a virtual point-to-point connection through the use of dedicated connections, virtual tunneling protocols, or traffic encryption
+* a tunneling protocol allows access to a protocol/feature the underlying network does support directly
+  * ex. ipv6 over ipv4
+  * these types of protocols usually use a part of the payload of a packet to carry data that provides such a service
 
 ### cryptography
 * steganography -  the practice of concealing a file/message/image/video within another file/message/image/video.
