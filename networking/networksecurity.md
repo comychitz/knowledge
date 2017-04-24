@@ -15,13 +15,17 @@ some notes on network security
 * it's about perspective: 
 ![netsecviews](https://github.com/comychitz/knowledge/blob/master/networking/img/netsecviews2.png)
   
-## VPNs
+### VPNs
 * [wikipedia - vpn](https://en.wikipedia.org/wiki/Virtual_private_network)
 * virtual private networks allows a private network to be accessed through a public network
 * created by establishing a virtual point-to-point connection through the use of dedicated connections, virtual tunneling protocols, or traffic encryption
 * a tunneling protocol allows access to a protocol/feature the underlying network does support directly
   * ex. ipv6 over ipv4
   * these types of protocols usually use a part of the payload of a packet to carry data that provides such a service
+* the vpn security model provides:
+  * confidentiality - packets are encrypted, sniffing traffic won't reveal data
+  * authentication - need to have authentication/credentials to get into the network
+  * integrity - detect any instances of man-in-the-middle attacks/alteration of transmitted messages
 
 ### cryptography
 * steganography -  the practice of concealing a file/message/image/video within another file/message/image/video.
