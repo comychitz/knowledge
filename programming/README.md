@@ -1,5 +1,9 @@
 # programming essentials
 
+## general notes
+* idempotence: the property of certain operations in mathematics and computer science, that can be applied multiple times without changing the result beyond the initial application [idempotence - wikipedia](https://en.wikipedia.org/wiki/Idempotence)
+* 
+
 ## remember to always...
 * optimize for reader not the writer(!)
 * be consistent(!)
