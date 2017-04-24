@@ -5,7 +5,15 @@ readings.
 ### General Notes
 * a socket is just a communication endpoint
 * network topology: the arragement of the various elements (links, nodes, etc.) of a computer network. 
-   * physical vs logical topology
+  * physical vs logical topology
+  * examples:
+    * point-to-point
+    * bus - linear, distributed
+    * star - extended, distributed
+    * ring
+    * mesh; full/partially connected
+    * hybrid
+    * daisy chain
 * network byte order is big-endian (MSB first)
   ![hosttonetwork](https://github.com/comychitz/knowledge/blob/master/networking/img/hosttonetwork.png)
 
