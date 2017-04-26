@@ -1,6 +1,6 @@
 # programming essentials
 ## remember to always...
-* optimize for reader not the writer(!)
+* optimize for the reader, not the writer(!)
 * be consistent(!)
 * keep it simple, stupid(!)
 * if unit testing is difficult, revisit your design/implementation
