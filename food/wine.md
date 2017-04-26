@@ -1,7 +1,7 @@
-#Wine
+# Wine
 So when I was in undergrad, I had the pleasure of taking a class that covered wine, beers & spirits, but mostly covered wine. It was very informative and I genuinely enjoyed it. I took a separate class just about beer during the same quarter, to ensure my beer knowledge was up to par as well. It was senior year ;)
 
-##General Notes
+## General Notes
 Warning: these notes are sporadic
 * gold color means it was most likely in an oak barrel
 * fruit smell is deeper in the glass
