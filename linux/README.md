@@ -1,7 +1,23 @@
 # Linux
 Some, hopefully useful, Linux-related notes.
 
+## Useful commands
+* find
+  find . -name "*.o" -exec rm {} \;
+  find . -name "unittest.log" -exec rm {} \;
+  find . -name "tmp" -type d |xargs rm -rf
+  find ./ -type f -exec sed -i -e 's/apple/orange/g' {} \;
+* mount
+  * mount -o remount,rw /path/to/filesystem/to/remount
+* info coreutils 
+  * is like an intense manual for all the GNU coreutils
+* df -h - disk free space stats
+* du - disk usage of files and directories
+* fdisk - to create partitions for a mounted drive such as USB drive, etc.
+* mkfs - to create a file system on a mounted drive
+
 ## Notes
+### general 
 ### getopt
 * An option character in this string can be followed by a colon (‘:’) to indicate
 that it takes a required argument. If an option character is followed by two
