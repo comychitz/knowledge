@@ -1,12 +1,11 @@
 # C++ Notes
 Some of my personal notes on the C++ language - regarding features, coding style, etc. In no way is this a complete set of notes, if anything it barely touches the surface. But hopefully it'll grow to be a great reference.
 
-Style notes mostly stolen from the [Google C++ Syle Guide](https://google.github.io/styleguide/cppguide.html). 
 
-Good reads and big contributors to these notes:
-* A Tour of C++ by Bjarne Stroustrup 
+## References
+* Style notes mostly stolen from the [Google C++ Syle Guide](https://google.github.io/styleguide/cppguide.html). 
+* A Tour of C++ by Bjarne Stroustrup
 
-* use the c++ linter that enforces the Google C++ style code can be found [here](https://raw.githubusercontent.com/google/styleguide/gh-pages/cpplint/cpplint.py)
 
 ## Style Notes
 * optimize for the reader not the writer!
@@ -67,3 +66,5 @@ Good reads and big contributors to these notes:
 * encapsulation is the term used for the act of hiding the implementation details of an object from its user
 * a forward declaration is a declaration of an identifier (denoting an entity such as a type, a variable, a constant, or a function) for which the programmer has not yet given a complete definition.
 
+## Miscellaneous
+* use the c++ linter that enforces the Google C++ style code can be found [here](https://raw.githubusercontent.com/google/styleguide/gh-pages/cpplint/cpplint.py)
