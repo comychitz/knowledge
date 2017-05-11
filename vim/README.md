@@ -40,8 +40,8 @@ ma    |   	Set a marker at cursor position to come back to later. a can be any c
 
 Search | Desc 
 --- | ---
-*     |      	Search forward for word under cursor                                                                                                      
-#       |     	Search backwards for word under cursor 
+\*     |      	Search forward for word under cursor                                                                                                      
+\#       |     	Search backwards for word under cursor 
 /word   |  	Search forward for word. Accepts regular expressions to search 
 ?word   | 	Search backwards for word. Accepts regular expressions to search
 n       |     	Repeat the last / or ? command
