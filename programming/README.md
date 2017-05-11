@@ -5,6 +5,14 @@
 * keep it simple, stupid(!)
 * if unit testing is difficult, revisit your design/implementation
 
+## object oriented
+* SOLID Priciples of Obect Oriented Design
+  * Single Responsibility 
+  * Open-Closed - open for extension, closed for modification
+  * Liskov Substitution - a subclass shall be able to be replaced for its parent without breaking the program
+  * Interface Segregation - many specific interfaces is better than one do-it-all interface
+  * Dependency Inversion - program toward abstractions, not implementations (because they vary, abstractions should not)
+
 ## general notes
 * idempotence: the property of certain operations in mathematics and computer science, that can be applied multiple times without changing the result beyond the initial application [idempotence - wikipedia](https://en.wikipedia.org/wiki/Idempotence)
 * late vs early binding
@@ -38,19 +46,17 @@
     other hand, a weakly typed language may produce unpredictable results or may
     perform implicit type conversion.
 
-## object oriented
-* SOLID Priciples of Obect Oriented Design
-  * Single Responsibility 
-  * Open-Closed - open for extension, closed for modification
-  * Liskov Substitution - a subclass shall be able to be replaced for its parent without breaking the program
-  * Interface Segregation - many specific interfaces is better than one do-it-all interface
-  * Dependency Inversion - program toward abstractions, not implementations (because they vary, abstractions should not)
-
 ## design patterns
 * observer (aka listener) pattern
   * the subject maintains a list of observers and notifies them (via calling one their methods) of state changes. this is common in event-driven programming.
-* 
-  
+* strategy pattern [wikiArticle](https://en.wikipedia.org/wiki/Strategy_pattern)
+  * a behavorial pattern that enables an algorithm's behavior to be selected at runtime
+* template method pattern [wikiArticle](https://en.wikipedia.org/wiki/Template_method_pattern)
+  * a behavioral design pattern that defines the program skeleton of an algorithm in an operation, deferring some steps to subclasses. 
+* bridge pattern [wikiArticle](https://en.wikipedia.org/wiki/Bridge_pattern)
+  * decouple an abtraction from its implementation
+
+
 ## software development
 * the waterfall model
   * analysis of specification
