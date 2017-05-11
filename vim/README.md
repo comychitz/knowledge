@@ -37,6 +37,7 @@ ma    |   	Set a marker at cursor position to come back to later. a can be any c
 'a     |   Move cursor to the first character of the line marked with ma 
 %       |  Move cursor to next brace, bracket or comment paired to the current cursor location 
 
+
 Search | Desc 
 --- | ---
 *     |      	Search forward for word under cursor                                                                                                      
@@ -45,6 +46,7 @@ Search | Desc
 ?word   | 	Search backwards for word. Accepts regular expressions to search
 n       |     	Repeat the last / or ? command
 N       |    	Repeat the last / or ? command in the opposite direction
+
 
 Deletion | Desc 
 --- | ---
@@ -73,6 +75,7 @@ O		Insert line above current lien and enter insert mode
 cm	|	Delete (change) the character or word (w) in motion m, then enter insert mode
 cc	|	Delete current line and enter insert mode (unlike dd which leaves you in normal mode)
 C	|	Delete (change) from cursor to end of line, enter insert mode
+
 
 Visual Mode | Desc
 --- | ---
