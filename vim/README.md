@@ -23,8 +23,8 @@ e|Move forward to next word, with cursor on <span>last</span> character (use E t
 ge|Move backwards to next word, with cursor on <span>last</span> character (use gE to jump by whitespace only) 
 (|Move to beginning of previous sentence. Use ) to go to next sentence 
 { |    	 	Move to beginning of previous paragraph. Use } to go to next paragraph 
-+ |    		Move forward to the first character on the next line
--  |       Move backwards to the first character on the previous line
+\+ |    		Move forward to the first character on the next line
+\-  |       Move backwards to the first character on the previous line
 ``<C>``+u|   	Move up by half a page 
 ``<C>``+d |  	Move down by half a page 
 H|         Move cursor to <span>header</span> (top) line of current visible window
