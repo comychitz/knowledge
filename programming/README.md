@@ -38,10 +38,18 @@
     other hand, a weakly typed language may produce unpredictable results or may
     perform implicit type conversion.
 
+## object oriented
+* SOLID Priciples of Obect Oriented Design
+  * Single Responsibility 
+  * Open-Closed - open for extension, closed for modification
+  * Liskov Substitution - a subclass shall be able to be replaced for its parent without breaking the program
+  * Interface Segregation - many specific interfaces is better than one do-it-all interface
+  * Dependency Inversion - program toward abstractions, not implementations (because they vary, abstractions should not)
 
 ## design patterns
 * observer (aka listener) pattern
   * the subject maintains a list of observers and notifies them (via calling one their methods) of state changes. this is common in event-driven programming.
+* 
   
 ## software development
 * the waterfall model
