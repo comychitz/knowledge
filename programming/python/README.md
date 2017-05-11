@@ -1,4 +1,5 @@
 # python
+A slow work in progres...
 
 ## references
 * [python.org](https://www.python.org/)
@@ -25,4 +26,5 @@ def some_property(self):
 class MyABC(metaclass=abc.ABCMeta):
   ...
 ```
-
+* tuples vs arrays
+  * arrays are of the same type, tuples allow a mix of types
