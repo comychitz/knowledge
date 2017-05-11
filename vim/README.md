@@ -1,6 +1,6 @@
-#Vim Shortcuts
+# Vim Shortcuts
 
-####Two good visual images:
+#### Two good visual images:
 * https://cdn.shopify.com/s/files/1/0165/4168/files/preview.png
 * http://www.viemu.com/vi-vim-cheat-sheet.gif
 
