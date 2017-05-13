@@ -2,6 +2,9 @@
 various networking related notes, some from classes, some from my own personal
 readings.
 
+### Useful References/Links
+* http://alas.matf.bg.ac.rs/manuals/lspe/mode=1.html 
+
 ### General Notes
 * a socket is just a communication endpoint
 * network topology: the arragement of the various elements (links, nodes, etc.) of a computer network. 
