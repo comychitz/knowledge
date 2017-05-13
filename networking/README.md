@@ -41,7 +41,7 @@ Network|Routing to destination|Packets|IP
 Data Link|Local network|Frame|ARP,EthernetmPPP
 Physical|Access media|Bits|Ethernet|10Base-T,1000Base-T,USB
 
-###Transport Layer
+### Transport Layer
 interaction between transport and network layers, overview. 
 * transport layer provides logical communication between processes
 * network layer provides logical communication between hosts
@@ -110,7 +110,7 @@ TCP congestion control: principles of congestion estimation (lost  segment, ackn
 * TCP used by applications that want packet retransmission and packet reordering and are willing to put up with congestion control. i.e. email, http, ftp
 * UDP used by applications that are not willing to put up with congestion control and dont need packet retransmission and packet reordering. i.e. streaming, VoIP, video conferencing, gaming
 
-###Network Layer
+### Network Layer
 DNS: servies, overview, hierarchical architecture
 * DNS is (1) a distributed database implemented in a hierarchy of DNS servers and (2) it is an application layer protocol that allows hosts to query the distributed database.
 * DNS provides services other than translating host names to IP addresses:
@@ -216,7 +216,7 @@ Multiple classes of service (motivation, scheduling, policing), DiffServ
    * Leaky bucket - we have a bucket which holds up to b tokens and generates r  tokens/second. It can only add tokens if it is less than b token in the bucket. Each packet that comes into the network must take a token in the bucket. If it is empty a packet must wait for a token to arrive. This serves to limit the long-term average rate at which packets can enter a network. Leaky bucket with weighted fair queueing = provable maximum delay in a queue. 
    * Diffserv -  Differentiated services provides service differentiation, the ability to handle different classes of traffic in different ways within the internet in a scalable manner. Two sets of functional elements in Diffserv: edge functions - packet classification and traffic conditioning, and core function - forwarding. Result of DiffServ (1) QoS does not require virtual circuits, and (2) ISPs to divide whether to use only internal or through peering & transit and whether to charge or not.
 
-###Link Layer and Local Area Networks (LAN)
+### Link Layer and Local Area Networks (LAN)
 services, adapter and interfaces
 * two types of network links: point-to-point (single sender and receiver) and broadcast links (multiple senders and receivers on the same broadcast channel).
 * services provided by the link layer:
