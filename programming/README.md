@@ -15,6 +15,9 @@
 
 ## general notes
 * idempotence: the property of certain operations in mathematics and computer science, that can be applied multiple times without changing the result beyond the initial application [idempotence - wikipedia](https://en.wikipedia.org/wiki/Idempotence)
+* serialization
+  * has two contexts: 1) serializing access (i.e. with a mutex) 2) serializing
+    data (translating from one form to another; for example, to store in a DB)
 * late vs early binding
   * making a run-time decision about which instance method to call is known as
     dynamic or late binding. 
