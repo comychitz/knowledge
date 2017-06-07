@@ -4,6 +4,7 @@ A slow work in progres...
 ## references
 * [python.org](https://www.python.org/)
   * https://docs.python.org/2/tutorial/
+  *  https://docs.python.org/3/tutorial/
 
 ## notes
 * interfaces in python
