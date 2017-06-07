@@ -6,7 +6,7 @@ A slow work in progres...
 * first releaed in 1991
 * it is an interpreted language
   * [stackoverflow: Is Python interpreted or compiled or both?](https://stackoverflow.com/questions/6889747/is-python-interpreted-or-compiled-or-bot)
-  * 
+  * [is python interpreted or compiled?](https://softwareengineering.stackexchange.com/questions/24558/is-python-interpreted-or-compiled)
 * indentation is used to delimit code blocks
 * dynamic type system
    * uses duck typing
@@ -64,4 +64,3 @@ Traceback (most recent call last):
   File "<stdin>", line 1, in <module>
 AssertionError
 ```
-* 
