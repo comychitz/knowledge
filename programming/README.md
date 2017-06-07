@@ -58,7 +58,8 @@
   * a behavioral design pattern that defines the program skeleton of an algorithm in an operation, deferring some steps to subclasses. 
 * bridge pattern [wikiArticle](https://en.wikipedia.org/wiki/Bridge_pattern)
   * decouple an abtraction from its implementation
-
+* decorator pattern [wikiArticle](https://en.wikipedia.org/wiki/Decorator_pattern)
+  * A decorator makes it possible to add or alter behavior of an interface at run-time 
 
 ## software development
 * the waterfall model
