@@ -9,4 +9,4 @@ Use UML to track relationships between classes and show inheritance heirarchies.
 * Show the has-a relationship with a down arrow or sideways arrow (indicates composition)
 
 ### References
-* http://creately.com/blog/diagrams/uml-diagram-types-examples/
+* [UML diagram types examples](http://creately.com/blog/diagrams/uml-diagram-types-examples/)
