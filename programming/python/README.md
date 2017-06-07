@@ -57,8 +57,9 @@ class MyABC(metaclass=abc.ABCMeta):
 ```
 * tuples vs arrays
   * arrays are of the same type, tuples allow a mix of types
-* decorators
-  * 
+* python uses decorators
+  * [decorator pattern](https://en.wikipedia.org/wiki/Decorator_pattern)
+  * A decorator makes it possible to add or alter behavior of an interface at run-time
 * with 
   * (from Python 2.5) encloses a code block within a context manager (for example, acquiring a lock before the block of code is run and releasing the lock afterwards, or opening a file and then closing it), allowing Resource Acquisition Is Initialization (RAII)-like behavior
 * assert [condition]
