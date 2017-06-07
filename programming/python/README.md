@@ -1,8 +1,11 @@
 # python
 A slow work in progres...
 
+### references
+* [wikiArticle](https://en.wikipedia.org/wiki/Python_(programming_language)) 
+* http://www.ics.uci.edu/~brgallar/week9_3.html
+
 # about 
-* [wikiArticle](https://en.wikipedia.org/wiki/Python_(programming_language))
 * first releaed in 1991
 * it is an interpreted language
   * [stackoverflow: Is Python interpreted or compiled or both?](https://stackoverflow.com/questions/6889747/is-python-interpreted-or-compiled-or-bot)
