@@ -57,6 +57,8 @@ class MyABC(metaclass=abc.ABCMeta):
 ```
 * tuples vs arrays
   * arrays are of the same type, tuples allow a mix of types
+* decorators
+  * 
 * with 
   * (from Python 2.5) encloses a code block within a context manager (for example, acquiring a lock before the block of code is run and releasing the lock afterwards, or opening a file and then closing it), allowing Resource Acquisition Is Initialization (RAII)-like behavior
 * assert [condition]
