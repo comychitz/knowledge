@@ -13,4 +13,4 @@
   * DRAM
    * dynamic, needs refreshing
    * one capacitor & one transistor per bit (high density)
-![memorydiagram](https://github.com/comychitz/knowledge/blob/master/programming/memory/img/bAmyiEdPAVQw.png)
+![memorydiagram](https://github.com/comychitz/knowledge/blob/master/memory/img/bAmyiEdPAVQw.png)
