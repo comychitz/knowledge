@@ -35,6 +35,7 @@ A slow work in progres...
   *  https://docs.python.org/3/tutorial/
 
 ## notes
+* pyro is a framework for distributed objects for Python
 * interfaces in python
 ```python
 import abc
