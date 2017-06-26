@@ -48,6 +48,8 @@
     argument passed to a function does not closely match the expected type. On the
     other hand, a weakly typed language may produce unpredictable results or may
     perform implicit type conversion.
+* distributed systems:
+    - a collection of independent computers that appears to its users as a single cohenerent system
 
 ## design patterns
 * observer (aka listener) pattern
