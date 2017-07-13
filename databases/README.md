@@ -1,7 +1,7 @@
-#Databases
+# Databases
 Some notes regarding database management systems.
 
-##General Notes
+## General Notes
 * advantages of a DBMS include: data independence, efficient data access, data integrity and security, data administration, concurrent access and crash recovery, reduced application development time
 * schema is a description of data in terms of a data model. example: Students(sid: string, name: string, login: string, age: integer, gpa: real) is a schema.
 * a relation can be though of as a set of records. Each row of a relation (i.e. students relation) is a record transactions and locks
@@ -111,8 +111,7 @@ map(String key, String value):
     * For each indexed attribute of R: number of distinct values |πA(R)|, range of values (low and high values), number of index leaf pages, number of index level (if B+ tree)
 
 
-
-##Storage & Indexing
+## Storage & Indexing
 * cost of io operations dominates the cost of typical database operations
 * file of records. scan on files allows us to step through all records one at a time
 * an index is a data structure that organizes data records on disk to optimize certain kinds of retrieval operations
@@ -130,7 +129,7 @@ map(String key, String value):
 * a tree index matches (a conjunction of) terms that involve only attributes in a prefix of the search key. e.g. tree index on <a,b,c> matches the selection a=5 AND b=3, and a=5 and b>6, but not b=3
 * a hash index matches (a conjunction of) terms that has a term attribute = value for every attribute in the search key of the index. e.g. hash index on <a,b,c> matches a=5 AND b=3 AND c=5, bu not b=3, or a=5, pr a>5 AND b=3 AND c=5.
 
-Parallel Database Systems
+## Parallel Database Systems
 * Reasons for success: Set oriented processing, natural pipelining (relational operators/trees), inexpensive hardware can do the trick, users/app-programmers don’t need to think in parallel. speed-up and scale-up (increase in data and hardware should result in constant time). shared memory (SMP) vs shared disk vs shared nothing (network). 
 * different types of parallel DBMS: intra-operator parallelism - get all machines working together to compute a given operation (scan, sort, or join), inter-operator parallelism - each operator may run concurrently on a different site (exploits pipelining), inter-query parallelism - completely different queries run on different sites
 * partitioning - shared nothing benefits from good partitioning: range - good for equijoins, exact-match queries, and range queries; hash - good for equijoins, exact match queries; round robin - good to spread load
@@ -151,8 +150,8 @@ Parallel Database Systems
   * ordering on join attribute(s), GROUP BY attribute(s), DISTINCT attribute(S), ORDER BY attribute(S)
 
 
-##Papers
-###Graefe paper: Modern B-Tree Techniques
+## Papers
+### Graefe paper: Modern B-Tree Techniques
 * binary trees are used for in memory data and B-trees for on disk data. 
 * B-trees are good for on disk data because they can match the node size to the page size. 
 * B-trees are indexes optimized for pages environments. 
@@ -168,13 +167,13 @@ Parallel Database Systems
 * normalized keys - implementations of B-trees transform keys into a binary string such that simply binary comparisons suffice to sort the records during index creation and to guide a search in the B-tree to the correct record. 
 * duplicate keys are not desirable in B-trees because they lead to ambiguities especially when navigating from a primary to secondary index or during a deletion.
 
-###Litwin paper - Linear Hashing
+### Litwin paper - Linear Hashing
 * if the hashing function is dynamically modified in the course of insertions or deletions we call it a virtual hashing function. 
 * linear hashing is an algorithm that uses only a few bytes of core suffice now for a file of any size. for any number of insertions or deletions, the load of a file may therefore be high and record may be found, in general, in one access. a dynamic hashing function uses splits to reassign addresses to records.
 * splits are performed iff a collision occurs are called uncontrolled. Splits are called controlled if they also depend on other conditions or are performed even if there is no collision.  A useful control is called load control. This is where a split is performed when a collision occurs, but only if the load factor is superior to some threshold. the inverse of splitting is grouping. if allocation is contiguous then linear hashing is almost as simple and fast as classical hashing
 * if the bucket capacity is greater than 10 records, then almost any record is found in one access. vs trees linear hashing has simpler algorithms for search, for insertion and especially for deletion. also the case for concurrency control since only the key and the pointer must be locked, instead of a path in the tree.
 
-###Stonebraker paper: Operating System Support for Database Management
+### Stonebraker paper: Operating System Support for Database Management
 * Summary: Several operating system services are examined with a view toward their applicability to support of database management functions. These services include buffer pool management; the file system; scheduling, process management, and interprocess communication; and consistency control.
 * In order of an OS provided buffer pool manager to be attractive, the access overhead must be cut to a few hundred instructions (system call instructions). 
 * Database access in INGRES is a combination of: 1) sequential access to blocks which will not be rereferenced 2) sequential access to blocks which will be cyclically rereferenced 3) random access to blocks which will not be rereferenced again 4) random access to blocks for which there is a nonzero probability of rereference.
@@ -185,7 +184,7 @@ Parallel Database Systems
 * Most operating systems provide locking for files, but not many provide finer locks such as those on records and pages.
 * DBMS prefers small efficient operating systems with only desired services. Real-time OSs are the only ones that get close to this ideal
 
-###AsterixDB paper
+### AsterixDB paper
 * well suited for application like web data warehousing, social data storage and analysis, and other use cases related to Big Data. AsterixDB has a flexible NoSQL style data model; a query language that supports a wide range of queries; a scalable runtime; partitioned LSM-based data storage and indexing (including B+-tree, R-tree and text indexes)
 * key features desired: 1) a flexible, semistructured data model for use cases ranging from “schema first” to “schema never” 2) a full query language with at least the power of SQL 3) an efficient parallel query runtime 4) support for data management and automatic indexing 5) support for a wide range of query sizes, with processing cost proportional to the task at hand 6) support for continuous data ingestion 7) the ability to scale gracefully in order to manage and query large volumes of data by using large clusters 8) support for today’s common “Big Data data types” (e.g. textural, temporal and spatial data)
 * open vs closed data types - open datatypes are allowed to have additional content, beyond what the type specifies, as long as they at least contain the information prescribed by the datatype definition.
