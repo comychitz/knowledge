@@ -73,7 +73,9 @@
 ## interesting problems
 * [the travelling salesman problem](https://en.wikipedia.org/wiki/Travelling_salesman_problem)
 * [the produce-consumer problem](https://en.wikipedia.org/wiki/Producer–consumer_problem)
-  * usually solved using semaphores
+  * usually solved using 2 semaphores
+    * the consumer must wait for the producer to produce something if the queue is empty
+    * the producer must wait for the consumer to consume something if the queue is full
 
 ## software development
 * the waterfall model
@@ -83,3 +85,17 @@
   * testing & debugging
   * maintenance
 * [agile](https://en.wikipedia.org/wiki/Agile_software_development)
+  * the 12 principles:
+    1. Customer satisfaction by early and continuous delivery of valuable software
+    2. Welcome changing requirements, even in late development
+    3. Working software is delivered frequently (weeks rather than months)
+    4. Close, daily cooperation between business people and developers
+    5. Projects are built around motivated individuals, who should be trusted
+    6. Face-to-face conversation is the best form of communication (co-location)
+    7. Working software is the primary measure of progress
+    8. Sustainable development, able to maintain a constant pace
+    9. Continuous attention to technical excellence and good design
+    10. Simplicity—the art of maximizing the amount of work not done—is essential
+    11. Best architectures, requirements, and designs emerge from self-organizing teams
+    12. Regularly, the team reflects on how to become more effective, and adjusts accordingly
+
