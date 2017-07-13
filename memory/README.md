@@ -4,6 +4,9 @@
   # General Notes
   * What is computer memory?
     - Typically, computer memory refers to the devices that is a computer's "primary storage" device (non-volative). A computer uses memory for holding information about it's current tasks/jobs, thus access, ideally, should be quick and inexpensive.
+  * [Virtual Memory](https://en.wikipedia.org/wiki/Virtual_memory)
+    - Map virtual/logical addresses to physical addresses via implementations in software & hardware.
+    - CPUs have Memory Management Units for virtual memory to be effective in translating addresses timely.
   * Fragmentation
     - Internal - when more memory is allocated than needed - for example, a
       small program that doesn't need much memory has to at least allocate a X
