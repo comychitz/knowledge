@@ -70,6 +70,11 @@
 * decorator pattern [wikiArticle](https://en.wikipedia.org/wiki/Decorator_pattern)
   * A decorator makes it possible to add or alter behavior of an interface at run-time 
 
+## interesting problems
+* [the travelling salesman problem](https://en.wikipedia.org/wiki/Travelling_salesman_problem)
+* [the produce-consumer problem](https://en.wikipedia.org/wiki/Producer–consumer_problem)
+  * usually solved using semaphores
+
 ## software development
 * the waterfall model
   * analysis of specification
@@ -77,3 +82,4 @@
   * implementation
   * testing & debugging
   * maintenance
+* [agile](https://en.wikipedia.org/wiki/Agile_software_development)
