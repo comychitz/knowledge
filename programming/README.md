@@ -14,6 +14,13 @@
   * Dependency Inversion - program toward abstractions, not implementations (because they vary, abstractions should not)
 
 ## general notes
+* toolchain
+  * general definition: a set of tools, usually used sequentially (hence, a
+    chain), to perform some complex software task. A simple example is a
+    toolchain that contains system libraries, tools for building, a debugger,
+    and other related tools - like the GNU toolchain - for building software
+    programs on Unix/Linux systems.
+  * https://en.wikipedia.org/wiki/GNU_toolchain
 * idempotence: the property of certain operations in mathematics and computer science, that can be applied multiple times without changing the result beyond the initial application [idempotence - wikipedia](https://en.wikipedia.org/wiki/Idempotence)
 * serialization
   * has two contexts: 1) serializing access (i.e. with a mutex) 2) serializing
