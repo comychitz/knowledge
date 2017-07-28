@@ -30,6 +30,7 @@ Some of my personal notes on the C++ language - regarding features, coding style
 
 
 ## Language Notes (and related programming notes)
+* member object variables are able to be constructed with arguments from the constructor itself, but it has to be in the initialization list.
 * as in all object oriented code should be, we want high cohesion but low coupling of our modules/classes
 * declaring a variable in a global un-named namespace is the C++ way of doing static functions. Everything in the anonymous namespace gets mangled with a compile-generated string, and those functions are only accessible by other functions in the same translation unit
 * l-values and r-values
