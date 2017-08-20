@@ -25,6 +25,19 @@ Some notes I compiled about compilers.
     * speculative processor features
         * control & data speculation
     * caching & cache-related optimizations
+* compiling C/C++ (in a nutshell)
+    * preprocessing
+        * handle the preprocesser directorives (#include, #define, etc.)
+    * compilation
+        * parse source code and produce assembly
+        * then an assembler converts to machine code in an object file that
+          contains references (some defined some not) to symbols by their name.
+    * linking
+        * final stage of compilation where all the symbols are resolved by
+          reading them from a library or other object file
+        * can be done dynamically (right at run-time start) by the dynamic
+          linker 
+        * or resolved when compiled, which is referred to as statically linking
 
 ## cross compilers
 * a compiler capable of compiling for a platform other than which the compiler
