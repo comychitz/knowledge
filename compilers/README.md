@@ -51,3 +51,8 @@ Some notes I compiled about compilers.
           ./configure when cross compiling, this will help simulate the target
           system
 
+## notes
+* can you statically link against a shared object? [stackoverflow](https://stackoverflow.com/questions/725472/static-link-of-shared-library-function-in-gcc)
+    * no, a shared libary/object is an executable in a special format that does
+      not contain all the information needed to statically compile against it.
+
