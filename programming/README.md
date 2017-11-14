@@ -85,6 +85,7 @@
   * testing & debugging
   * maintenance
 * [agile](https://en.wikipedia.org/wiki/Agile_software_development)
+  * [agile manifesto](http://agilemanifesto.org)
   * the 12 principles:
     1. Customer satisfaction by early and continuous delivery of valuable software
     2. Welcome changing requirements, even in late development
