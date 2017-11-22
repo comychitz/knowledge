@@ -5,6 +5,7 @@ Recipes, food ideas, good general knowledge about foods/nutrients, wine, beer & 
   * [Wine](#wine)
   * [Beer](#beer)
   * [Recipes](#recipes)
+    * [Potato Casserole](#potato-casserole)
     * [Chicken Fried Brown Rice](#chicken-fried-brown-rice)
     * [Lasagna](#lasagna)
     * [Meatballs](#meatballs)
@@ -22,6 +23,33 @@ See this page -> [beer](https://github.com/comychitz/knowledge/blob/master/food/
 
 # Recipes
 Some of my own recipes that I have compiled since starting to cook on my own. Typically these recipes are for easy meal preps, but sometimes they get fancy :) 
+
+### Potato Casserole
+| Ingredient | Amount | Note |
+| --- | --- | --- |
+| russet potatoes | 6 | peeled and sliced into 1/4 inch thick rounds |
+| salt and fresh ground pepper | |
+| garlic cloves | 2 |
+| shredded cheddar cheese | 1 cup | 
+| shredded monterey jack cheese | 1 cup |
+| milk | 2 cups |
+| eggs | 2 large |
+| chopped fresh parsley | 2 tablespoons | 
+
+#### Directions
+* preheat over to 375
+* rub 13x9 dish with butter
+* layer half of the potato slices in dish, overlapping slightly
+* season with salt and pepper
+* sprinkle minced garlic & cheeses over potatoes 
+* layer another set of potato slices
+* in a separate bowl, mix milk, eggs, salt and pepper
+* pour over potatoes
+* add parsley over
+* cover and back for 75 to 09 minutes, until custard is cooked and set
+* remove foil and cook for 10 to 15 minutes, or until top is browned
+* let rest 20 minutes before cutting & serviing
+* Resource: https://diethood.com/loaded-baked-potato-casserole/
 
 ### Hashbrowns
 
