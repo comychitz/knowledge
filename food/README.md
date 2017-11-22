@@ -22,8 +22,6 @@ See this page -> [wine](https://github.com/comychitz/knowledge/blob/master/food/
 See this page -> [beer](https://github.com/comychitz/knowledge/blob/master/food/beer.md)
 
 # Recipes
-Some of my own recipes that I have compiled since starting to cook on my own. Typically these recipes are for easy meal preps, but sometimes they get fancy :) 
-
 ### Potato Casserole
 | Ingredient | Amount | Note |
 | --- | --- | --- |
@@ -40,13 +38,11 @@ Some of my own recipes that I have compiled since starting to cook on my own. Ty
 * preheat over to 375
 * rub 13x9 dish with butter
 * layer half of the potato slices in dish, overlapping slightly
-* season with salt and pepper
-* sprinkle minced garlic & cheeses over potatoes 
+* sprinkle minced garlic & cheeses over potatoes, add salt and pepper
 * layer another set of potato slices
-* in a separate bowl, mix milk, eggs, salt and pepper
-* pour over potatoes
-* add parsley over
-* cover and back for 75 to 09 minutes, until custard is cooked and set
+* in a separate bowl, mix milk, eggs, salt and pepper &  pour over potatoes
+* add chopped parsley 
+* cover and bake for 75 to 90 minutes, until custard is cooked and set
 * remove foil and cook for 10 to 15 minutes, or until top is browned
 * let rest 20 minutes before cutting & serviing
 * Resource: https://diethood.com/loaded-baked-potato-casserole/
