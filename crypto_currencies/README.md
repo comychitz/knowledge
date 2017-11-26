@@ -1,4 +1,4 @@
-# Cryto 
+# Crypto Currencies
 Crypto currency-related notes, for example, on Bitcoin, Ethereum, how it works, etc. - all that jazz.
 
 ## General Notes
