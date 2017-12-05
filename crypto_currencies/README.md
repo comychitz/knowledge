@@ -3,9 +3,9 @@ Crypto currency-related notes, for example, on Bitcoin, Ethereum, how it works, 
 
 ## General Notes & Concepts
 * definition: a digital asset that uses cryptography to secure transactions
-* The goal of Bitcoin and other crypto currencies [in general] is to provide a
-  decentralized system upon which exchanges can occur without a trusted 
-  authority or central server, and protects against the double spending problem.
+* The goal of Bitcoin is to provide a decentralized system upon which exchanges
+  can occur without a trusted authority or central server, and protects against 
+  the double spending problem.
 * the basis of coins are digital signatures
     * signatures offer non-repudiation, authentication, and integrity
 * blockchain
@@ -68,7 +68,6 @@ Crypto currency-related notes, for example, on Bitcoin, Ethereum, how it works, 
 * there will be only 21 million bitcoins supplied
     * approx. 12.5 bitcoins per blocks until 2020, then having every four years
       until no more are distributed, which should be between years 2110-40
-
 
 ## Relevant Papers
 * [Bitcoin: A Peer-to-Peer Electronic Cash System](https://bitcoin.org/bitcoin.pdf)
