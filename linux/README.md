@@ -3,10 +3,10 @@ Some, hopefully useful, Linux-related notes.
 
 ## Useful commands
 * find
-  find . -name "*.o" -exec rm {} \;
-  find . -name "unittest.log" -exec rm {} \;
-  find . -name "tmp" -type d |xargs rm -rf
-  find ./ -type f -exec sed -i -e 's/apple/orange/g' {} \;
+  * find . -name "*.o" -exec rm {} \;
+  * find . -name "unittest.log" -exec rm {} \;
+  * find . -name "tmp" -type d |xargs rm -rf
+  * find ./ -type f -exec sed -i -e 's/apple/orange/g' {} \;
 * remount something: mount -o remount,rw /path/to/filesystem/to/remount
 * tcpdump
     * listening on a UDP socket: tcpdump -lu -vvXX port <portnum>
