@@ -25,24 +25,24 @@ Some, hopefully useful, Linux-related notes.
 ## Notes
 ### general 
 * reading from the man pages
-       * if there is more than one entry for the command/api 
-        we can look at all the man pages by running
-                man -a <command/api>
-        if it says to checkout <command/api>(3) man page
-        then run:
-                man 3 <command/api>
-        the different levels of man pages are:
-                1 User Command
-                2 System Calls
-                3 C Library Functions
-                4 Devices and Special Files
-                5 File Formats and Conventions
-                6 Games et. Al.
-                7 Miscellanea
-                8 System Administation tools and Deamons
-        use man -l <command/api> to list all the different
-        sections the command/api is in, along with a brief
-        description
+   * if there is more than one entry for the command/api 
+    we can look at all the man pages by running
+              man -a <command/api>
+      if it says to checkout <command/api>(3) man page
+      then run:
+              man 3 <command/api>
+      the different levels of man pages are:
+              1 User Command
+              2 System Calls
+              3 C Library Functions
+              4 Devices and Special Files
+              5 File Formats and Conventions
+              6 Games et. Al.
+              7 Miscellanea
+              8 System Administation tools and Deamons
+      use man -l <command/api> to list all the different
+      sections the command/api is in, along with a brief
+       description
 * directory permissions
   * Directory permissions in linux differ than regular file permissions:
     * the write bit allows the affected user to create, rename,
