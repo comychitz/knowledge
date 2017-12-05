@@ -25,7 +25,7 @@ Some, hopefully useful, Linux-related notes.
 ## Notes
 ### general 
 * reading from the man pages
-        * if there is more than one entry for the command/api 
+       * if there is more than one entry for the command/api 
         we can look at all the man pages by running
                 man -a <command/api>
         if it says to checkout <command/api>(3) man page
