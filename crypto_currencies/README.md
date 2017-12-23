@@ -1,5 +1,5 @@
 # Crypto Currencies
-Crypto currency-related notes, for example, on Bitcoin, Ethereum, how it works, etc. - all that jazz.
+Crypto currency (and related topics) notes.
 
 ## General Notes & Concepts
 * definition: a digital asset that uses cryptography to secure transactions
@@ -30,6 +30,7 @@ Crypto currency-related notes, for example, on Bitcoin, Ethereum, how it works, 
       the service requester, usually meaning processing time by a computer.
     * challenge-response vs solution-verification protocols
     * ideally, verification at the provider (server) should be quick as possible
+    * proof-of-work vs proof-of-stake vs proof-of
 * [smart contracts](https://en.wikipedia.org/wiki/Smart_contract)
     * first coined in 1996 by Nick Szabo
     * "A smart contract is a set of promises, specified in digital form,
@@ -42,10 +43,22 @@ Crypto currency-related notes, for example, on Bitcoin, Ethereum, how it works, 
       decentralized security, encryption, and limited trusted parties that fit
       Szabo's definition of a digital agreement with observability,
       verifiability, privity, and enforceability
+* Ethereum
+    * (read white & yellow papers for full details; links below)
+    * so much more to offer than Bitcoin does; Bitcoin is design and aimed for
+        purely exchanges of goods/value, whereas Ethereum is a network upon which
+        any type of transaction can occur
+    * "one key goal is to facilitate transactions between consenting
+      individuals who would otherwise have no means to trust one another"
+    * "Early work on smart contracts has been done by Szabo [1997] and Miller
+        [1997]. Around the 1990s it became clear that algorithmic enforcement of
+        agreements could become a significant force in human cooperation"
+* decentralized applications
+    *
+
 
 ### Terminology & Related Topics
 * coins vs altcoins vs tokens
-    * https://masterthecrypto.com/differences-between-cryptocurrency-coins-and-tokens/
     * altcoins - general term for cryptocurrencies, both those that were
       Bitcoin-Derived blockchains (litecoin, namecoin) or have their own native 
       blockchain (ethereum, ripple, etc.)
@@ -58,22 +71,40 @@ Crypto currency-related notes, for example, on Bitcoin, Ethereum, how it works, 
       tokens operate on top of a blockchain that facilitates the creation of
       decentralized applications.
     * ICOs - Initial Coin Offerings are actually token offerings to the public
-* Byzantine fault tolerance
 * white paper vs yellow paper
     * white paper is higher level, less techy
     * yellow paper is like a research level paper, has all the details, etc.
       typically these do not have authorised value
+* client software
+    * client software != mining software
+    * for example, ethereum client software is light-weight interaction with the
+        network - meaning interacting with contracts, performing transactions,
+        transfering funds, etc. 
+
 
 ### Fun Facts
-* there will be only 21 million bitcoins supplied
-    * approx. 12.5 bitcoins per blocks until 2020, then having every four years
+* supply is limited(!)
+    * there will be only 21 million bitcoins supplied (by desgin)
+    * approx. 12.5 bitcoins per blocks until 2020, then halving every four years
       until no more are distributed, which should be between years 2110-40
+
 
 ## Relevant Papers
 * [Bitcoin: A Peer-to-Peer Electronic Cash System](https://bitcoin.org/bitcoin.pdf)
 * [Ethereum Yellow Paper](http://yellowpaper.io)
+* [Ethereum White Paper](https://github.com/ethereum/wiki/wiki/White-Paper#applications)
 
-### Links
-* [What the f*ck is Ethereum?](http://whatthefuckisethereum.com)
+## Good Reads
+* [Hype Cycle for Emerging Technologies - 2017](https://www.forbes.com/sites/louiscolumbus/2017/08/15/gartners-hype-cycle-for-emerging-technologies-2017-adds-5g-and-deep-learning-for-first-time/#c3bf5c504307)
+* [Differences between coins & tokens](https://masterthecrypto.com/differences-between-cryptocurrency-coins-and-tokens/)
+* [CNBC Explains How To Mine Bitcoins On Your Own](https://www.cnbc.com/2014/01/23/cnbc-explains-how-to-mine-bitcoins-on-your-own.html)
+* [What is a Decentralized Application](https://www.coindesk.com/information/what-is-a-decentralized-application-dapp/)
+
+### Links & References
 * [CoinMarketCap](https://coinmarketcap.com/coins/)
+* [What the f*ck is Ethereum?](http://whatthefuckisethereum.com)
 
+#### Exchanges
+* coinbase.com
+* bittrex.com
+* binance.com
