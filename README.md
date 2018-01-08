@@ -3,6 +3,7 @@ This repository contains notes (mostly about computer science/engineering) that 
 
 ## Topics
 A list of some topics you will find in this repository:
+  * crypto currencies
   * networking
   * databases
   * programming languages
