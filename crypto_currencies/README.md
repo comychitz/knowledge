@@ -2,36 +2,45 @@
 Crypto currency (and related topics) notes.
 
 ## General Notes & Concepts
-* definition: a digital asset that uses cryptography to secure transactions
-* The goal of Bitcoin is to provide a decentralized system upon which exchanges
-  can occur without a trusted authority or central server, and protects against 
-  the double spending problem.
-* the basis of coins are digital signatures
-    * signatures offer non-repudiation, authentication, and integrity
-* blockchain
-    * a chain of records (blocks) secured using cryptographic functions
-    * Satoshi Nakamoto conceptualized (2008) the first distributed blockchain
-      to serve as a public ledger
-    * a blockchain is maintained by a network of communicating nodes 
+* By definition, a crytographic currency (cyrpto currency) is a digital asset that
+    uses cyrptography to secure transactions. There are many examples, the most
+    prominent of all being Bitcoin. 
+* The heart of many crypto currencies such as Bitcoin is consensus - there must
+    be an agreed upon method which the nodes on the network can safely, securely
+    and quickly agree upon changes in the state of the system.
+* The goal of Bitcoin is to provide a decentralized system upon which exchanges 
+    of value can occur without a trusted authority or central server, while 
+    protecting against the double spending problemn. 
+* Coins are based on digital signatures, which like a person's signature, offers
+    non-repudiation, authentication, and integrity. 
+* The Blockchain 
+    * a chain of records (blocks) secured using cryptographic functions to
+      serve a public (or private) [distributed ledger](https://en.wikipedia.org/wiki/Distributed_ledger)
+    * a blockchain is maintained by a network of communicating nodes (aka a
+      peer-to-peer network)
     * a blockchain is a distributed database; each node has a copy of it
     * the longest blockchain is the "true" blockchain in a network
+    * "Blockchains are secure by design and are an example of a distributed
+      computing system with high Byzantine fault tolerance."
     * the time it takes for an attacker to undo previous blocks and catch up
       expontentially decreases as more transactions are computed
-* mining
+    * Satoshi Nakamoto conceptualized (2008) the first distributed blockchain
+      to serve as a [distributed] public ledger (Bitcoin)
+* Mining
     * using cpu processing power, a node/computer will help "keep the blockhain
       consistent, complete, and unalterable by repeatedly verifying and
       collecting newly broadcast transactions into a new group of transactions
       called a block" [wikiArticle](https://en.wikipedia.org/wiki/Bitcoin#Mining)
     * "To be accepted by the rest of the network, a new block must contain a
       so-called proof-of-work."
-* proof-of-work system
-    * wikipedia:  is an economic measure to deter denial of service attacks and
+* Proof-of-Work system
+    * wikipedia: is an economic measure to deter denial of service attacks and
       other service abuses such as spam on a network by requiring some work from
       the service requester, usually meaning processing time by a computer.
     * challenge-response vs solution-verification protocols
     * ideally, verification at the provider (server) should be quick as possible
     * proof-of-work vs proof-of-stake vs proof-of
-* [smart contracts](https://en.wikipedia.org/wiki/Smart_contract)
+* [Smart Contracts](https://en.wikipedia.org/wiki/Smart_contract)
     * first coined in 1996 by Nick Szabo
     * "A smart contract is a set of promises, specified in digital form,
       including protocols within which the parties perform on these promises."
@@ -45,7 +54,7 @@ Crypto currency (and related topics) notes.
       verifiability, privity, and enforceability
 * Ethereum
     * (read white & yellow papers for full details; links below)
-    * so much more to offer than Bitcoin does; Bitcoin is design and aimed for
+    * so much more to offer than Bitcoin does; Bitcoin is designed and aimed for
         purely exchanges of goods/value, whereas Ethereum is a network upon which
         any type of transaction can occur
     * "one key goal is to facilitate transactions between consenting
@@ -53,9 +62,14 @@ Crypto currency (and related topics) notes.
     * "Early work on smart contracts has been done by Szabo [1997] and Miller
         [1997]. Around the 1990s it became clear that algorithmic enforcement of
         agreements could become a significant force in human cooperation"
-* decentralized applications
-    *
-
+    * "The ethereum white paper splits dapps into three types: apps that manage
+        money, apps where money is involved (but also requires another piece),
+        and apps in the “other” category, which includes voting and governance
+        systems."
+* Decentralized Applications (dapps)
+    * software applications can be thought of as three classes:
+      1) centralized 2) decentralied 3) distributed
+    * [The General Theory of Decentralized Applications, Dapps](https://github.com/DavidJohnstonCEO/DecentralizedApplications)
 
 ### Terminology & Related Topics
 * coins vs altcoins vs tokens
@@ -81,13 +95,11 @@ Crypto currency (and related topics) notes.
         network - meaning interacting with contracts, performing transactions,
         transfering funds, etc. 
 
-
 ### Fun Facts
 * supply is limited(!)
     * there will be only 21 million bitcoins supplied (by desgin)
     * approx. 12.5 bitcoins per blocks until 2020, then halving every four years
       until no more are distributed, which should be between years 2110-40
-
 
 ## Relevant Papers
 * [Bitcoin: A Peer-to-Peer Electronic Cash System](https://bitcoin.org/bitcoin.pdf)
@@ -99,12 +111,15 @@ Crypto currency (and related topics) notes.
 * [Differences between coins & tokens](https://masterthecrypto.com/differences-between-cryptocurrency-coins-and-tokens/)
 * [CNBC Explains How To Mine Bitcoins On Your Own](https://www.cnbc.com/2014/01/23/cnbc-explains-how-to-mine-bitcoins-on-your-own.html)
 * [What is a Decentralized Application](https://www.coindesk.com/information/what-is-a-decentralized-application-dapp/)
+* [The General Theory of Decentralized Applications, Dapps](https://github.com/DavidJohnstonCEO/DecentralizedApplications)
 
 ### Links & References
 * [CoinMarketCap](https://coinmarketcap.com/coins/)
 * [What the f*ck is Ethereum?](http://whatthefuckisethereum.com)
 
-#### Exchanges
+#### Exchanges && Apps
 * coinbase.com
 * bittrex.com
 * binance.com
+* blockfolio - Andriod/iOS coin portfolio app
+
