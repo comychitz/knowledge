@@ -13,6 +13,10 @@ Crypto currency (and related topics) notes.
     protecting against the double spending problemn. 
 * Coins are based on digital signatures, which like a person's signature, offers
     non-repudiation, authentication, and integrity. 
+* supply is limited(!)
+    * there will be only 21 million bitcoins supplied (by desgin)
+    * approx. 12.5 bitcoins per blocks until 2020, then halving every four years
+      until no more are distributed, which should be between years 2110-40
 * The Blockchain 
     * a chain of records (blocks) secured using cryptographic functions to
       serve a public (or private) [distributed ledger](https://en.wikipedia.org/wiki/Distributed_ledger)
@@ -69,9 +73,20 @@ Crypto currency (and related topics) notes.
 * Decentralized Applications (dapps)
     * software applications can be thought of as three classes:
       1) centralized 2) decentralied 3) distributed
-    * [The General Theory of Decentralized Applications, Dapps](https://github.com/DavidJohnstonCEO/DecentralizedApplications)
-
-### Terminology & Related Topics
+    * 3 types of dapps:
+        * Type I decentralized applications have their own block chain. Bitcoin
+        is the most famous example of a type I decentralized application but
+        Litecoin and other “alt-coins” are of the same type.
+        * Type II decentralized applications use the block chain of a type I
+        decentralized application. Type II decentralized applications are
+        protocols and have tokens that are necessary for their function. The
+        Omni Protocol is an example of a type II decentralized application.
+        * Type III decentralized applications use the protocol of a type II
+        decentralized application. Type III decentralized applications are
+        protocols and have tokens that are necessary for their function. For
+        example the SAFE Network that uses the Omni Protocol to issue
+        ‘safecoins’ that can be used to acquire distributed file storage is
+        an example of a type III decentralized application.
 * coins vs altcoins vs tokens
     * altcoins - general term for cryptocurrencies, both those that were
       Bitcoin-Derived blockchains (litecoin, namecoin) or have their own native 
@@ -84,7 +99,16 @@ Crypto currency (and related topics) notes.
       altcoins are separate currencies with their own separate blockchain while
       tokens operate on top of a blockchain that facilitates the creation of
       decentralized applications.
+    * The purpose of a token is to allow access to a computer application. For
+        example, an individual must own a number of bitcoins in order to be able
+        to perform any transaction on the Bitcoin network. Tokens in Dapps do
+        not represent any underlying asset, they do not give rights to a
+        dividend, and no equity is represented through them. Although the value
+        of a Dapp token may increase or decrease over time, tokens are not
+        equity securities.
     * ICOs - Initial Coin Offerings are actually token offerings to the public
+
+### Terminology & Related Topics
 * white paper vs yellow paper
     * white paper is higher level, less techy
     * yellow paper is like a research level paper, has all the details, etc.
@@ -95,16 +119,13 @@ Crypto currency (and related topics) notes.
         network - meaning interacting with contracts, performing transactions,
         transfering funds, etc. 
 
-### Fun Facts
-* supply is limited(!)
-    * there will be only 21 million bitcoins supplied (by desgin)
-    * approx. 12.5 bitcoins per blocks until 2020, then halving every four years
-      until no more are distributed, which should be between years 2110-40
-
 ## Relevant Papers
 * [Bitcoin: A Peer-to-Peer Electronic Cash System](https://bitcoin.org/bitcoin.pdf)
 * [Ethereum Yellow Paper](http://yellowpaper.io)
 * [Ethereum White Paper](https://github.com/ethereum/wiki/wiki/White-Paper#applications)
+* [Ripple - Solution Overview](https://ripple.com/files/ripple_solutions_guide.pdf)
+* [The Ripple Protocol Consensus Algorithm](https://ripple.com/files/ripple_consensus_whitepaper.pdf) 
+* [The Stellar Consensus Protocol](https://www.stellar.org/papers/stellar-consensus-protocol.pdf)
 
 ## Good Reads
 * [Hype Cycle for Emerging Technologies - 2017](https://www.forbes.com/sites/louiscolumbus/2017/08/15/gartners-hype-cycle-for-emerging-technologies-2017-adds-5g-and-deep-learning-for-first-time/#c3bf5c504307)
