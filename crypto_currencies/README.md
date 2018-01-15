@@ -123,6 +123,7 @@ Crypto currency (and related topics) notes.
 * [Bitcoin: A Peer-to-Peer Electronic Cash System](https://bitcoin.org/bitcoin.pdf)
 * [Ethereum Yellow Paper](http://yellowpaper.io)
 * [Ethereum White Paper](https://github.com/ethereum/wiki/wiki/White-Paper#applications)
+* [Decentralization in Bitcoin & Ethereum Network](https://arxiv.org/pdf/1801.03998.pdf)
 * [Ripple - Solution Overview](https://ripple.com/files/ripple_solutions_guide.pdf)
 * [The Ripple Protocol Consensus Algorithm](https://ripple.com/files/ripple_consensus_whitepaper.pdf) 
 * [The Stellar Consensus Protocol](https://www.stellar.org/papers/stellar-consensus-protocol.pdf)
