@@ -37,6 +37,12 @@ Crypto currency (and related topics) notes.
       called a block" [wikiArticle](https://en.wikipedia.org/wiki/Bitcoin#Mining)
     * "To be accepted by the rest of the network, a new block must contain a
       so-called proof-of-work."
+    * In the Bitcoin and Ethereum protocols, users submit transactions for
+      miners to sequence into blocks. Better decentralization of miners means
+      higher resistance against censorship of individual transactions.
+    * Both Bitcoin and Ethereum also contain full nodes, which serve two
+      critical roles: (1) to relay blocks and transactions to miners (2) and
+      to answer queries for end users about the state of the blockchain.
 * Proof-of-Work system
     * wikipedia: is an economic measure to deter denial of service attacks and
       other service abuses such as spam on a network by requiring some work from
@@ -95,6 +101,9 @@ Crypto currency (and related topics) notes.
     * tokens - Tokens are a representation of a particular asset or utility,
       that usually resides on top of another blockchain
         * tokens are built using smart contracts
+        * tokens allow access to a specific application - think of it similar to
+          a token you'd recieve at an arcade, which can only be used to access
+          games (apps) the arcade (network) offers
     * The main difference between altcoins and tokens is in their structure;
       altcoins are separate currencies with their own separate blockchain while
       tokens operate on top of a blockchain that facilitates the creation of
@@ -138,6 +147,9 @@ Crypto currency (and related topics) notes.
 ### Links & References
 * [CoinMarketCap](https://coinmarketcap.com/coins/)
 * [What the f*ck is Ethereum?](http://whatthefuckisethereum.com)
+
+### Tools & Resources
+* [Getting Starting with Algorithmic Crypto Trading](https://jaynagpaul.com/algorithmic-crypto-trading)
 
 #### Exchanges && Apps
 * coinbase.com
