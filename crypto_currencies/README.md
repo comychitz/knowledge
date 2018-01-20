@@ -138,6 +138,7 @@ Crypto currency (and related topics) notes.
 * [The Stellar Consensus Protocol](https://www.stellar.org/papers/stellar-consensus-protocol.pdf)
 
 ## Good Reads
+* [Blockchains From a Distributed Computing Perspective](http://cs.brown.edu/courses/csci2952-a/papers/perspective.pdf)
 * [Hype Cycle for Emerging Technologies - 2017](https://www.forbes.com/sites/louiscolumbus/2017/08/15/gartners-hype-cycle-for-emerging-technologies-2017-adds-5g-and-deep-learning-for-first-time/#c3bf5c504307)
 * [Differences between coins & tokens](https://masterthecrypto.com/differences-between-cryptocurrency-coins-and-tokens/)
 * [CNBC Explains How To Mine Bitcoins On Your Own](https://www.cnbc.com/2014/01/23/cnbc-explains-how-to-mine-bitcoins-on-your-own.html)
