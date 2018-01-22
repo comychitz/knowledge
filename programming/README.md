@@ -55,12 +55,27 @@
     argument passed to a function does not closely match the expected type. On the
     other hand, a weakly typed language may produce unpredictable results or may
     perform implicit type conversion.
+* [opaque pointer](https://en.wikipedia.org/wiki/Opaque_pointer)
+  * a special case of an opaque data type, a dataype decalred to be a pointer 
+    to a record or data structure of some unspecified type
+  * "Opaque pointers are a way to hide the implementation details of an
+    interface from ordinary clients, so that the implementation may be changed
+    without the need to recompile the modules using it. This benefits the
+    programmer as well since a simple interface can be created, and most
+    details can be hidden in another file.[1] This is important for providing
+    binary code compatibility through different versions of a shared library,
+    for example."
+  * "This technique is described in Design Patterns as the Bridge pattern. It is
+    sometimes referred to as "handle classes",[2] the "Pimpl idiom" (for
+    "pointer to implementation idiom"),[3] "Compiler firewall idiom",[4]
+    "d-pointer" or "Cheshire Cat", especially among the C++ community."
 * distributed systems:
     - a collection of independent computers that appears to its users as a single cohenerent system
 
 ## design patterns
 * observer (aka listener) pattern
   * the subject maintains a list of observers and notifies them (via calling one their methods) of state changes. this is common in event-driven programming.
+  * push-based vs pull-based observers
 * strategy pattern [wikiArticle](https://en.wikipedia.org/wiki/Strategy_pattern)
   * a behavorial pattern that enables an algorithm's behavior to be selected at runtime
 * template method pattern [wikiArticle](https://en.wikipedia.org/wiki/Template_method_pattern)
@@ -69,6 +84,16 @@
   * decouple an abtraction from its implementation
 * decorator pattern [wikiArticle](https://en.wikipedia.org/wiki/Decorator_pattern)
   * A decorator makes it possible to add or alter behavior of an interface at run-time 
+* proxy pattern
+  * provides a one-to-one forwarding interface to another class: calling FunctionA() in the proxy class will cause it to call FunctionA() in the original class.
+  * is useful to modify the behavior of the original class while still preserving its interface. 
+  * this is particularlly useful if the original class in a third-party library and hence not easily modifiable directly.
+* adapter pattern
+  * translates the interface for one class into a compatible but different interface
+* facade pattern
+  * defines a higher-level interface that makes the underlying subsystem easier to use
+  * is a way to structure your API into subsystems to reduce complexity and in turn make the API easier to use
+  * think of it as an example of a multicomponent wrapper
 
 ## interesting problems
 * [the travelling salesman problem](https://en.wikipedia.org/wiki/Travelling_salesman_problem)
@@ -78,14 +103,14 @@
     * the producer must wait for the consumer to consume something if the queue is full
 
 ## software development
-* the waterfall model
-  * analysis of specification
-  * program design
-  * implementation
-  * testing & debugging
-  * maintenance
 * [agile](https://en.wikipedia.org/wiki/Agile_software_development)
   * [agile manifesto](http://agilemanifesto.org)
+    * "We are uncovering better ways of developing software by doing it and helping others do it. Through this work we have come to value:
+          Individuals and interactions over process and tools
+          Working software over comprehensive documentation
+          Customer collaboration over contract negotiation
+          Repsonding to change over following a plan
+      That is, while there is value in the items on the right, we value the items on the left more."
   * the 12 principles:
     1. Customer satisfaction by early and continuous delivery of valuable software
     2. Welcome changing requirements, even in late development
@@ -99,4 +124,10 @@
     10. Simplicity—the art of maximizing the amount of work not done—is essential
     11. Best architectures, requirements, and designs emerge from self-organizing teams
     12. Regularly, the team reflects on how to become more effective, and adjusts accordingly
+* the waterfall model
+  * analysis of specification
+  * program design
+  * implementation
+  * testing & debugging
+  * maintenance
 

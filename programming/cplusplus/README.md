@@ -1,11 +1,17 @@
 # C++ Notes
 Some of my personal notes on the C++ language - regarding features, coding style, etc. In no way is this a complete set of notes, if anything it barely touches the surface. But hopefully it'll grow to be a great reference.
 
-
 ## References
 * Style notes mostly stolen from the [Google C++ Syle Guide](https://google.github.io/styleguide/cppguide.html). 
 * A Tour of C++ by Bjarne Stroustrup
+* [API Design for C++](http://index-of.es/C++/API%20Design%20for%20Cpp.pdf) - by Martin Reddy
 
+## C++ API Notes
+* Pimpl Idiom
+  * Use the pimpl idiom to keep implementation details out of your public header files
+  * pimple relies on the fact that it's possible to define a data member of a C++ class that is a pointer to a forward declared type.
+  * Advantages:
+    * Information hiding, reduced coupling, faster compiles, greater binary compatibility & lazy allocation
 
 ## Style Notes
 * optimize for the reader not the writer!
