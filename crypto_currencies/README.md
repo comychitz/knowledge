@@ -156,5 +156,7 @@ Crypto currency (and related topics) notes.
 * coinbase.com
 * bittrex.com
 * binance.com
+* kucoin.com
+* robinhood
 * blockfolio - Andriod/iOS coin portfolio app
 
