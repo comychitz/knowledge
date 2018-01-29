@@ -14,6 +14,12 @@
   * Dependency Inversion - program toward abstractions, not implementations (because they vary, abstractions should not)
 
 ## general notes
+* memory barrier
+  * is a type of barrier instruction that causes a CPI or compiler to enforce
+      ordering constraint on memory operations.
+  * Typically, this means that operations issued prior to the barrier are
+      guaranteed to be performed before operatiosn issued after the barrier
+  * https://en.wikipedia.org/wiki/Memory_barrier
 * toolchain
   * general definition: a set of tools, usually used sequentially (hence, a
     chain), to perform some complex software task. A simple example is a
