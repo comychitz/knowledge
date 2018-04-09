@@ -14,6 +14,10 @@
   * Dependency Inversion - program toward abstractions, not implementations (because they vary, abstractions should not)
 
 ## general notes
+* syntax vs semantics
+    * syntax is the grammar
+    * semantics is the meaning
+    * a statement can be syntatically valid, but the semantics can not be.
 * memory barrier
   * is a type of barrier instruction that causes a CPI or compiler to enforce
       ordering constraint on memory operations.
