@@ -105,6 +105,26 @@
   * is a way to structure your API into subsystems to reduce complexity and in turn make the API easier to use
   * think of it as an example of a multicomponent wrapper
 
+## algorithms 
+* complete search
+    * general method to solve almost *any* algorithm problem
+    * generate all possible solutions to the problem using brute force, and then
+        select the best solution or count the number of solutions, depending on
+        the problem.
+* greedy algorithm 
+    * constructs a solution to the problem by always making a choice that looks
+        the best at the moment.
+* dynamic programming
+    * combines the correctness of complete search and the efficiency of greedy
+        algorithms. 
+    * it can be applied if the problem can be divded into overlapping problems
+        that can be solved independently.
+    * there are two uses for dynamic programming
+        * finding an optimal solution
+        * counting the number of solutions
+* (reference: [Competetive Programmer's Handbook](https://cses.fi/book.pdf))
+
+
 ## interesting problems
 * [the travelling salesman problem](https://en.wikipedia.org/wiki/Travelling_salesman_problem)
 * [the produce-consumer problem](https://en.wikipedia.org/wiki/Producer–consumer_problem)
