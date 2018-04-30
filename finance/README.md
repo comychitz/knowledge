@@ -88,18 +88,18 @@ interesting I made sure to write down.
     * Charles Schwab
     * Sir John Templeton
 * resources
-    * findanadvisor.napfa.org
-    * strongholdfinancial.com
-    * lifetimeincome.com
-    * americasebest401k.com/401k-fee-checker
-    * economicprinciples.org
+    * [findanadvisor.napfa.org]()
+    * [strongholdfinancial.com]()
+    * [lifetimeincome.com]()
+    * [americasebest401k.com/401k-fee-checker]()
+    * [economicprinciples.org]()
 * living trust vs will
     * using a living trust will avoid probate - a costly and lengthy procedure
         of allowing the courts to sort through your assets (and make everything
         public record). 
     * template document for a living trust can be found here
-        * getyourshittogether.org
+        * [getyourshittogether.org]()
     * can set up one for as little as $250, checkout LegalZoom
-        * legalzoom.com/living-trusts/living-trusts-overview.html
+        * [legalzoom.com/living-trusts/living-trusts-overview.html]()
 
 
