@@ -81,6 +81,15 @@
     "d-pointer" or "Cheshire Cat", especially among the C++ community."
 * distributed systems:
     - a collection of independent computers that appears to its users as a single cohenerent system
+* declaration vs definition
+    * a declaration introduces an identifier and describes its type, be it a
+        type, object, or function.
+        * a declaration is what the compiler needs
+    * a definition actually instantiates/implements the identifier.
+        * definition is what the linker needs
+    * in C++, the standard considers `struct x;` to be a declaration and `stuct
+        x {};` to be a definition.
+    * [stackoverflow question](https://stackoverflow.com/questions/1410563/what-is-the-difference-between-a-definition-and-a-declaration?utm_medium=organic&utm_source=google_rich_qa&utm_campaign=google_rich_qa)
 
 ## design patterns
 * observer (aka listener) pattern
