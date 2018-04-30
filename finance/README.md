@@ -94,7 +94,7 @@ interesting I made sure to write down.
     * americasebest401k.com/401k-fee-checker
     * economicprinciples.org
 * living trust vs will
-    * using a living trust will avoid probate - a costly and liength procedure
+    * using a living trust will avoid probate - a costly and lengthy procedure
         of allowing the courts to sort through your assets (and make everything
         public record). 
     * template document for a living trust can be found here
