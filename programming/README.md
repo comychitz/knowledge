@@ -91,6 +91,9 @@
         x {};` to be a definition.
     * [stackoverflow question](https://stackoverflow.com/questions/1410563/what-is-the-difference-between-a-definition-and-a-declaration?utm_medium=organic&utm_source=google_rich_qa&utm_campaign=google_rich_qa)
 
+## type systems
+* [Types and Programming Languages - B.Pierce - MIT Press](https://www.asc.ohio-state.edu/pollard.4/type/books/pierce-tpl.pdf)
+
 ## design patterns
 * observer (aka listener) pattern
   * the subject maintains a list of observers and notifies them (via calling one their methods) of state changes. this is common in event-driven programming.
