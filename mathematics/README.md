@@ -2,7 +2,7 @@
 *"the Queen of the Sciences" - Carl Friedrich Gauss*
 
 ## why log?
-Why is the *logarthim* function so important and frequently used in engineering?
+Why is the *logarithm* function so important and frequently used in engineering?
 Well, there are many answers to that question, but let's try and breakdown why
 *log* is so powerful and also show some practical applications of it.
 
