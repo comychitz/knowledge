@@ -90,6 +90,12 @@
     * in C++, the standard considers `struct x;` to be a declaration and `stuct
         x {};` to be a definition.
     * [stackoverflow question](https://stackoverflow.com/questions/1410563/what-is-the-difference-between-a-definition-and-a-declaration?utm_medium=organic&utm_source=google_rich_qa&utm_campaign=google_rich_qa)
+* closures
+    * [WikiArticle](https://en.wikipedia.org/wiki/Closure_(computer_programming))
+    * a closure is a record storing a function together with an environment
+    * "a technique for implementing lexically scoped name binding in a language
+        with first-class functions."
+
 
 ## type systems
 * [Types and Programming Languages - B.Pierce - MIT Press](https://www.asc.ohio-state.edu/pollard.4/type/books/pierce-tpl.pdf)
