@@ -28,6 +28,5 @@ Some notes about memory types, management, hardware, etc.
     * one capacitor & one transistor per bit (high density)
         ![memorydiagram](https://github.com/comychitz/knowledge/blob/master/memory/img/bAmyiEdPAVQw.png)
 
-
 # Resources/Good Reads
 * [Anatomy of a Program in Memory](https://manybutfinite.com/post/anatomy-of-a-program-in-memory/)
