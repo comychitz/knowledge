@@ -96,7 +96,6 @@
     * "a technique for implementing lexically scoped name binding in a language
         with first-class functions."
 
-
 ## type systems
 * [Types and Programming Languages - B.Pierce - MIT Press](https://www.asc.ohio-state.edu/pollard.4/type/books/pierce-tpl.pdf)
 
