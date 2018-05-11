@@ -1,5 +1,5 @@
 # cloud computing
-some notes about computing in the cloud.
+some notes about computing in the *cloud*.
 
 ## general notes
 * the NIST's definition of cloud computing identifies 5 characteristics:
@@ -10,8 +10,19 @@ some notes about computing in the cloud.
     * Measured service
 * service-oriented architecture
     * Infrastructure as a Service (IaaS)
-    * Platform as a Service (PaaS)
+        * provides virtual hardware from a provider with adjustable
+            configuration/scalibility
+        * example, Amazon's EC2
     * Software as a Service (SaaS)
+        * "on-demand software" that is licensed on a subscription basis and is
+            centralized
+        * has a very lightwight client, usually interface through one's browser
+    * Platform as a Service (PaaS)
+        * in between IaaS and Saas
+        * with PaaS, server management is hanlded by the provider wherase in
+            IaaS the user still needs to manage their server
+    * Database as a Service (DaaS)
+        * example, Amazon's RDS
 
 ## aws
 * amazon web services
@@ -30,6 +41,17 @@ some notes about computing in the cloud.
     * each region is made up of two or more availability zones
     * edge locations
 * AWS marketplace
+* hypervisor
+    * aws uses a hypervisor running on the host machines to allow multiple operating
+        systems to run on the same computer
+    * hypervisor manages virtualization at the hardware level while containers
+        manage virtualization at the operating system level
+    * two main types:
+        * native/bare metal hypervisor - hypervisor runs directly on
+            hardware
+        * hosted hypervisor - hypervisor runs on top of an OS
+    * [wikiArticle](https://en.wikipedia.org/wiki/Hypervisor)
+    * [KVM - Kernel-based Virtual Machine](https://en.wikipedia.org/wiki/Kernel-based_Virtual_Machine)
 
 ### ec2
 * elastic compute cloud
@@ -60,7 +82,6 @@ some notes about computing in the cloud.
 * stored data is automatically replicated within its AZ
 * make sure to keep in mind the kind of ebs type you choose matches the ec2
     instance you run. 
-
 
 ## references & videos
 * [wikiArticle - Cloud Computing](https://en.wikipedia.org/wiki/Cloud_computing)
