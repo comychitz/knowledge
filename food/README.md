@@ -21,6 +21,16 @@ See this page -> [wine](https://github.com/comychitz/knowledge/blob/master/food/
 ## Beer
 See this page -> [beer](https://github.com/comychitz/knowledge/blob/master/food/beer.md)
 
+# Sous Vide
+* Salmon
+    * 125-130 F for 45-75 minutes
+* Chicken
+    * 160 F for 1-4 hours
+* Russet Potatoes
+    * 185-190F for 1 hour (can slice prior to sealing)
+
+*Ziploc bags are safe in general (for temperatues less than 190F)*
+
 # Recipes
 ### Potato Casserole
 | Ingredient | Amount | Note |
