@@ -13,6 +13,9 @@
   * Interface Segregation - many specific interfaces is better than one do-it-all interface
   * Dependency Inversion - program toward abstractions, not implementations (because they vary, abstractions should not)
 
+## good reads
+* [The Twelve Factor App](https://12factor.net)
+
 ## general notes
 * syntax vs semantics
     * syntax is the grammar
