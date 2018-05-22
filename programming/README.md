@@ -1,5 +1,6 @@
 # programming essentials
 ## remember to always...
+* make the design apparent in the code(!) [see this for more](http://www.pathsensitive.com/2018/01/the-design-of-software-is-thing-apart.html)
 * optimize for the reader, not the writer(!)
 * be consistent(!)
 * keep it simple, stupid(!)
