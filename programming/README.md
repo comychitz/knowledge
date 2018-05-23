@@ -15,6 +15,7 @@
   * Dependency Inversion - program toward abstractions, not implementations (because they vary, abstractions should not)
 
 ## good reads
+* [The Programmer Competency Matrix](http://sijinjoseph.com/programmer-competency-matrix/)
 * [The Twelve Factor App](https://12factor.net)
 
 ## general notes
