@@ -52,15 +52,72 @@ integrate deep work into his/her life.
             neurological reasons maximizes the meaning and satisftaction you'll
             associate with your working life.
     * A Psychological Argument for Depth
-        * the best moments usually occur when a person's body or mind is
+        * The best moments usually occur when a person's body or mind is
             strecthed to its limits in a voluntary effort to accomplish
-            something difficult and worthwhile 
+            something difficult and worthwhile. Csikszentmihalyi called this
+            *flow*
         * Human beings are at their best when immersed deeply in something
             challenging.
-
+        * Deep work is an activity well suited to generate a flow state
+    * A Philosophical Argument for Depth
+        * Any pursuit - be it physcial or cognitive - that supports high levels
+            of skill can also generate a sense of sacredness.
+        * The advice to "follow your passion*, for example, is motivated by the
+            (flawed) idea that what matters most for your career satisfaction is
+            the specifics of the job you choose. 
+        * You don't need a rarified job; you need instead a rarified approach to
+            your work.
 ### Part 2: The Rules
 * Rule #1: Work Deeply
-    * 
+    * Decide on Your Depth Philosophy
+        * The Monastic Philosophy of Deep Work Scheduling
+            * Maximize deep efforts by elimnating or radically minimizing
+                shallow obligations.
+            * Cannot apply to all job types
+        * The Bimodal Philosophy of Deep Work Scheduling
+            * Divide your time, dedicating some cleary defined stretches to deep
+                pursuits and leaving the rest open to everything else.
+            * The minimum unit of time for deep work in this philosophy tends to
+                be at least one full day. To put aside a few hours in the
+                morning, for example, is too short.
+        * The Rhythmic Philosophy of Deep Work Scheduling
+            * This philosophy argues that the easiset way to consitently start
+                deep work sessions is to transform them into a simple regular
+                habit. 
+            * The goal, in other words, is to generate a rhythm for this work
+                that removes the need for you to invest energy in deciding if
+                and whn you're going to go deep.
+            * For example, Jerry Seinfeld's *chain method*.
+        * The Journalistic Philosphy of Deep Work Scheduling
+            * Fit deep work wherever you can into your schedule.
+            * Not recommended for the deep work novice.
+    * Ritualize
+        * An effective ritual must address the following:
+            * Where you'll work and for how long
+            * How you'll work once you start to work
+            * How you'll support your work
+    * Make a Grand Gesture
+    * Don't Work Alone
+        * The theory of serendipitous creativity
+        * hub-and-spoke architecture
+            * serendipitous encounter + isolated deep thinking
+    * Execute Like a Business
+        * Dispipline #1: Focus on the Wildly Important
+        * Discipline #2: Act on the Lead Measures
+            * lag vs lead measures
+                * lag measures describe the thing you're ultimately trying to
+                    improve
+                * lead measures measures the new behaviors that will drive
+                    success on the lag measures
+            * for deep work the lead measure is time spent in a state of deep
+                work dedicated toward your wildly important goal
+        * Discipline #3: Keep a Compelling Scoreboard
+        * Discipline #4: Create a Cadence of Accountibility
+    * Be Lazy
+        * Reason #1: Downtime Aids Insights
+        * Reason #2: Downtime Helps Recharge the Energy Needed to Work Deeply
+        * Reason #3: The Work That Evening Downtime Replaces Is Usually Not That
+            Important
 * Rule #2: Embrace Boredom
 * Rule #3: Quit Social Media
 * Rule #4: Drain the Shallows
