@@ -119,5 +119,55 @@ integrate deep work into his/her life.
         * Reason #3: The Work That Evening Downtime Replaces Is Usually Not That
             Important
 * Rule #2: Embrace Boredom
+    * Don't Take Breaks from Distraction. Instead Take Breaks from Focus.
+        * Internet blocks
+        * Point #1: this strategy works even if your job requires lots of
+            Internet use and/or prompt e-mail replies.
+        * Point #2: regardless of how you schedule your Internet blocks, you
+            must keep the time outside these blocks absolutley free from
+            Internet use.
+        * Point #3: Scheduling Internet use at home as well as work can further
+            improve your concentration training
+    * Work Like Teddy Roosevelt
+        * Roosevelt dashes - working with immense intensity.
+        * Leverage artificial deadlines to help you systematically increase the
+            level you can regularly achieve.
+    * Meditate Productively
+        * Take a period of time in which you're occupied physically but not
+            mentally and focus your attention on a single well-defined
+            professional problem.
+        * The intention of this is not to increase productivity, but rather to
+            improve your ability to think deeply.
+        * Suggestion #1: Be Way of Distractions and Looping
+        * Suggestion #2: Structure Your Deep Thinking
+    * Memorize a Deck of Cards
+        * Associate each card with an object/detail in your house.
 * Rule #3: Quit Social Media
+    * 30 day Experiment
+        * Drop social media cold turkey for 30 days and analyze how it has
+            changed your life.
+    * The Any-Benefit Approach to Network Tool Selection: You'r justified in
+        using a network tool if you can identify any possible benefit to its
+        use, or anything you might possibly miss out on if you don't use it.
+    * The Craftsman Approach To Tool Selection: Identify core factors that
+        determine success and happiness in your professional and personal life.
+        Adopt a tool only if its positive impacts on these factors substantially
+        outweigh its negative impacts.
+    * Apply The Law of the Vital Few to Your Internet Habits
+        * The Law of the Vital Few: In many settings, 80 percent of a given
+            effect is due to just 20 percent of the possible causes.
+    * Don't Use the Internet to Entertain Yourself
 * Rule #4: Drain the Shallows
+    * Minimizing the shallow work will increase your deep work time.
+    * Schedule Every Minute of Your Day
+        * To promote thoughtful scheduling, not rigid/forceful schedule
+        * Encourage spontaneity; if you're on a roll with something keep going
+    * Quantify the Depth of Every Activity
+    * Ask your Boss for a Shallow Work Budget
+    * Finish Your Work by Five Thirty
+    * Become Hard to Reach (via email)
+        * Tip #1: Make People Who Send You E-mail Do More Work
+        * Tip #2: Do More Work When You Send or Reply to E-mails
+        * Tip #3: Don't Respond
+* Conclusion
+    * "I'll live the focused life, because it's the best kind there is." - Winifred Gallagher
