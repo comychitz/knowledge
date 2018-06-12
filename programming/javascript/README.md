@@ -24,6 +24,7 @@ Some notes about the "language of the Internet".
 ## references
 * [Wikipedia Article - Javascript](https://en.wikipedia.org/wiki/JavaScript)
 * [A re-interoduction to JavaScript - Mozilla](https://developer.mozilla.org/en-US/docs/Web/JavaScript/A_re-introduction_to_JavaScript) 
+* [An Introduction to Functional Programming - Mary Rose Cook](https://codewords.recurse.com/issues/one/an-introduction-to-functional-programming)
 
 ## videos & examples
 ### Example 1 - Build a Bookmarker Appliction in Javascript
@@ -34,6 +35,12 @@ builds javascript to interact with the user and use HTML local storage APIs
 (which is part of the HTML basic language) to store some basic data.
 * [Youtube - Learn JavaScript By Building A Bookmarker Application](https://www.youtube.com/watch?v=DIVfDZZeGxM)
 
+### videos
+* [Youtube - Functional Programming with Javascript](https://www.youtube.com/watch?v=e-5obm1G_FY)
+
+# Document Object model
+* An API to interact with the structure of a webpage (ex. HTML) or document (ex. XML)
+* [Wikipedia - Document Object Model](https://en.wikipedia.org/wiki/Document_Object_Model)
+
 # HTML
 * [Wikipedia - HTML](https://en.wikipedia.org/wiki/HTML)
-* [Wikipedia - Document Object Model](https://en.wikipedia.org/wiki/Document_Object_Model)
