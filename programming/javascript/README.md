@@ -25,6 +25,7 @@ Some notes about the "language of the Internet".
 * [Wikipedia Article - Javascript](https://en.wikipedia.org/wiki/JavaScript)
 * [A re-interoduction to JavaScript - Mozilla](https://developer.mozilla.org/en-US/docs/Web/JavaScript/A_re-introduction_to_JavaScript) 
 * [An Introduction to Functional Programming - Mary Rose Cook](https://codewords.recurse.com/issues/one/an-introduction-to-functional-programming)
+* [Mastering the JavaScript Interview](https://medium.com/javascript-scene/master-the-javascript-interview-what-is-functional-programming-7f218c68b3a0)
 
 ## videos & examples
 ### Example 1 - Build a Bookmarker Appliction in Javascript
