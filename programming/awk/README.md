@@ -7,6 +7,7 @@ about *awk*.
 ## resources
 * [WikiArticle](https://en.wikipedia.org/wiki/AWK)
 * [Why you should know just a little Awk](https://gregable.com/2010/09/why-you-should-know-just-little-awk.html)
+* [The Awk Programming Language (1988) - PDF](https://ia802309.us.archive.org/25/items/pdfy-MgN0H1joIoDVoIC7/The_AWK_Programming_Language.pdf)
 
 ## general notes
 * awk stands for Aho, Weinberger, Kernighan
