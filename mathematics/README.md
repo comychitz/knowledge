@@ -26,3 +26,23 @@ helpful when viewing the data as it allows readers to see trends that aren't
 visible when viewing on a linear scale.
 
 [[Logarithm (Wikipedia)](https://en.wikipedia.org/wiki/Logarithm)]
+
+## permutations & combinations
+"A combination lock should really be called a permutation lock" :) 
+
+* permutations 
+    * are for lists (order matters)
+    * possibilities of picking k out of n total items:
+        `P(n,k) = n! / (n-k)!`
+* combinations 
+    * are for groups (order doesn't matter)
+    `C(n,k) = P(n,k) / k! = n! / (n-k)!k!`
+
+* factorial
+    * most commonly used to compute the total amount of ways to arrand n
+        distinct objects. `n!`
+    * often appears in the denominator of a formala when ordering is to be
+        ignored
+    * 0! = 1.
+        * there is only one permutation of zero objects
+
