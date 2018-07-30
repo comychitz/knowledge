@@ -43,6 +43,8 @@ visible when viewing on a linear scale.
 * combinations 
     * are for groups (order doesn't matter)
     `C(n,k) = P(n,k) / k! = n! / (n-k)!k!`
+    
+* *Combinations is always less than permutations* 
 
 * factorial
     * most commonly used to compute the total amount of ways to arrand n
