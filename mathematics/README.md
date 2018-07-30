@@ -34,6 +34,12 @@ visible when viewing on a linear scale.
     * are for lists (order matters)
     * possibilities of picking k out of n total items:
         `P(n,k) = n! / (n-k)!`
+    * in programming, can solve permutation of a string by the following
+        algorithm:
+        * use recursion(!)
+        * base case is when string is empty or size 1
+        * then, insert the outter char in every spot of a permutation of the
+            substring
 * combinations 
     * are for groups (order doesn't matter)
     `C(n,k) = P(n,k) / k! = n! / (n-k)!k!`
