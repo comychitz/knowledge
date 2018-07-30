@@ -14,6 +14,9 @@
   * Interface Segregation - many specific interfaces is better than one do-it-all interface
   * Dependency Inversion - program toward abstractions, not implementations (because they vary, abstractions should not)
 
+## fundamentals
+For programming fundamentals see this page --> [fundamentals](https://github.com/comychitz/knowledge/tree/master/programming/fundamentals)
+
 ## good reads
 * [The Programmer Competency Matrix](http://sijinjoseph.com/programmer-competency-matrix/)
 * [The Twelve Factor App](https://12factor.net)
