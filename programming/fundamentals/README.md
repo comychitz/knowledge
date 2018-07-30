@@ -24,6 +24,10 @@ Practice coding data structures and algorithms in C++.
 
 <small><i><a href='http://ecotrust-canada.github.io/markdown-toc/'>Table of contents generated with markdown-toc</a></i></small>
 
+## practice 
+* [HackerRank](https://www.hackerrank.com/dashboard)
+* Cracking the Coding Interview - G. McDowell
+
 ## to learn/review
 * MapReduce
 * database & sql basics
