@@ -30,11 +30,15 @@ Practice coding data structures and algorithms in C++.
 
 ## to learn/review
 * MapReduce
-* big O analysis
+* algorithms review
+    * designing algorithms
+    * complexity analysis 
 * mathematics
     * prime numbers
+    * probability
 * database & sql basics
     * db indexes
+* system design
 
 ## algorithms overview
 * divide and conquer
