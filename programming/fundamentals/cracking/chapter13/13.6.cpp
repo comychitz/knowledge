@@ -5,7 +5,7 @@
 /**
  * Question 
  *
- * Why does a destructor in bas class need to be declared virtual?
+ * Why does a destructor in base class need to be declared virtual?
  */
 
 

@@ -31,6 +31,8 @@ Practice coding data structures and algorithms in C++.
 ## to learn/review
 * MapReduce
 * database & sql basics
+* smart pointers (reference pointers)
+* big O analysis
 
 ## algorithms overview
 * divide and conquer
