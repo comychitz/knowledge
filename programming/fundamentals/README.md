@@ -81,6 +81,27 @@ Practice coding data structures and algorithms in C++.
            return num & mask;
         ```
 
+## tips and tricks
+### swapping two integers
+* can swap two integers without temporary variable in the following ways:
+```c++
+int x = 10, y = 5;
+x = x + y; // 15
+y = x - y; // 10
+x = x - y; // 5
+// shorthand could be x=(x+y)-(y=x);
+```
+*can apply same method using multiply and divide*
+* using xor
+    * this method works because the result of xor-ing two numbers has the bits
+        set for wherever the bits between the two numbers are unequal
+```c++
+int x = 10, y = 5;
+x = x ^ y;
+y = x ^ y;
+x = x ^ y;
+```
+
 ## o notation
 Big O notation, also called asymptotic notation, is a mathematical notation that
 describes the limiting behavior of a function. It is used to analyze algorithms
