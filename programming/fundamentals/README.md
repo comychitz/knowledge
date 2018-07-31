@@ -30,9 +30,11 @@ Practice coding data structures and algorithms in C++.
 
 ## to learn/review
 * MapReduce
-* database & sql basics
-* smart pointers (reference pointers)
 * big O analysis
+* mathematics
+    * prime numbers
+* database & sql basics
+    * db indexes
 
 ## algorithms overview
 * divide and conquer
@@ -386,6 +388,20 @@ Common problems solved using dynamic programming
         * circular wait: each proces must be waiting for a resource which is
             being held by another process, which in turn is waiting for the
             first process to release the resource.
+
+
+# hard problems 
+[A short guide to hard problems](https://www.quantamagazine.org/a-short-guide-to-hard-problems-20180716/)
+
+| Label | Name | Description |
+|---|---|---|
+| P | Polynomial Time | Anything that a classic computer can solve in n^c time |
+| BPP | Bounded-error Probabalistic Polynomial Time | Problems that can be quickly solved by algorithms that include a bit of randomness |
+| BQP | Bounded-error Quantum Polynomial Time | All problems that are easy for a quantum computer to solve |
+| NP | Non-deterministic Polynomail Time | A hard problem that can only be verified in polynomial time, no good solution exists yet |
+| PH | Polynomial Heirarchy | A generalization of NP; all problems of NP when adding more complexity |
+| PSPACE | Polynomial Space | Problems that can be solved with reasonable amount of memory |
+| EXPTIME | Exponential Time | All problems that can be solved in an exp. amount of time by a classical computer |
 
 ## References
 * [Tree (Data Structure) - Wikipedia](https://en.wikipedia.org/wiki/Tree_(data_structure))
