@@ -20,6 +20,9 @@ Practice coding data structures and algorithms in C++.
   * [binary search](#binary-search)
 - [sorting](#sorting)
 - [dynamic programming](#dynamic-programming)
+- [threads and locks](#threads-and-locks)
+- [hard problems](#hard-problems)
+- [map reduce](#map-reduce)
 - [References](#references)
 
 <small><i><a href='http://ecotrust-canada.github.io/markdown-toc/'>Table of contents generated with markdown-toc</a></i></small>
@@ -29,16 +32,28 @@ Practice coding data structures and algorithms in C++.
 * Cracking the Coding Interview - G. McDowell
 
 ## to learn/review
-* MapReduce
+* system design
 * algorithms review
     * designing algorithms
     * complexity analysis 
 * mathematics
     * prime numbers
     * probability
+    * number theory
+    * combinatorics
+* networking basics
+    * REST
+    * OSI Model
+    * streaming & up/down-loading
 * database & sql basics
-    * db indexes
-* system design
+    * structured data
+    * normalized vs denormalized
+    * relational (sql) vs noSql
+    * different database types
+    * sql db indexes
+    * sql, noSql, graphql
+* security basics
+    * public key crypto (RSA)
 
 ## algorithms overview
 * divide and conquer
@@ -50,6 +65,15 @@ Practice coding data structures and algorithms in C++.
     * simplify and generalize
     * base case and build
     * data structure brainstorm
+* [top 10 algorithm problems](https://www.geeksforgeeks.org/top-10-algorithms-in-interview-questions/)
+    * graphs
+    * linked lists
+    * dynamic programming
+    * sorting & searching
+    * trees & binary search trees
+    * number theory
+    * bit manipulation
+    * strings & arrays
 
 ## bit manipulation
 * xor operation
@@ -371,7 +395,7 @@ Common problems solved using dynamic programming
 * the knapsack problem
 * egg dropping problem
 
-# threads & locks
+# threads and locks
 * deadlock
     * occurs if and only if all the *Coffman conditions* are tru:
         * mutual exclusion: at least one resource must be held in a
@@ -392,7 +416,9 @@ Common problems solved using dynamic programming
         * circular wait: each proces must be waiting for a resource which is
             being held by another process, which in turn is waiting for the
             first process to release the resource.
-
+* preventing deadlock
+    * prevent one of the mentioned conditions from happening
+    * the most common is to prevent the circular wait condition from occuring
 
 # hard problems 
 [A short guide to hard problems](https://www.quantamagazine.org/a-short-guide-to-hard-problems-20180716/)
@@ -406,6 +432,33 @@ Common problems solved using dynamic programming
 | PH | Polynomial Heirarchy | A generalization of NP; all problems of NP when adding more complexity |
 | PSPACE | Polynomial Space | Problems that can be solved with reasonable amount of memory |
 | EXPTIME | Exponential Time | All problems that can be solved in an exp. amount of time by a classical computer |
+
+# map reduce
+* a programming model for processing big data sets with a parallel, distruted
+    algorithm on a cluster.
+* map reduce systems are a specialization of the split-apply-combine strategy
+* inspired by the map & reduce functions in functional programming, but not used
+    in the same exact way.
+
+## traditional map, filter & reduce
+* map 
+    * a function that applies the same function to all objects of a list and
+        returns the resulting list
+    ```javascript
+    const numbers = [2,4,8,10];
+    const halves = numbers.map(x => x/2);
+    // halves is [1,2,4,5]
+    ```
+* filter
+    * same concept as map, except items that only pass the filter are returned
+        in the resulting list
+* reduce
+    * reduce applies a function against an accumulator and each element in the
+        array (from left to right) to reduce it to a single value
+    ```javascript
+    const total = [0, 1, 2, 3].reduce((sum, value) => sum + value, 1);
+    // total is 7
+    ```
 
 ## References
 * [Tree (Data Structure) - Wikipedia](https://en.wikipedia.org/wiki/Tree_(data_structure))
