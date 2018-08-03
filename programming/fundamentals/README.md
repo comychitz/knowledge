@@ -32,7 +32,6 @@ Practice coding data structures and algorithms in C++.
 * Cracking the Coding Interview - G. McDowell
 
 ## to learn/review
-* system design
 * algorithms review
     * designing algorithms
     * complexity analysis 
@@ -41,10 +40,6 @@ Practice coding data structures and algorithms in C++.
     * probability
     * number theory
     * combinatorics
-* networking basics
-    * REST
-    * OSI Model
-    * streaming & up/down-loading
 * database & sql basics
     * structured data
     * normalized vs denormalized
@@ -54,6 +49,10 @@ Practice coding data structures and algorithms in C++.
     * sql, noSql, graphql
 * security basics
     * public key crypto (RSA)
+* networking basics
+    * REST
+    * OSI Model
+    * streaming & up/down-loading
 
 ## algorithms overview
 * divide and conquer
