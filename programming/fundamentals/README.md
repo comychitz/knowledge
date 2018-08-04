@@ -55,16 +55,77 @@ Practice coding data structures and algorithms in C++.
     * streaming & up/down-loading
 
 ## algorithms overview
-* divide and conquer
-* greedy algorithm
-* dynamic programming
-* five algorithm approaches
+### divide and conquer
+* **divide** the problem into a number of subproblems that are smaller
+    instances of the same problem.
+* **conquer** the subproblems by solving them recursively. If the subproblem
+    sizes are small enough, however, just solve the subproblems in a
+    straightforward manner.
+* **combine** the solutions to the subporblems into the solution for the
+    original problem.
+* running time of divide-and-conquer algorithms can be represented using a
+    *recurrence equation*, or *recurrence*. it often will help to build a
+    recursion tree as well.
+* examples
+    * merge sort
+    * maximum sub-array problem
+
+## greedy algorithms
+
+### dynamic programming
+Dynamic programming is thought to be as the opposite approach that recursion
+takes. Recursion is a top-down approach while dynamic programming is bottom-up.
+Although dynamic programming uses recursion, it often solves a problem by
+calculating all possibilities and then choosing the best one. Along with this,
+*memoization* is used to improve efficiency, by storing values already calculated
+previously.
+DP = recursion + memoization + guessing
+* memoize (remember) + re-use solutions to subproblems that help solve the
+    problem
+* time = # subproblems * time/subproblem
+    * or, more precisely the sum of all subproblems
+    * for fibonacci implemented using dynamic programming, n is the number of
+        subproblems and the time per subproblem is constant (O(1))
+
+The two key attributes of a dynamic programming problem are:
+* optimal substructure
+* overlapping sub-problems
+
+#### references
+* [MIT OpenCourseWare - Dynamic Programming w/Eric Demaine](https://www.youtube.com/watch?v=OQ5jsbhAv_M)
+
+#### memoization
+* memoize - came from the idea of writing down your subproblem solutions on a
+    memopad. to memoize is to write down on memopad, in other words, remember.
+
+#### bottom-up approach
+* exactly same computation as the memoized version
+* performing a topological sort of subproblem dependency DAG
+* can usually
+
+* 7 steps to solve a dynamic programming problem ([DP tutorial](http://blog.refdash.com/dynamic-programming-tutorial-example/))
+    * recognize a DP problem
+    * identify problem variables
+    * clearly express the recurrence relation
+    * identify the base cases
+    * decide if you want to implement it iteratively or recursively
+    * add memoization
+    * determine time complexity
+
+* Common problems solved using dynamic programming
+    * fibonacci number
+    * shortest path problem
+    * the knapsack problem
+    * egg dropping problem
+
+### five algorithm approaches
     * exemplify
     * pattern matching
     * simplify and generalize
     * base case and build
     * data structure brainstorm
-* [top 10 algorithm problems](https://www.geeksforgeeks.org/top-10-algorithms-in-interview-questions/)
+
+### [top 10 algorithm problems](https://www.geeksforgeeks.org/top-10-algorithms-in-interview-questions/)
     * graphs
     * linked lists
     * dynamic programming
@@ -142,6 +203,16 @@ is referred to as the *order of the function*.
 The precise use of asymptotic notation is abused because big O notation isn't
 completely accurate in all contexts. Technically, Big O gives the upper
 asymptotic bound, Big Omega gives the lower bound, and Big Theta gives both.
+* Θ-notation bounds a function to within constant factors.
+* *O*-notation gives an upper bound for a function to within a constant factor.
+* Ω-notation gives a lower bound for a function to within a constant factor.
+
+"When we look at input size large enough to make only the order of growth of the
+running time relevant, we are studying the *asymptotic* efficiency of
+algorithms. That is, we are concerned with how the running time of an algorithm
+increases with the size of the input *in the limit*, as the size of the input
+increases without bound. **Usually, an algorithm that is asymptotically more
+efficient will be the best choice for all but very small inputs.**"
 
 | Notation | Name | Notes |
 |---|---|---|
@@ -337,9 +408,13 @@ our focus on the better ones.
 
 ## sorting
 Ordering elements in a list.
+* see Array Sorting Algorithms table on this page --> [bigocheetsheet.com](http://bigocheatsheet.com)
 
 | Name | Best | Average | Worst | Space | Stable | Notes |
 |---|---|---|---|---|---|---|
+| Insertion Sort | O(n^2) | O(n^2) | O(n^2) | O(1) | yes | 
+| Counting Sort | - | Θ(k + n) | Θ(k + n) | O(k) | yes |
+| Radix Sort | Ω(n+k) | Θ(n+k) | O(n+k) | O(n+k) | - | uses a stable sort sub-alg.
 | Quicksort | O(nlog(n)) | O(nlog(n)) | O(n^2) | O(n) | depends on implementation | 
 | Mergesort | O(nlog(n)) | O(nlog(n)) | O(nlog(n)) | O(n) | yes |
 | Heapsort | O(nlog(n)) (distinct keys) O(n) (equal keys) | O(nlog(n)) | O(nlog(n)) | O(1) | No |
@@ -347,52 +422,20 @@ Ordering elements in a list.
 *a sorting algorithm is said to be stable if two objects with equal keys appear
 in the output in the same order they were in the input*
 
-## dynamic programming
-Dynamic programming is thought to be as the opposite approach that recursion
-takes. Recursion is a top-down approach while dynamic programming is bottom-up.
-Although dynamic programming uses recursion, it often solves a problem by
-calculating all possibilities and then choosing the best one. Along with this,
-*memoization* is used to improve efficiency, by storing values already calculated
-previously.
+### simple sorting algos
+* selection sort
+    * find the min, replace with element at front. find the second min, replace
+        with element at second. repeat. `O(n^2)`
+* bubble sort
+    * swap adjacent element until condition is met. `O(n^2)`
 
-### references
-* [MIT OpenCourseWare - Dynamic Programming w/Eric Demaine](https://www.youtube.com/watch?v=OQ5jsbhAv_M)
-
-### memoization
-* memoize - came from the idea of writing down your subproblem solutions on a
-    memopad. to memoize is to write down on memopad, in other words, remember.
-
-### bottom-up approach
-* exactly same computation as the memoized version
-* performing a topological sort of subproblem dependency DAG
-* can usually
-
-DP = recursion + memoization + guessing
-* memoize (remember) + re-use solutions to subproblems that help solve the
-    problem
-* time = # subproblems * time/subproblem
-    * or, more precisely the sum of all subproblems
-    * for fibonacci implemented using dynamic programming, n is the number of
-        subproblems and the time per subproblem is constant (O(1))
-
-The two key attributes of a dynamic programming problem are:
-* optimal substructure
-* overlapping sub-problems
-
-7 steps to solve a dynamic programming problem ([DP tutorial](http://blog.refdash.com/dynamic-programming-tutorial-example/))
-* recognize a DP problem
-* identify problem variables
-* clearly express the recurrence relation
-* identify the base cases
-* decide if you want to implement it iteratively or recursively
-* add memoization
-* determine time complexity
-
-Common problems solved using dynamic programming
-* fibonacci number
-* shortest path problem
-* the knapsack problem
-* egg dropping problem
+### radix sort
+```
+for i = 1 to d // d = number of digits
+    use a stable sort to sort array A on digit i
+```
+* radix sort correct sorts numbers in Θ(d(n+k)) time if the stable sort takes
+    Θ(n+k) time
 
 # threads and locks
 * deadlock
