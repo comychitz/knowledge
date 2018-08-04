@@ -70,7 +70,7 @@ Practice coding data structures and algorithms in C++.
     * merge sort
     * maximum sub-array problem
 
-## greedy algorithms
+### greedy algorithms
 
 ### dynamic programming
 Dynamic programming is thought to be as the opposite approach that recursion
@@ -86,23 +86,19 @@ DP = recursion + memoization + guessing
     * or, more precisely the sum of all subproblems
     * for fibonacci implemented using dynamic programming, n is the number of
         subproblems and the time per subproblem is constant (O(1))
+* The two key attributes of a dynamic programming problem are:
+    * optimal substructure
+    * overlapping sub-problems
+* references
+    * [MIT OpenCourseWare - Dynamic Programming w/Eric Demaine](https://www.youtube.com/watch?v=OQ5jsbhAv_M)
 
-The two key attributes of a dynamic programming problem are:
-* optimal substructure
-* overlapping sub-problems
-
-#### references
-* [MIT OpenCourseWare - Dynamic Programming w/Eric Demaine](https://www.youtube.com/watch?v=OQ5jsbhAv_M)
-
-#### memoization
-* memoize - came from the idea of writing down your subproblem solutions on a
-    memopad. to memoize is to write down on memopad, in other words, remember.
-
-#### bottom-up approach
-* exactly same computation as the memoized version
-* performing a topological sort of subproblem dependency DAG
-* can usually
-
+* memoization
+    * memoize - came from the idea of writing down your subproblem solutions on a
+        memopad. to memoize is to write down on memopad, in other words, remember.
+* bottom-up approach
+    * exactly same computation as the memoized version
+    * performing a topological sort of subproblem dependency DAG
+    * can usually
 * 7 steps to solve a dynamic programming problem ([DP tutorial](http://blog.refdash.com/dynamic-programming-tutorial-example/))
     * recognize a DP problem
     * identify problem variables
@@ -111,7 +107,6 @@ The two key attributes of a dynamic programming problem are:
     * decide if you want to implement it iteratively or recursively
     * add memoization
     * determine time complexity
-
 * Common problems solved using dynamic programming
     * fibonacci number
     * shortest path problem
@@ -119,21 +114,52 @@ The two key attributes of a dynamic programming problem are:
     * egg dropping problem
 
 ### five algorithm approaches
-    * exemplify
-    * pattern matching
-    * simplify and generalize
-    * base case and build
-    * data structure brainstorm
+* exemplify
+* pattern matching
+* simplify and generalize
+* base case and build
+* data structure brainstorm
 
 ### [top 10 algorithm problems](https://www.geeksforgeeks.org/top-10-algorithms-in-interview-questions/)
-    * graphs
-    * linked lists
-    * dynamic programming
-    * sorting & searching
-    * trees & binary search trees
-    * number theory
-    * bit manipulation
-    * strings & arrays
+* graphs
+* linked lists
+* dynamic programming
+* sorting & searching
+* trees & binary search trees
+* number theory
+* bit manipulation
+* strings & arrays
+
+## o notation
+Big O notation, also called asymptotic notation, is a mathematical notation that
+describes the limiting behavior of a function. It is used to analyze algorithms
+as input size grows. The letter O is used because the growth rate of a function
+is referred to as the *order of the function*.
+
+The precise use of asymptotic notation is abused because big O notation isn't
+completely accurate in all contexts. Technically, Big O gives the upper
+asymptotic bound, Big Omega gives the lower bound, and Big Theta gives both.
+* Θ-notation bounds a function to within constant factors.
+* *O*-notation gives an upper bound for a function to within a constant factor.
+* Ω-notation gives a lower bound for a function to within a constant factor.
+
+"When we look at input size large enough to make only the order of growth of the
+running time relevant, we are studying the *asymptotic* efficiency of
+algorithms. That is, we are concerned with how the running time of an algorithm
+increases with the size of the input *in the limit*, as the size of the input
+increases without bound. **Usually, an algorithm that is asymptotically more
+efficient will be the best choice for all but very small inputs.**"
+
+| Notation | Name | Notes |
+|---|---|---|
+| O(1) | constant | 
+| O(log n) | logarithmic |
+| O(n) | linear |
+| O(n log(n)) | linearithmic, loglinear, or quasilinear |
+| O(n^2) | quadratic | 
+| O(n^c) | polynomial |
+| O(c^n) | exponential | where c > 1 
+| O(n!) | factorial | 
 
 ## bit manipulation
 * xor operation
@@ -193,37 +219,6 @@ x = x ^ y;
 y = x ^ y;
 x = x ^ y;
 ```
-
-## o notation
-Big O notation, also called asymptotic notation, is a mathematical notation that
-describes the limiting behavior of a function. It is used to analyze algorithms
-as input size grows. The letter O is used because the growth rate of a function
-is referred to as the *order of the function*.
-
-The precise use of asymptotic notation is abused because big O notation isn't
-completely accurate in all contexts. Technically, Big O gives the upper
-asymptotic bound, Big Omega gives the lower bound, and Big Theta gives both.
-* Θ-notation bounds a function to within constant factors.
-* *O*-notation gives an upper bound for a function to within a constant factor.
-* Ω-notation gives a lower bound for a function to within a constant factor.
-
-"When we look at input size large enough to make only the order of growth of the
-running time relevant, we are studying the *asymptotic* efficiency of
-algorithms. That is, we are concerned with how the running time of an algorithm
-increases with the size of the input *in the limit*, as the size of the input
-increases without bound. **Usually, an algorithm that is asymptotically more
-efficient will be the best choice for all but very small inputs.**"
-
-| Notation | Name | Notes |
-|---|---|---|
-| O(1) | constant | 
-| O(log n) | logarithmic |
-| O(n) | linear |
-| O(n log(n)) | linearithmic, loglinear, or quasilinear |
-| O(n^2) | quadratic | 
-| O(n^c) | polynomial |
-| O(c^n) | exponential | where c > 1 
-| O(n!) | factorial | 
 
 ## arrays
 * Dynamic vs static arrays
