@@ -417,6 +417,15 @@ Ordering elements in a list.
 *a sorting algorithm is said to be stable if two objects with equal keys appear
 in the output in the same order they were in the input*
 
+### sorting in linear time
+* comparison sorting algorithms:
+    * *the sorted order they determine is based only on comparisons between the
+        input elements*
+    * these types of algorithms run in O(nlog(n)) time.
+* counting sort
+* radix sort
+* bucket sort
+
 ### simple sorting algos
 * selection sort
     * find the min, replace with element at front. find the second min, replace
