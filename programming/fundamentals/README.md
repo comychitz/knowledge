@@ -161,6 +161,17 @@ efficient will be the best choice for all but very small inputs.**"
 | O(c^n) | exponential | where c > 1 
 | O(n!) | factorial | 
 
+### amortized analysis
+Amortized analysis is used to analyze algorithms where an operation that doesn't
+occur often is costly. For example, a dynamic array insertion takes O(1) time,
+however, if the array is at its capacity *c*, adding c+1 elements causes it to
+resize itself, which takes O(n) time. But if we analyze this using the
+**aggregate method**, we can show that the amortized cost of insertion is O(1). 
+`(nO(1) + O(n)) / (n + 1) = O(1)`
+
+In addition to aggregate analysis, there is the **acounting method** and the
+**potential method**.
+
 ## bit manipulation
 * xor operation
     * tell whether two bits are unequal
