@@ -71,6 +71,7 @@ Practice coding data structures and algorithms in C++.
     * maximum sub-array problem
 
 ### greedy algorithms
+* at each step, make a *greedy* decision on what to do next.
 
 ### dynamic programming
 Dynamic programming is thought to be as the opposite approach that recursion
@@ -129,6 +130,14 @@ DP = recursion + memoization + guessing
 * number theory
 * bit manipulation
 * strings & arrays
+
+### famous algorithms
+*[15 important algorithms](https://interestingengineering.com/15-of-the-most-important-algorithms-that-helped-define-mathematics-computing-and-physics)*
+* Euclid's algorithm for GCD
+* PageRank
+* Monte Carlo Method
+* Kalman Filter
+* QR algorithms for computing eigenvalues
 
 ## o notation
 Big O notation, also called asymptotic notation, is a mathematical notation that
