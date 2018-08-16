@@ -243,6 +243,14 @@ x = x ^ y;
 ## arrays
 * Dynamic vs static arrays
 
+## inversions
+* counting inversions is a common problem with arrays
+* an inversion is when: `a[i] > b[j]` and `i < j`
+* counting invesions can be done using
+    * simple nested for loop (O(n^2))
+    * merge sort (O(nlog(n)))
+    * BIT (binary indexed tree, aka Fenwick tree) (O(nlog(n)))
+
 ## hash sets & tables
 * constant O(1) lookups & inserts (O(n) worst case, in case underlying array
     needs to be resized).
@@ -334,6 +342,11 @@ Common operations performed on trees:
     * AVL tree
     * B-tree
     * Red-black tree
+
+## binary indexed tree
+* [Wikipedia Article - Fenwick Tree](https://en.wikipedia.org/wiki/Fenwick_tree)
+* A Fenwick tree or binary indexed tree is a data structure that can efficiently
+    update elements and calculate prefix sums in a table of numbers.
 
 ## heap
 A heap is a special-purpose tree structure that satisfies the heap property:
