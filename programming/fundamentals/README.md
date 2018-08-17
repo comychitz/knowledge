@@ -36,6 +36,7 @@ Practice coding data structures and algorithms in C++.
     * designing algorithms
     * complexity analysis 
 * mathematics
+    * fundamentals(!)
     * prime numbers
     * probability
     * number theory
@@ -54,6 +55,12 @@ Practice coding data structures and algorithms in C++.
     * OSI Model
     * streaming & up/down-loading
 
+## mathematics
+* arithmetic progression
+    * sum is `n(first + last)/2`
+* 
+
+
 ## algorithms overview
 ### divide and conquer
 * **divide** the problem into a number of subproblems that are smaller
@@ -68,7 +75,8 @@ Practice coding data structures and algorithms in C++.
     recursion tree as well.
 * examples
     * merge sort
-    * maximum sub-array problem
+    * maximum sub-array problem O(nlog(n))
+        * this can also be solved using Kadane's alg. in O(n) time
 
 ### greedy algorithms
 * at each step, make a *greedy* decision on what to do next.
