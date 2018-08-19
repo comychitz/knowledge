@@ -27,6 +27,9 @@ visible when viewing on a linear scale.
 
 [[Logarithm (Wikipedia)](https://en.wikipedia.org/wiki/Logarithm)]
 
+## number theory
+* A brnach of mathematics that studies integers. 
+
 ## permutations & combinations
 "A combination lock should really be called a permutation lock" :) 
 
@@ -54,3 +57,26 @@ visible when viewing on a linear scale.
     * 0! = 1.
         * there is only one permutation of zero objects
 
+## series
+* consecutive integers sum: `n(n+1)/2` ([proof](https://math.stackexchange.com/questions/2260/proof-for-formula-for-sum-of-sequence-123-ldotsn))
+
+### fibonacci
+* `F(n) = F(n-1) + F(n-2)`
+* Binet's formula: `((1+sqrt(5))^n - (1-sqrt(5))^n)/(sqrt(5)*2^n)`
+
+### arithmetic progression
+* a sequence of numbers where the diffrenec between any two consecutive numbers
+    is constant.
+* sum can be calculated as: `n(a+b)/2` where a is the first number of the series
+    and b is the last
+
+### geometic progression
+* a sequnece of numbers where the ration between any two consecutive numbers is
+    constant
+* sum can be calculated as: `bk - a / k - 1` where a is the first number, b is
+    the last number and k is the ration between consecutive numbers
+
+### harmonic series
+* `1 + 1/2 + 1/3 + 1/4 ... + 1/n`
+* upper bound of sum is `log(n) + 1` (log base 2)
+*
