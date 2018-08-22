@@ -1,6 +1,20 @@
 # mathematics
 *"the Queen of the Sciences" - Carl Friedrich Gauss*
 
+## why prime numbers are so important
+To mathematicians, prime numbers are equivalent to atoms - they can't be broken
+down to any smaller piece. Other natural numbers that can be broken down, known
+as *composites*, have been proven to have a *prime factorization*. In other
+words, they can be composed of only prime numbers - this is known as the
+*Fundamental therem of arithmetic*. 
+
+There are many applications to the use of prime numbers in science and
+engineering, which is why unlocking the key to producing and/or verifying prime
+numbers is a very important open problem in the world of mathematics. 
+
+Moreover, prime numbers have also shown to have interesting properties, such as:
+* 
+
 ## why log?
 Why is the *logarithm* function so important and frequently used in engineering?
 Well, there are many answers to that question, but let's try and breakdown why
