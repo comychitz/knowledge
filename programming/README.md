@@ -1,4 +1,8 @@
 # programming essentials
+
+## fundamentals
+For programming fundamentals see this page --> [fundamentals](https://github.com/comychitz/knowledge/tree/master/programming/fundamentals)
+
 ## remember to always...
 * make the design apparent in the code(!) [see this for more](http://www.pathsensitive.com/2018/01/the-design-of-software-is-thing-apart.html)
 * optimize for the reader, not the writer(!)
@@ -13,9 +17,6 @@
   * Liskov Substitution - a subclass shall be able to be replaced for its parent without breaking the program
   * Interface Segregation - many specific interfaces is better than one do-it-all interface
   * Dependency Inversion - program toward abstractions, not implementations (because they vary, abstractions should not)
-
-## fundamentals
-For programming fundamentals see this page --> [fundamentals](https://github.com/comychitz/knowledge/tree/master/programming/fundamentals)
 
 ## good reads
 * [The Programmer Competency Matrix](http://sijinjoseph.com/programmer-competency-matrix/)
