@@ -6,14 +6,14 @@ To mathematicians, prime numbers are equivalent to atoms - they can't be broken
 down to any smaller piece. Other natural numbers that can be broken down, known
 as *composites*, have been proven to have a *prime factorization*. In other
 words, they can be composed of only prime numbers - this is known as the
-*Fundamental therem of arithmetic*. 
+*Fundamental thereom of arithmetic*. 
 
-There are many applications to the use of prime numbers in science and
+There are many applications that make use of prime numbers in science and
 engineering, which is why unlocking the key to producing and/or verifying prime
-numbers is a very important open problem in the world of mathematics. 
+numbers is an important open problem in the world of mathematics. 
 
 Moreover, prime numbers have also shown to have interesting properties, such as:
-* 
+* (TODO)
 
 ## why log?
 Why is the *logarithm* function so important and frequently used in engineering?
@@ -42,7 +42,7 @@ visible when viewing on a linear scale.
 [[Logarithm (Wikipedia)](https://en.wikipedia.org/wiki/Logarithm)]
 
 ## number theory
-* A brnach of mathematics that studies integers. 
+* A branch of mathematics that studies integers. 
 
 ## permutations & combinations
 "A combination lock should really be called a permutation lock" :) 
@@ -64,7 +64,7 @@ visible when viewing on a linear scale.
 * *Combinations are always less than permutations* 
 
 * factorial
-    * most commonly used to compute the total amount of ways to arrand n
+    * most commonly used to compute the total amount of ways to arrange n
         distinct objects. `n!`
     * often appears in the denominator of a formala when ordering is to be
         ignored
@@ -93,4 +93,3 @@ visible when viewing on a linear scale.
 ### harmonic series
 * `1 + 1/2 + 1/3 + 1/4 ... + 1/n`
 * upper bound of sum is `log(n) + 1` (log base 2)
-*
