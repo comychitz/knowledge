@@ -79,7 +79,7 @@ visible when viewing on a linear scale.
 * Binet's formula: `((1+sqrt(5))^n - (1-sqrt(5))^n)/(sqrt(5)*2^n)`
 
 ### arithmetic progression
-* a sequence of numbers where the diffrenec between any two consecutive numbers
+* a sequence of numbers where the difference between any two consecutive numbers
     is constant.
 * sum can be calculated as: `n(a+b)/2` where a is the first number of the series
     and b is the last
@@ -93,3 +93,18 @@ visible when viewing on a linear scale.
 ### harmonic series
 * `1 + 1/2 + 1/3 + 1/4 ... + 1/n`
 * upper bound of sum is `log(n) + 1` (log base 2)
+
+## probability
+* P(A and B) = P(B given A) * P(A) = P(A given B) * P(B)
+* P(A or B) = P(A) + P(B) - P(A and B)
+* Baye's Thereom
+    * P(A|B) = P(B|A) * P(A)/P(B)
+* If events A and B are independent, then P(A and B) = P(A) * P(B) because P(B
+    given A) = P(B) since A indicates nothing about B.
+* If A and B are mutually exclusive, then P(A or B) = P(A) + P(B) since P(A and
+    B) = 0.
+* When solving probability problems, it often helps to look at the opposite of
+    what you're trying to solve. In other words, when solving for the chances of
+    something happening, often look at the chances of it not happening first. 
+
+
