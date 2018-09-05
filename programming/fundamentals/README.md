@@ -178,6 +178,9 @@ efficient will be the best choice for all but very small inputs.**"
 | O(c^n) | exponential | where c > 1 
 | O(n!) | factorial | 
 
+### recursive runtime
+* Recursive runtime of an algorithm will generall be: `O(branches^depth)`
+
 ### amortized analysis
 Amortized analysis is used to analyze algorithms where an operation that doesn't
 occur often is costly. For example, a dynamic array insertion takes O(1) time,
@@ -226,6 +229,10 @@ In addition to aggregate analysis, there is the **acounting method** and the
            int mask = (-1<<i);
            return num & mask;
         ```
+ * Two's complement
+  * To calculate the negative of K: `-K = concat(1, 2^(N-1) - K`
+  * Or, flip all bits, then add 1 to the result.
+    * One's complement is the same, just don't add 1 to the result.
 
 ## tips and tricks
 ### swapping two integers
@@ -351,15 +358,18 @@ Common operations performed on trees:
     * B-tree
     * Red-black tree
 
-## binary indexed tree
+### binary indexed tree
 * [Wikipedia Article - Fenwick Tree](https://en.wikipedia.org/wiki/Fenwick_tree)
 * A Fenwick tree or binary indexed tree is a data structure that can efficiently
     update elements and calculate prefix sums in a table of numbers.
+    
+### tries
+* Tries, also referred to as a digital tree, radix tree or prefix tree is a kind of search tree. No node in the tree stores a value, instead the position of a node determines what key a node is associate with. All descendents of a node have a common prefix, with the root node having the empty value. 
+* Tries are useful when you want to check if a string/value you are building is going to be valid. For example, if we had all words in the dictionary in a trie, we can easily check if a string we are building is going to be a legit word.
 
 ## heap
 A heap is a special-purpose tree structure that satisfies the heap property:
-    * *if P is a parent of C, then the value of P must be greater or equal to (in
-    a max heap) than the value of C.*
+* if P is a parent of C, then the value of P must be greater or equal to (in a max heap) than the value of C.
 
 A heap can be implemented using a tree as its underlying strucutre, but more
 commonly implemented as an array since pointers are not required between
@@ -484,7 +494,7 @@ for i = 1 to d // d = number of digits
 
 # threads and locks
 * deadlock
-    * occurs if and only if all the *Coffman conditions* are tru:
+    * occurs if and only if all the *Coffman conditions* are true:
         * mutual exclusion: at least one resource must be held in a
             non-shareable mode. Otherwise, the processes would not be prevented
             from using the resource when necessary. Only one process can use the
