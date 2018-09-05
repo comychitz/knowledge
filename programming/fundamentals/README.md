@@ -55,12 +55,6 @@ Practice coding data structures and algorithms in C++.
     * OSI Model
     * streaming & up/down-loading
 
-## mathematics
-* arithmetic progression
-    * sum is `n(first + last)/2`
-* 
-
-
 ## algorithms overview
 ### divide and conquer
 * **divide** the problem into a number of subproblems that are smaller
@@ -75,8 +69,10 @@ Practice coding data structures and algorithms in C++.
     recursion tree as well.
 * examples
     * merge sort
-    * maximum sub-array problem O(nlog(n))
+    * maximum sub-array problem 
         * this can also be solved using Kadane's alg. in O(n) time
+        * solved in O(nlog(n)) using divide and conquer
+        * solved simply by iterating over every subarray in O(n^3) time
 
 ### greedy algorithms
 * at each step, make a *greedy* decision on what to do next.
@@ -121,6 +117,9 @@ DP = recursion + memoization + guessing
     * shortest path problem
     * the knapsack problem
     * egg dropping problem
+    * edit distance problem
+    * coin change problem
+    *
 
 ### five algorithm approaches
 * exemplify
@@ -261,6 +260,11 @@ x = x ^ y;
 ## inversions
 * counting inversions is a common problem with arrays
 * an inversion is when: `a[i] > b[j]` and `i < j`
+* the number of inversions indicates how much work is needed to sort the array
+* swapping a pair of consecutive elements that are in the wrong order removes
+    exactly one inversion from the array. if a sorting algorithm can only swap
+    consecutive elements, each swap removes at most one invesions, and the time
+    complexity of the agorithm is at least O(n^2)
 * counting invesions can be done using
     * simple nested for loop (O(n^2))
     * merge sort (O(nlog(n)))
@@ -451,6 +455,8 @@ our focus on the better ones.
 * performs search on a sorted array in logarithmic time (average and worst case)
 * O(log n) time complexity
 * O(1) space complexity
+* In C++ use the `lower_bound` and `upper_bound` functions to find the index in
+    the array
 
 ## sorting
 Ordering elements in a list.
