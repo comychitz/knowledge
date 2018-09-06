@@ -232,6 +232,8 @@ In addition to aggregate analysis, there is the **acounting method** and the
   * To calculate the negative of K: `-K = concat(1, 2^(N-1) - K`
   * Or, flip all bits, then add 1 to the result.
     * One's complement is the same, just don't add 1 to the result.
+  * When adding two numbers using two's complement results in an extra bit
+      needed, we simply drop it.
 
 ## tips and tricks
 ### swapping two integers
