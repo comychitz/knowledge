@@ -25,6 +25,9 @@ For programming fundamentals see this page --> [fundamentals](https://github.com
 * The Pragmatic Programmer
 * Clean Code - Martin
 * The Art of Unix Programming - ESR
+  * seven, plus or minus two, is the number of things that a human mind can keep in its head at once 
+  * when being compact, it doesn’t always help to look at the length of the function, but more so the number of local variables or nesting levels. 
+  * should keep static procedure call depth to no more than four 
 
 ## general notes
 * syntax vs semantics
