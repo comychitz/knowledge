@@ -21,6 +21,10 @@ For programming fundamentals see this page --> [fundamentals](https://github.com
 ## good reads
 * [The Programmer Competency Matrix](http://sijinjoseph.com/programmer-competency-matrix/)
 * [The Twelve Factor App](https://12factor.net)
+* Code Complete - McConnell
+* The Pragmatic Programmer
+* Clean Code - Martin
+* The Art of Unix Programming - ESR
 
 ## general notes
 * syntax vs semantics
@@ -104,6 +108,16 @@ For programming fundamentals see this page --> [fundamentals](https://github.com
     * a closure is a record storing a function together with an environment
     * "a technique for implementing lexically scoped name binding in a language
         with first-class functions."
+
+## functional programming
+* There is no definite agreed upon definition of functional programming, other
+    than the premise that functional programming is code written in a functional
+    style (using functional programming features such as *pure functions*,
+    *first-class functions*, etc.)
+* Functional programming tends toward conveying intention of a program rather
+    than the implementation details
+* Functional programming avoid side effects - arguably the largest difference
+    between imperitave programming
 
 ## type systems
 * [Types and Programming Languages - B.Pierce - MIT Press](https://www.asc.ohio-state.edu/pollard.4/type/books/pierce-tpl.pdf)
