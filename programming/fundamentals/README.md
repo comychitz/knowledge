@@ -97,7 +97,6 @@ DP = recursion + memoization + guessing
     * overlapping sub-problems
 * references
     * [MIT OpenCourseWare - Dynamic Programming w/Eric Demaine](https://www.youtube.com/watch?v=OQ5jsbhAv_M)
-
 * memoization
     * memoize - came from the idea of writing down your subproblem solutions on a
         memopad. to memoize is to write down on memopad, in other words, remember.
@@ -105,6 +104,14 @@ DP = recursion + memoization + guessing
     * exactly same computation as the memoized version
     * performing a topological sort of subproblem dependency DAG
     * can usually
+* bottom-up vs top-down
+    * bottom-up approach is breaking down a problem to a simple case (like a
+        list with one element); or traversing to the leaves of a solution tree
+        and working our way up. one key here is that we can use the solution of
+        one case off of the previous case(s).
+    * top-down approach is like memoization - define problem recursively and
+        solve from top level downwards, caching results as you go.
+    * [StackOverFlow Q/A](https://stackoverflow.com/questions/6164629/dynamic-programming-and-memoization-bottom-up-vs-top-down-approaches)
 * 7 steps to solve a dynamic programming problem ([DP tutorial](http://blog.refdash.com/dynamic-programming-tutorial-example/))
     * recognize a DP problem
     * identify problem variables
@@ -120,7 +127,6 @@ DP = recursion + memoization + guessing
     * egg dropping problem
     * edit distance problem
     * coin change problem
-    *
 
 ### five algorithm approaches
 * exemplify
