@@ -371,6 +371,19 @@ Common operations performed on trees:
     * B-tree
     * Red-black tree
 
+#### red-black tree
+* Operations: search, insert, remove (all O(log(n)))
+* Criteria of the tree
+    1. a node is either red or black
+    2. the root and leaves (NULL) are black
+    3. if a node is red, then its children are black
+        * note that its ok for black nodes to have black children
+    4. all paths from a node to its NULL descendents contain the same number of
+       black nodes
+        * when couting black nodes, we exclude the starting nodes color
+
+
+
 ### binary indexed tree
 * [Wikipedia Article - Fenwick Tree](https://en.wikipedia.org/wiki/Fenwick_tree)
 * A Fenwick tree or binary indexed tree is a data structure that can efficiently
