@@ -136,7 +136,11 @@ For programming fundamentals see this page --> [fundamentals](https://github.com
 * bridge pattern [wikiArticle](https://en.wikipedia.org/wiki/Bridge_pattern)
   * decouple an abtraction from its implementation
 * decorator pattern [wikiArticle](https://en.wikipedia.org/wiki/Decorator_pattern)
-  * A decorator makes it possible to add or alter behavior of an interface at run-time 
+  * A decorator makes it possible to add or alter behavior of an interface
+      (possibly at run-time, if language supports) by wrapping a new decorator
+      class that contains a pointer to the object being decorated. 
+  * Decorator pattern uses composition to achieve its effect, encouraging the
+      single responsibility rule for objects, while still being extensible.
 * proxy pattern
   * provides a one-to-one forwarding interface to another class: calling FunctionA() in the proxy class will cause it to call FunctionA() in the original class.
   * is useful to modify the behavior of the original class while still preserving its interface. 
