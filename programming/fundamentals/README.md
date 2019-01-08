@@ -337,6 +337,8 @@ Common operations performed on trees:
 * complete binary tree
     * a tree that has all levels but last filled, and the last level has nodes
         from the left populated
+* tree symmetry
+*
 
 ### tree traversal
 * depth-first search
@@ -392,6 +394,12 @@ Common operations performed on trees:
 ### tries
 * Tries, also referred to as a digital tree, radix tree or prefix tree is a kind of search tree. No node in the tree stores a value, instead the position of a node determines what key a node is associate with. All descendents of a node have a common prefix, with the root node having the empty value. 
 * Tries are useful when you want to check if a string/value you are building is going to be valid. For example, if we had all words in the dictionary in a trie, we can easily check if a string we are building is going to be a legit word.
+
+* radix/PATRICIA tree
+    * a compressed version of a trie - rather than storing a character at each
+        node, it stores several together when applicable. 
+    * see [this stackoverflow q/q](https://stackoverflow.com/questions/14708134/what-is-the-difference-between-trie-and-radix-trie-data-structures)
+    * [Wikipedia Article](https://en.wikipedia.org/wiki/Radix_tree)
 
 ## heap
 A heap is a special-purpose tree structure that satisfies the heap property:
