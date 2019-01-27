@@ -41,10 +41,21 @@ techniques and technologies used to build them.
         partitions on a different device, and less used tables in another
         device. 
 * ACID database transactions
+    * [Wikipedia - ACID](https://en.wikipedia.org/wiki/ACID_(computer_science))
     * atomicity
+        * a transaction (even if multiple statements) either succeeds complete
+            or fails completed
     * consistency
+        * the requirement that any database transaction should only change
+            affected data in allowed ways. in other words, any data written to
+            the database must be valid according to the rules (constraints,
+            cascades, triggers)
     * isolation
+        * ensures that concurrent execution of transactions leaves the database
+            in the same state that would have been if executed sequentially
     * durability
+        * guarantees that if a transaction is committed, it will stay committed
+            even if system failure
 
 ## relational vs non-relational database
 * relational database use cases
