@@ -6,12 +6,15 @@ class WeightedGraph {
 
     class Node {
       public:
-        explicit Node(int v) : val(v) { }
+        explicit Node(int v) : val(v), dist(std::numeric_limits<int>::max()) { }
 
         ~Node() { }
 
         int val;
+        int dist;
     };
+
+    typedef std::set<Node*> NodeSet;
 
     WeightedGraph() { }
 
@@ -33,6 +36,16 @@ class WeightedGraph {
         return *neighbors;
       }
       return std::vector<std::pair<Node*, int> >();
+    }
+
+    NodeSet *getAllVertices() const {
+      NodeSet vertices;
+      for (auto &adj : adj_) {
+        for (auto &n : adj) {
+          vertices.insert(n.first);
+        }
+      }
+      return vertices;
     }
 
   private:
