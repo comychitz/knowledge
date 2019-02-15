@@ -1,0 +1,48 @@
+9.1
+
+Stock Data: Imagine you are building some sort of service that will be called by
+up to 1,000 client applications to get simple end-of-day stock price information
+(open, close, high, low). You may assume that you already have the data, and you
+can store it in any format you wish. How would you design the client-facing
+service that provides the information to client applications? You are respon-
+sible for the development, rollout, and ongoing monitoring and maintenance of
+the feed. Describe the different methods you considered and why you would
+recommend your approach.Your service can use any technologies you wish, and can
+distribute the information to the client applications in any mechanism you
+choose.
+
+Scoping the problem:
+- clients are requesting by the stock/company's name?
+
+Characteristics of this problem:
+- read-heavy
+- 
+
+Basic components:
+- client app interface (web interface)
+- calls to back end to retrieve info on per-stock basis
+    - i.e. send request of all stocks the user is watching,
+      then return the info for those stocks
+- database to store historical data
+    - need redundancy support
+- use a cache to speed up reading
+    - 
+
+
+       -------------------------
+      | front end load balancer |
+       -------------------------
+
+    -----------        -----------
+   | app server |     | app server |    <-- contains cache
+    -----------        -----------
+
+     -----------------------------
+    | db connection load balancer |
+     -----------------------------
+
+           ----        ----
+          | db |      | db |
+           ----        ----
+
+
