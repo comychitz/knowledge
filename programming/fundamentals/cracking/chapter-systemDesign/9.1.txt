@@ -25,8 +25,8 @@ Basic components:
       then return the info for those stocks
 - database to store historical data
     - need redundancy support
+    - can be sql because the data is pretty structured given our requirements
 - use a cache to speed up reading
-    - 
 
 
        -------------------------
