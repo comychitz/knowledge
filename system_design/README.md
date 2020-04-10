@@ -24,6 +24,9 @@ techniques and technologies used to build them.
     * Master - Master setup, each master has their own slave(s)
     * With master slave replication all writes are done on the master and all
         reads can be done from the slave(s).
+* Normalized vs Denormalized DBs
+    * normalized databases are designed to minimize redundancy
+    * denormalied databases are design to optimize read time
 * Database partitioning
     * Horizontal partitioning - put different rows into different tables.
         database shards are horizontal partitions of data. each of multiple

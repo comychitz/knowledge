@@ -338,7 +338,6 @@ Common operations performed on trees:
     * a tree that has all levels but last filled, and the last level has nodes
         from the left populated
 * tree symmetry
-*
 
 ### tree traversal
 * depth-first search
@@ -382,7 +381,7 @@ Common operations performed on trees:
         * note that its ok for black nodes to have black children
     4. all paths from a node to its NULL descendents contain the same number of
        black nodes
-        * when couting black nodes, we exclude the starting nodes color
+        * when counting black nodes, we exclude the starting nodes color
 
 
 
@@ -398,7 +397,7 @@ Common operations performed on trees:
 * radix/PATRICIA tree
     * a compressed version of a trie - rather than storing a character at each
         node, it stores several together when applicable. 
-    * see [this stackoverflow q/q](https://stackoverflow.com/questions/14708134/what-is-the-difference-between-trie-and-radix-trie-data-structures)
+    * see [this stackoverflow q&a](https://stackoverflow.com/questions/14708134/what-is-the-difference-between-trie-and-radix-trie-data-structures)
     * [Wikipedia Article](https://en.wikipedia.org/wiki/Radix_tree)
 
 ## heap
@@ -426,8 +425,8 @@ placed at the top of the tree and sifted down until no longer needed. Deletion
 time complexity is `O(log(n))`.
 
 ## graphs
-A graph is mathematical structure used to model pairwise relations between
-objects.  Graphs are a set of vertices and edges, where edges connect two
+A graph is a mathematical structure used to model pairwise relations between
+objects. Graphs are a set of vertices and edges, where edges connect two
 vertices together, typically carrying a weight. 
 
 Operations:
@@ -440,7 +439,7 @@ Representations:
 * adjacency list
     * slow to remove vertices and edges, because it needs to find all vertices
         or edges
-* adjacency matric
+* adjacency matrix
     * slow to add or remove vertices, because matrix must be resized/copied
 * Incidence matrix
     * slow to add or remove vertices and edges because matrics must be
