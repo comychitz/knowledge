@@ -1,12 +1,12 @@
 # python
-A slow work in progres...
+A slow work in progress...
 
 ### references
-* [wikiArticle](https://en.wikipedia.org/wiki/Python_(programming_language)) 
+* [wikiArticle](https://en.wikipedia.org/wiki/Python_(programming_language))
 * http://www.ics.uci.edu/~brgallar/week9_3.html
 
-# about 
-* first releaed in 1991
+# about
+* first released in 1991
 * it is an interpreted language
   * [stackoverflow: Is Python interpreted or compiled or both?](https://stackoverflow.com/questions/6889747/is-python-interpreted-or-compiled-or-bot)
   * [is python interpreted or compiled?](https://softwareengineering.stackexchange.com/questions/24558/is-python-interpreted-or-compiled)
@@ -17,7 +17,7 @@ A slow work in progres...
 * automatic memory management
 * programming paradigms:
   * object-oriented & structured
-  * imperitave
+  * imperative
   * functional programming
   * procedural styles
 * handy standard library(!)
@@ -60,7 +60,7 @@ class MyABC(metaclass=abc.ABCMeta):
   * arrays are of the same type, tuples allow a mix of types
 * python uses decorators
   * https://wiki.python.org/moin/PythonDecorators
-* with 
+* with
   * (from Python 2.5) encloses a code block within a context manager (for example, acquiring a lock before the block of code is run and releasing the lock afterwards, or opening a file and then closing it), allowing Resource Acquisition Is Initialization (RAII)-like behavior
 * assert [condition]
 ```python
