@@ -30,19 +30,17 @@ General notes about the Java programming language
   programming errors
     * Java provides three kinds of throwables: checked exceptions, runtime
       exceptions and errors.
-    * all the unchecked throwables you implement shoudl subclass
+    * all the unchecked throwables you implement should subclass
       RuntimeExcpetion
-* avoid unncessary use of checked exceptions
+* avoid unnecessary use of checked exceptions
 * favor the use fo standard exceptions
 * throw exceptions appropriate to the abstraction
-    * higher layers should catch lower-leverl exceptions and, int heir place,
+    * higher layers should catch lower-level exceptions and, int heir place,
       throw exceptions that can be explained in terms of the higher-level
       abstraction.
-* doucment all exceptions thrown by each method
+* document all exceptions thrown by each method
 * include failure-capture information in detail messages
 * strive for failure atomicity
 
 
 ## general notes
-
-
