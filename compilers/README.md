@@ -27,7 +27,7 @@ Some notes I compiled about compilers.
     * caching & cache-related optimizations
 * compiling C/C++ (in a nutshell)
     * preprocessing
-        * handle the preprocesser directorives (#include, #define, etc.)
+        * handle the preprocesser directives (#include, #define, etc.)
     * compilation
         * parse source code and produce assembly
         * then an assembler converts to machine code in an object file that
@@ -36,7 +36,7 @@ Some notes I compiled about compilers.
         * final stage of compilation where all the symbols are resolved by
           reading them from a library or other object file
         * can be done dynamically (right at run-time start) by the dynamic
-          linker 
+          linker
         * or resolved when compiled, which is referred to as statically linking
 
 ## cross compilers
@@ -53,6 +53,5 @@ Some notes I compiled about compilers.
 
 ## notes
 * can you statically link against a shared object? [stackoverflow](https://stackoverflow.com/questions/725472/static-link-of-shared-library-function-in-gcc)
-    * no, a shared libary/object is an executable in a special format that does
+    * no, a shared library/object is an executable in a special format that does
       not contain all the information needed to statically compile against it.
-

@@ -11,15 +11,15 @@ some notes about computing in the *cloud*.
 * service-oriented architecture
     * Infrastructure as a Service (IaaS)
         * provides virtual hardware from a provider with adjustable
-            configuration/scalibility
+            configuration/scalability
         * example, Amazon's EC2
     * Software as a Service (SaaS)
         * "on-demand software" that is licensed on a subscription basis and is
             centralized
-        * has a very lightwight client, usually interface through one's browser
+        * has a very lightweight client, usually interface through one's browser
     * Platform as a Service (PaaS)
         * in between IaaS and Saas
-        * with PaaS, server management is hanlded by the provider wherase in
+        * with PaaS, server management is handled by the provider whereas in
             IaaS the user still needs to manage their server
     * Database as a Service (DaaS)
         * example, Amazon's RDS
@@ -28,7 +28,7 @@ some notes about computing in the *cloud*.
 * amazon web services
 * benefits:
     * prevent large capital expenses at the beginning or IT resources
-    * scalibility
+    * scalability
     * no need to guess how much resources you need
     * quickly get up to speed and developing your product(s)
 * aws by category:
@@ -36,7 +36,7 @@ some notes about computing in the *cloud*.
     * platform services
     * development and operations services
 * aws regions
-    * availibility zone within regions
+    * availability zone within regions
     * can use for replication/redundancy
     * each region is made up of two or more availability zones
     * edge locations
@@ -61,7 +61,7 @@ some notes about computing in the *cloud*.
 * pay for capacity that you actually use
 * supports Windows or Linux
 * amazon machine image (ami)
-    * template for root valome that define the os, apps, etc.
+    * template for root volume that define the os, apps, etc.
     * lifecycle: launch -> pending, running -> stopping -> stopped, running ->
         shutting-down -> terminated (instance destroyed)
     * when its stopped you stop paying, but you can restart it and the instance
@@ -81,7 +81,7 @@ some notes about computing in the *cloud*.
     performance
 * stored data is automatically replicated within its AZ
 * make sure to keep in mind the kind of ebs type you choose matches the ec2
-    instance you run. 
+    instance you run.
 
 ## references & videos
 * [wikiArticle - Cloud Computing](https://en.wikipedia.org/wiki/Cloud_computing)

@@ -11,7 +11,7 @@ techniques and technologies used to build them.
 * Horizontal Scaling
     * Distribute between many different slower machines
 * Load Balancing
-    * all servers do the same 
+    * all servers do the same
     * each server has a dedicated responsibility
     * round robin
     * can be software or hardware
@@ -26,7 +26,7 @@ techniques and technologies used to build them.
         reads can be done from the slave(s).
 * Normalized vs Denormalized DBs
     * normalized databases are designed to minimize redundancy
-    * denormalied databases are design to optimize read time
+    * denormalized databases are design to optimize read time
 * Database partitioning
     * Horizontal partitioning - put different rows into different tables.
         database shards are horizontal partitions of data. each of multiple
@@ -39,10 +39,10 @@ techniques and technologies used to build them.
             interaction and maintainability of the database
     * [Wikipedia - Shard](https://en.wikipedia.org/wiki/Shard_(database_architecture))
     * Vertical partitioning - create tables with fewer columns - similar to
-        normalizing approach. but vertional partitioning goes further on
+        normalizing approach. but vertical partitioning goes further on
         normalized data. For example, we might store more used vertical
         partitions on a different device, and less used tables in another
-        device. 
+        device.
 * ACID database transactions
     * [Wikipedia - ACID](https://en.wikipedia.org/wiki/ACID_(computer_science))
     * atomicity
@@ -83,4 +83,4 @@ techniques and technologies used to build them.
     * graph
 
 ## references
-* https://www.hiredintech.com/classrooms/system-design/lesson/60 
+* https://www.hiredintech.com/classrooms/system-design/lesson/60
