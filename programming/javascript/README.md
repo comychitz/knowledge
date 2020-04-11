@@ -1,5 +1,5 @@
 # javascript
-Some notes about the "language of the Internet". 
+Some notes about the "language of the Internet".
 
 ## general notes
 * javascript is a multi-paradigm language
@@ -10,17 +10,24 @@ Some notes about the "language of the Internet".
 * created by Mozilla
 * it was named javascript because of the populate lingo "java" - but has
     nothing to do with Java.
-        * standardized as ECMAScript
-* initially implemented for cleint-side browsing, but now it has expanded to be
+    * standardized as ECMAScript
+* initially implemented for client-side browsing, but now it has expanded to be
     used in many other ways:
-        * mobile applications
-        * server-side apps
-        * non-web programs like word processor and PDF software
+    * mobile applications
+    * server-side apps
+    * non-web programs like word processor and PDF software
 * javascript is used alongside CSS and HTML to create webpages/web apps
 * it relies on a run-time environment to provide interface to the environment it
     is running in (this is typically your browser)
 * JSON = JavaScript *Object* Notation
 * functions are first-class in JS
+
+### the event loop
+* [How The Javascript Event Loop Works](https://blog.sessionstack.com/how-javascript-works-event-loop-and-the-rise-of-async-programming-5-ways-to-better-coding-with-2f077c4438b5)
+  * "The Event Loop has one simple job — to monitor the Call Stack and the Callback Queue. If the Call Stack is empty, it will take the first event from the queue and will push it to the Call Stack, which effectively runs it."
+
+![](img/1*TozSrkk92l8ho6d8JxqF_w.gif)
+
 
 ### functional programming in javascript
 * main concepts of functional programming:
@@ -33,13 +40,13 @@ Some notes about the "language of the Internet".
 
 ## references
 * [Wikipedia Article - Javascript](https://en.wikipedia.org/wiki/JavaScript)
-* [A re-interoduction to JavaScript - Mozilla](https://developer.mozilla.org/en-US/docs/Web/JavaScript/A_re-introduction_to_JavaScript) 
+* [A re-introduction to JavaScript - Mozilla](https://developer.mozilla.org/en-US/docs/Web/JavaScript/A_re-introduction_to_JavaScript)
 * [An Introduction to Functional Programming - Mary Rose Cook](https://codewords.recurse.com/issues/one/an-introduction-to-functional-programming)
 * [Mastering the JavaScript Interview](https://medium.com/javascript-scene/master-the-javascript-interview-what-is-functional-programming-7f218c68b3a0)
-* [Mostly Adequete Guide to Functional Programming](https://github.com/MostlyAdequate/mostly-adequate-guide)
+* [Mostly Adequate Guide to Functional Programming](https://github.com/MostlyAdequate/mostly-adequate-guide)
 
 ## videos & examples
-### Example 1 - Build a Bookmarker Appliction in Javascript
+### Example 1 - Build a Bookmarker Application in Javascript
 This example goes through how to build a web application that saves bookmarks
 for you. It uses [bootstrap](https://getbootstrap.com/) to quickly get up and
 running with a theme for your web page. It then sets up a basic HTML page and
