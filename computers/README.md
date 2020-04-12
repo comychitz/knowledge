@@ -7,6 +7,6 @@ C/C++ -> Assembly -> Machine Code -> Memory + CPU + HW -> Sequential Logic -> Co
 
 This is one way to think about it... one path this all happens that is.
 
-![](assets/README-0393dc9e.png)
+![](assets/README-43592f7b.svg)
 
 Full diagram to come below...
