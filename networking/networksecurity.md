@@ -1,20 +1,20 @@
-#network security
+# network security
 some notes on network security
 
 ## general notes
-* active vs passive attacks: 
+* active vs passive attacks:
    * active: attempt to alter a system (ex. DoS, spoofing, man-in-the-middle attack, ARP poisoning, ping flood, ping of death, smurf attach)
    * passive: attempt to learn about a system (ex. nmap, wiretapping)
 * security concepts:
   * confidentiality - only the sender and the intended receiver should see message
-  * authentication - sender and reciever want to confirm their identities
-  * message integrity - sender/receiver wants to ensure that messages are not alrtered without detection
+  * authentication - sender and receiver want to confirm their identities
+  * message integrity - sender/receiver wants to ensure that messages are not altered without detection
   * access & availability - services must be access and available to users
 * metcalfe's law
   * states that the value of a telecommunications network is proportional to the square of the number of connected users of the system (n^2).
-* it's about perspective: 
-![netsecviews](https://github.com/comychitz/knowledge/blob/master/networking/img/netsecviews2.png)
-  
+* it's about perspective:
+![netsecviews](./img/netsecviews2.png)
+
 ### VPNs
 * [wikipedia - vpn](https://en.wikipedia.org/wiki/Virtual_private_network)
 * virtual private networks allows a private network to be accessed through a public network
@@ -47,7 +47,7 @@ some notes on network security
     * public-key (asymmetric): sender and receiver do not per-share secret key
       * public key is known to all
       * private decryption known only to receiver
-      * given a public key, it should be impossibnle to compule the private key
+      * given a public key, it should be impossible to compute the private key
       * RSA
         * Choosing Keys:
           1. Choose two large prime numbers p, q
@@ -61,16 +61,16 @@ some notes on network security
           3. To decrypt cipher text c compute , m = cd mod n
             m = (me mod n)d mod n
         * Important property of RSA:
-          * use public key to encrypt first, then public key to encrypt that will be the same if you did it in reverse order. 
+          * use public key to encrypt first, then public key to encrypt that will be the same if you did it in reverse order.
 * Data Integrity
   * Message Authentication Code (MAC)
     * When Alice sends to Bob a message she will use the message (m) and secret key (s) and hash it and append it to the message before sending (i.e. will send m + H(m+s) ) and then bob does the same with the secret key and the message and compares the result of H(m+s) to the one that Alice sent with the message. MD5, SHA-1, and SHA-2 are hash functions used. but SHA-2 is the only secure one.
   * Digital Signatures
 * Authentication
 * Secure Email: PGP
-* SSL (Sceurity Sockets Layer)
+* SSL (Security Sockets Layer)
 * IPSec
-    * an end-to-end security scheme operating in the Internet Layer of the IP Suite. IPsec uses several protocols to perform different functions. 
+    * an end-to-end security scheme operating in the Internet Layer of the IP Suite. IPsec uses several protocols to perform different functions.
         * AH - Authentication Header Protocol is uses to provide connectionless integrity and data origin authentication and provides protection against replay attacks, but no confidentiality.
         * ESP - Encapsulating Security Payloads - provides confidentiality, data-origin authentication, connectionless integrity, an anti-replay service, and limited traffic flow confidentiality.
 
@@ -148,7 +148,7 @@ some notes on network security
   * password security risks: keystroke loggers (hw & sw), shoulder surfing, same password at multiple sites, broken implementations, social engineering
   * How people use passwords: same password multiple places, easy to remember, write on paper
   * Memorability vs Security
-    * one bank tried to put a word in correspondence with your pin and then fill in the rest of the grid with random letters. only you know the word. 
+    * one bank tried to put a word in correspondence with your pin and then fill in the rest of the grid with random letters. only you know the word.
   * Heuristics for guessing attacks
     * dictionary with words spelled backwards, first and last names, streets, cities, same with upper=case initials, all valid license plate numbers in your state, room numbers, telephone numbers, foreign languages, letter substitutions, etc.
   * Strengthening passwords: add biometrics, graphical passwords
@@ -174,15 +174,15 @@ some notes on network security
         * moving up the chain (computing the next hash) is easy, moving down the chain (inverting the hash) is hard
         * n should be large (can only use it for n authentications)
         * for verification only need the root (upmost link) of the chain
-  * Secure ID: generate a random key by using a custom function where the input is a 64 bit key, then with a 24 bit counter will output a 6 digit value. 
+  * Secure ID: generate a random key by using a custom function where the input is a 64 bit key, then with a 24 bit counter will output a 6 digit value.
   * Honey Passwords
     * computer system and honey checker
     * benefits of honey checker design
       * computer system does nothing but transmit sweet word index
       * get the benefits of distributed security. compromise of either components isn’t fatal. no single point of compromise, compromise of both brings us back to hashed case
-      * Honeychecker can be a minimalist thing, pretty much input only with a rare occurrence of output 
-      * honeychecker can be offline. it can sit inside a security operations center. 
-      * if honey checker goes down can still authenticate 
+      * Honeychecker can be a minimalist thing, pretty much input only with a rare occurrence of output
+      * honeychecker can be offline. it can sit inside a security operations center.
+      * if honey checker goes down can still authenticate
     * honey word generation
       * Chaffing with a password model
       * chaffing by tweaking
@@ -204,10 +204,10 @@ some notes on network security
   * used for authentication, personalization, and tracking
   * cookies saved on your client device can only be read by the website. anyone can write a secure cookie though. secure cookies are set over HTTPS
   * there are temporary cookies, persistent cookies, and third-party cookies
-  * Storing states in browser cookies is good, but potentially brings up the risk of users being able to edit the cookie in some way to benefit them. To fix this there is a MAC tied to every cookie computer with the server’s secret key. 
+  * Storing states in browser cookies is good, but potentially brings up the risk of users being able to edit the cookie in some way to benefit them. To fix this there is a MAC tied to every cookie computer with the server’s secret key.
   * better cookie authenticator makes the cookie have: capability, expiration, Hash(server secret, capability, expiration).
 * Kerberos
-  * many to many authentication protocol design. 
+  * many to many authentication protocol design
   * requirements of many to many authentication
     * security - must be secure against attacks by passive eavesdroppers and actively malicious attackers (including rogue users)
     * reliability - must be always available.
@@ -242,22 +242,22 @@ some notes on network security
 * IP addresses of spam sources only appear once or twice
 * vast majority of spam originates from a small fraction of IP address space that most legitimate email comes from
 * spammers exploit routing infrastructure by either creating short lived connection to mail relay or hijack a large chunk of unallocated “dark” space
-* Spambot behavior has a strong correlation with Bobax infections. they are typically active for a short amount of time. 
+* Spambot behavior has a strong correlation with Bobax infections. they are typically active for a short amount of time.
 * Stormbot spam architecture - work bots generate unique messages for each address, try to deliver, report results to their proxies
 * countermeasures:
   * CAN-SPAM act - bans email harvesting, misleading header information, deceptive subject lines, use of proxies. requires opt-out identification of advertising, imposes up to $11k penalties. only 50 cases from 2003-2005 report. no impact on spam originating outside the US
   * SPF (Sender Policy Framework)
-Process where the recipeints email gateway does a DNS query on example.com and checks the list of returned IP addresses to the one in the email.
+Process where the recipients email gateway does a DNS query on example.com and checks the list of returned IP addresses to the one in the email.
   * Domain Keys (DKIM)
     * sender’s server has to sign email
     * recipients email gateway does a DNS query on example.com to get a public key. then attempts to verify the digital signature using the public key returned from the DNS server
   * S/MIME
-    * sender obtains public key certificate from public certificate authority. senders email server applies an S/MIME digital signature to the email using the signing certificate. recipients email client will then see if the valid signature icon appears or not. 
+    * sender obtains public key certificate from public certificate authority. senders email server applies an S/MIME digital signature to the email using the signing certificate. recipients email client will then see if the valid signature icon appears or not.
   * DKIM and SPF don’t help with spammers creating email accounts, CAPTCHAs do.
 * graylists - recipient’s mail server records triple in its database (configurable for let’s say 3 days).  first time tries to send will get busy reply, second time will let email pass.
 * puzzles and captchas
 
-##Phishing
+## Phishing
 * phishing techniques
   * use confusing URLs
   * use URL with multiple redirection
@@ -281,7 +281,7 @@ Process where the recipeints email gateway does a DNS query on example.com and c
   * TCP connection requires state (SYN flooding)
   * TCP state easy to guess (TCP spoofing and connection hijacking)
 * Smurf Attack
-  * is a distributed denial-of-service attack in which large numbers of Internet Control Message Protocol (ICMP) packets with the intended victim's spoofed source IP are broadcast to a computer network using an IP Broadcast address. 
+  * is a distributed denial-of-service attack in which large numbers of Internet Control Message Protocol (ICMP) packets with the intended victim's spoofed source IP are broadcast to a computer network using an IP Broadcast address.
 * Ping of Death
   * in old Windows machine that would crash when received an ICMP packet with payload over 64k
 * Teardrop and Bonk
@@ -294,7 +294,7 @@ Process where the recipeints email gateway does a DNS query on example.com and c
   3. ACK from client
 * SYN flooding
   * an example of an asymmetric vulnerability that causes a DoS attack
-* Preventing DoS 
+* Preventing DoS
   * it is caused by asymmetric state allocation
   * cookies allow server to remain stateless until client produces to server the cookie with its ACK.
   * Anti-spoofing cookies basic patter
@@ -339,7 +339,7 @@ Process where the recipeints email gateway does a DNS query on example.com and c
   * good news travels fast and bad news travels slow
 * BGP - Border Gateway Protocol
   * a path-vector INTER-AS protocol
-  * just like distance-vecotr, but routing updates for each entry also contains an AS-level path to destination
+  * just like distance-vector, but routing updates for each entry also contains an AS-level path to destination
   * each BGP router receives UPDATE messages from neighbors, selects one “best” path for each prefix and advertises to its neighbors
 * BGP Security
   * update messages contain no authentication, however, today they are sent over secure tunnels
@@ -375,7 +375,7 @@ Process where the recipeints email gateway does a DNS query on example.com and c
         * each message contains a nonce to avoid replay
         * each DNS node shares a symmetric key with its parent
         * Zone root server has a public key (hybrid approach)
-        
+
 ## Firewalls
 * idea: separate local network from the Internet (or, in general, separate one network from another)
 * restricts access from the outside and also access going to the outside
@@ -406,7 +406,7 @@ Process where the recipeints email gateway does a DNS query on example.com and c
       * fragment a URL or FTP “put” command. firewall may not realize what is going on because it would need to understand the application-specific commands to catch this
       * Denial of service: connecting to itself, causing CPU locking
   * stateless filtering is not enough
-    * for TCP connections, port numbers les than 1024 are used for servers and anything above 1024 is used for client ports
+    * for TCP connections, port numbers less than 1024 are used for servers and anything above 1024 is used for client ports
     * firewalls have to allow for access out to port, let’s say, 5151. can’t tell if this is malicious or not because there is no states
   * session filtering
     * decision still made on packet by packet basis, but in the context of a connection
@@ -433,7 +433,7 @@ Process where the recipeints email gateway does a DNS query on example.com and c
   * generally don’t prevent denial of service
   * don’t prevent many types of insider attacks
   * increased complexity and potential for mis-configuration
-  
+
 ## anonymity
 * applications: privacy, untraceable email, law enforcement and intelligence, digital cash, electronic voting, censorship resistant publishing, crypto-anarchy, porn, linel, propaganda, sale of illegal stuff, tax avoidance, etc.
 * anonymity is the inability to identify someone with a set of subjects
@@ -485,7 +485,7 @@ Process where the recipeints email gateway does a DNS query on example.com and c
     * CRL - certificate revocation list
       * offline mechanism
       * pros: simple, don’t need secure channel for CRL distribution
-      * cons: timelineess (window of vulnerability), CRLs can be huge, how to distribute CRLs reliably?
+      * cons: timeliness (window of vulnerability), CRLs can be huge, how to distribute CRLs reliably?
     * OCSP - online certificate status protocol
     * CRS - certificate revocation system
   * CRT - certificate revocation tree
@@ -515,9 +515,9 @@ Process where the recipeints email gateway does a DNS query on example.com and c
       * hiding position of tested markers
       * how many markers are being tested
       * subset of matched markers (in case of negative test)
-      
+
 ### e-cash
-* to allow for anonymous payments where the bank doesn’t know where the cash came from and the user’s identity is never revealed, unless there are double spenders. 
+* to allow for anonymous payments where the bank doesn’t know where the cash came from and the user’s identity is never revealed, unless there are double spenders.
 * coin holds the following:
   * public info:
     * N - large composite number

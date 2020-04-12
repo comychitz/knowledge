@@ -11,8 +11,8 @@ For programming fundamentals see this page --> [fundamentals](https://github.com
 * if unit testing is difficult, revisit your design/implementation
 
 ## object oriented
-* SOLID Priciples of Obect Oriented Design
-  * Single Responsibility 
+* SOLID Principles of Object Oriented Design
+  * Single Responsibility
   * Open-Closed - open for extension, closed for modification
   * Liskov Substitution - a subclass shall be able to be replaced for its parent without breaking the program
   * Interface Segregation - many specific interfaces is better than one do-it-all interface
@@ -25,20 +25,20 @@ For programming fundamentals see this page --> [fundamentals](https://github.com
 * The Pragmatic Programmer
 * Clean Code - Martin
 * The Art of Unix Programming - ESR
-  * seven, plus or minus two, is the number of things that a human mind can keep in its head at once 
-  * when being compact, it doesn’t always help to look at the length of the function, but more so the number of local variables or nesting levels. 
-  * should keep static procedure call depth to no more than four 
+  * seven, plus or minus two, is the number of things that a human mind can keep in its head at once
+  * when being compact, it doesn’t always help to look at the length of the function, but more so the number of local variables or nesting levels.
+  * should keep static procedure call depth to no more than four
 
 ## general notes
 * syntax vs semantics
     * syntax is the grammar
     * semantics is the meaning
-    * a statement can be syntatically valid, but the semantics can not be.
+    * a statement can be syntactically valid, but the semantics can not be.
 * memory barrier
   * is a type of barrier instruction that causes a CPI or compiler to enforce
       ordering constraint on memory operations.
   * Typically, this means that operations issued prior to the barrier are
-      guaranteed to be performed before operatiosn issued after the barrier
+      guaranteed to be performed before operations issued after the barrier
   * https://en.wikipedia.org/wiki/Memory_barrier
 * toolchain
   * general definition: a set of tools, usually used sequentially (hence, a
@@ -53,17 +53,17 @@ For programming fundamentals see this page --> [fundamentals](https://github.com
     data (translating from one form to another; for example, to store in a DB)
 * late vs early binding
   * making a run-time decision about which instance method to call is known as
-    dynamic or late binding. 
+    dynamic or late binding.
   * when the compiler selects the correct overloaded method at compile time by
     comparing the method's signatures is known as static or early binding.
   * in polymorphism, the actual method that will be called is not determined by
     the compiler. The compiler determines if a method can be called (i.e. is it
     legal?), while the run-time environment determines how it will be called
-    (i.e. which overriden form should be used?)
+    (i.e. which overridden form should be used?)
 * static/dynamic and strong/weak typing
   * good wiki article: https://en.wikipedia.org/wiki/Type_system
-  * Static/Dynamic typing is about when type information is aquired (Either at
-    compiletime or at runtime)
+  * Static/Dynamic typing is about when type information is acquired (Either at
+    compile-time or at runtime)
   * static type checking is the process of verifying the
     type safety of a program based on analysis of a program's text (source
     code).
@@ -82,7 +82,7 @@ For programming fundamentals see this page --> [fundamentals](https://github.com
     other hand, a weakly typed language may produce unpredictable results or may
     perform implicit type conversion.
 * [opaque pointer](https://en.wikipedia.org/wiki/Opaque_pointer)
-  * a special case of an opaque data type, a dataype decalred to be a pointer 
+  * a special case of an opaque data type, a dataype declared to be a pointer
     to a record or data structure of some unspecified type
   * "Opaque pointers are a way to hide the implementation details of an
     interface from ordinary clients, so that the implementation may be changed
@@ -96,14 +96,14 @@ For programming fundamentals see this page --> [fundamentals](https://github.com
     "pointer to implementation idiom"),[3] "Compiler firewall idiom",[4]
     "d-pointer" or "Cheshire Cat", especially among the C++ community."
 * distributed systems:
-    - a collection of independent computers that appears to its users as a single cohenerent system
+    - a collection of independent computers that appears to its users as a single coherent system
 * declaration vs definition
     * a declaration introduces an identifier and describes its type, be it a
         type, object, or function.
         * a declaration is what the compiler needs
     * a definition actually instantiates/implements the identifier.
         * definition is what the linker needs
-    * in C++, the standard considers `struct x;` to be a declaration and `stuct
+    * in C++, the standard considers `struct x;` to be a declaration and `struct
         x {};` to be a definition.
     * [stackoverflow question](https://stackoverflow.com/questions/1410563/what-is-the-difference-between-a-definition-and-a-declaration?utm_medium=organic&utm_source=google_rich_qa&utm_campaign=google_rich_qa)
 * closures
@@ -120,7 +120,7 @@ For programming fundamentals see this page --> [fundamentals](https://github.com
 * Functional programming tends toward conveying intention of a program rather
     than the implementation details
 * Functional programming avoid side effects - arguably the largest difference
-    between imperitave programming
+    between imperative programming
 
 ## type systems
 * [Types and Programming Languages - B.Pierce - MIT Press](https://www.asc.ohio-state.edu/pollard.4/type/books/pierce-tpl.pdf)
@@ -130,21 +130,21 @@ For programming fundamentals see this page --> [fundamentals](https://github.com
   * the subject maintains a list of observers and notifies them (via calling one their methods) of state changes. this is common in event-driven programming.
   * push-based vs pull-based observers
 * strategy pattern [wikiArticle](https://en.wikipedia.org/wiki/Strategy_pattern)
-  * a behavorial pattern that enables an algorithm's behavior to be selected at runtime
+  * a behavioral pattern that enables an algorithm's behavior to be selected at runtime
 * template method pattern [wikiArticle](https://en.wikipedia.org/wiki/Template_method_pattern)
-  * a behavioral design pattern that defines the program skeleton of an algorithm in an operation, deferring some steps to subclasses. 
+  * a behavioral design pattern that defines the program skeleton of an algorithm in an operation, deferring some steps to subclasses.
 * bridge pattern [wikiArticle](https://en.wikipedia.org/wiki/Bridge_pattern)
-  * decouple an abtraction from its implementation
+  * decouple an abstraction from its implementation
 * decorator pattern [wikiArticle](https://en.wikipedia.org/wiki/Decorator_pattern)
   * A decorator makes it possible to add or alter behavior of an interface
       (possibly at run-time, if language supports) by wrapping a new decorator
-      class that contains a pointer to the object being decorated. 
+      class that contains a pointer to the object being decorated.
   * Decorator pattern uses composition to achieve its effect, encouraging the
       single responsibility rule for objects, while still being extensible.
 * proxy pattern
   * provides a one-to-one forwarding interface to another class: calling FunctionA() in the proxy class will cause it to call FunctionA() in the original class.
-  * is useful to modify the behavior of the original class while still preserving its interface. 
-  * this is particularlly useful if the original class in a third-party library and hence not easily modifiable directly.
+  * is useful to modify the behavior of the original class while still preserving its interface.
+  * this is particularly useful if the original class in a third-party library and hence not easily modifiable directly.
 * adapter pattern
   * translates the interface for one class into a compatible but different interface
 * facade pattern
@@ -152,24 +152,24 @@ For programming fundamentals see this page --> [fundamentals](https://github.com
   * is a way to structure your API into subsystems to reduce complexity and in turn make the API easier to use
   * think of it as an example of a multicomponent wrapper
 
-## algorithms 
+## algorithms
 * complete search
     * general method to solve almost *any* algorithm problem
     * generate all possible solutions to the problem using brute force, and then
         select the best solution or count the number of solutions, depending on
         the problem.
-* greedy algorithm 
+* greedy algorithm
     * constructs a solution to the problem by always making a choice that looks
         the best at the moment.
 * dynamic programming
     * combines the correctness of complete search and the efficiency of greedy
-        algorithms. 
-    * it can be applied if the problem can be divded into overlapping problems
+        algorithms.
+    * it can be applied if the problem can be divided into overlapping problems
         that can be solved independently.
     * there are two uses for dynamic programming
         * finding an optimal solution
         * counting the number of solutions
-* (reference: [Competetive Programmer's Handbook](https://cses.fi/book.pdf))
+* (reference: [Competitive Programmer's Handbook](https://cses.fi/book.pdf))
 
 
 ## interesting problems
@@ -186,7 +186,7 @@ For programming fundamentals see this page --> [fundamentals](https://github.com
         * Individuals and interactions over process and tools
         * Working software over comprehensive documentation
         * Customer collaboration over contract negotiation
-        * Repsonding to change over following a plan
+        * Responding to change over following a plan
       That is, while there is value in the items on the right, we value the items on the left more."
   * the 12 principles:
     1. Customer satisfaction by early and continuous delivery of valuable software
@@ -207,4 +207,3 @@ For programming fundamentals see this page --> [fundamentals](https://github.com
   * implementation
   * testing & debugging
   * maintenance
-

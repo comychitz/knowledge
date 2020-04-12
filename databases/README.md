@@ -10,13 +10,13 @@ Some notes regarding database management systems.
 * Replacement Sort: the idea is to repeatedly pick the tuple in the current set with the smallest k value that is still greater than the largest k value in he output buffer. The chosen tuple must satisfy the condition that its k value be greater than or equal to the largest k value currently in the output bugger. When all tuples in the input buffer have been consumed in this manner, the next page of the file is read in. Of course, the output buffer is written out when it is full, thereby extending the current run (which is gradually built up on disk). When every tuple in the current set is smaller than the largest tuple in the output buffer, the output buffer is written out and becomes the last page in the current run. We then start a new run and continue the cycle of writing tuples from the input buffer to the current set to  the output buffer. This will produce runs of 2B pages long, on average.
 * Disc access time = seek time + rotational delay + transfer time
 * RAID Levels:
-  * Level 0 - (nonredundant) data striping, 
-  * Level 1 - Mirrored, 
-  * Level 0+1 - Striping and Mirroring, 
-  * Level 2: Error-correcting Codes, 
-  * Level 3: Bit-Interleaved Parity, 
-  * Level 4: Block-Interleaved Parity, 
-  * Level 5: Block-Interleaved Distributed Parity, 
+  * Level 0 - (nonredundant) data striping,
+  * Level 1 - Mirrored,
+  * Level 0+1 - Striping and Mirroring,
+  * Level 2: Error-correcting Codes,
+  * Level 3: Bit-Interleaved Parity,
+  * Level 4: Block-Interleaved Parity,
+  * Level 5: Block-Interleaved Distributed Parity,
   * Level 6: P+Q Redundancy
 * conjunction is ADD. selection conditions are first converted to be in conductive normal form. ex. (something V something) ^ (something V something)
 * projection (or DISTINCT in the SQL query) removes duplicates
@@ -34,7 +34,8 @@ Some notes regarding database management systems.
   * map - processes one input key/value pair and produces a set of intermediate key/value pairs
   * reduce - combines intermediate value for one particular key. Produces a set of merged output values (usually one)
   word count example:
-  ```C
+
+```C
 reduce(String key, Iterator values):
 	// key: a word
 	// values: a list of counts
@@ -47,10 +48,11 @@ map(String key, String value):
 	// value: document contents
 	for each word w in value:
 		EmitIntermediate(w,”1”)
-  ```
+```
+
 * Column Stores
   * 3 benefits: read efficiency, compression efficiency, sorting & indexing efficiency
-  * storage layout: columnar storage, header/ID elimination, compression, multiple sort orders. 
+  * storage layout: columnar storage, header/ID elimination, compression, multiple sort orders.
   * execution engine: column operators, avoid decompression, late materialization, vectored operations
   * applications: data warehousing (high end, mid end/mass market, personal analytics), data mining, Google bigTable, RDF (triple store) (semantic web data management), scientific datasets, information retrieval
   * no fundamental differences between row and column stores. can not efficiently simulate column-stores with row-stores
@@ -91,7 +93,7 @@ map(String key, String value):
   * Cost estimation for multi-relation plans
     * Consider the query block to the right:
     * Maximum # tuples in result is the product of the cardinalities of relations in the FROM clause
-    * Reduction factor (RF) associated with each term reflects the impact of the term in reducing result size. Result cardinality = mAx # tuples * product of all RF’s 
+    * Reduction factor (RF) associated with each term reflects the impact of the term in reducing result size. Result cardinality = mAx # tuples * product of all RF’s
     * multi-relation plans are built up by joining one new relation at a time
       * cost of join method, plus estimation of join cardinality, gives us both a cost estimate and a result size estimate
   * System R recap
@@ -116,7 +118,7 @@ map(String key, String value):
 * file of records. scan on files allows us to step through all records one at a time
 * an index is a data structure that organizes data records on disk to optimize certain kinds of retrieval operations
 * the term data entry is used to refer to the records stored in an index file
-* a data entry with search key value k, denoted as k*, contains enough information to locate one or more data records with search key value k. 
+* a data entry with search key value k, denoted as k*, contains enough information to locate one or more data records with search key value k.
 * there are three main alternatives for what to store as a data entry in an index:
     1. a data entry k* is an actual data record (with search key value k)
     2. a data entry is a <k, rid> pair, where rid is the record id of a data record with search key value k
@@ -130,7 +132,7 @@ map(String key, String value):
 * a hash index matches (a conjunction of) terms that has a term attribute = value for every attribute in the search key of the index. e.g. hash index on <a,b,c> matches a=5 AND b=3 AND c=5, bu not b=3, or a=5, pr a>5 AND b=3 AND c=5.
 
 ## Parallel Database Systems
-* Reasons for success: Set oriented processing, natural pipelining (relational operators/trees), inexpensive hardware can do the trick, users/app-programmers don’t need to think in parallel. speed-up and scale-up (increase in data and hardware should result in constant time). shared memory (SMP) vs shared disk vs shared nothing (network). 
+* Reasons for success: Set oriented processing, natural pipelining (relational operators/trees), inexpensive hardware can do the trick, users/app-programmers don’t need to think in parallel. speed-up and scale-up (increase in data and hardware should result in constant time). shared memory (SMP) vs shared disk vs shared nothing (network).
 * different types of parallel DBMS: intra-operator parallelism - get all machines working together to compute a given operation (scan, sort, or join), inter-operator parallelism - each operator may run concurrently on a different site (exploits pipelining), inter-query parallelism - completely different queries run on different sites
 * partitioning - shared nothing benefits from good partitioning: range - good for equijoins, exact-match queries, and range queries; hash - good for equijoins, exact match queries; round robin - good to spread load
 * parallel scans/selects: scan in parallel and merge; selection may not require all sites for range or hash partitioning, but always does for round robin; indexes can be constructed on each partition; secondary indexes: become troublesome in the face of partitioning; can partition them via base table key; can partition by secondary key ranges; Teradata’s solution: partition non-unique indices by base table key. partition unique indices by secondary key
@@ -152,35 +154,35 @@ map(String key, String value):
 
 ## Papers
 ### Graefe paper: Modern B-Tree Techniques
-* binary trees are used for in memory data and B-trees for on disk data. 
-* B-trees are good for on disk data because they can match the node size to the page size. 
-* B-trees are indexes optimized for pages environments. 
-* B-trees are balanced, with a uniform path length in root-to-leaf searches. This guarantees uniformly efficient search. 
-* B+ trees are different from traditional B-trees because they only stored user data in the leaves. 
-* if a b-tree contains N records and L records per leaf, the B-tree required N/L leaf nodes. 
-* The average number of children per parent is F, the number of branch levels is logF(N/L). often more than 99% of nodes in a B-tree are leaf nodes. 
-* B-trees vs Hash indexes: hash indexes should save IO costs due to a single IO per look-up whereas B-trees require a complete root-to-leaf traversal for each search. 
-* B-trees have advantages over hash indexes with respect to index creation, range predicates, sorted retrieval, phantom protection in concurrency control. 
-* The strongest argument for B-trees over hashed indexes pertain to multi-field indexes and to nonuniform distributions of key values. 
-* B-tree indexes are ubiquitous, whereas hash indexes are not, even though has indexes promise exact-match look up with direct address calculation in the hash directory and a single IO. 
-* page/node size is access time x transfer bandwidth. 
-* normalized keys - implementations of B-trees transform keys into a binary string such that simply binary comparisons suffice to sort the records during index creation and to guide a search in the B-tree to the correct record. 
+* binary trees are used for in memory data and B-trees for on disk data.
+* B-trees are good for on disk data because they can match the node size to the page size.
+* B-trees are indexes optimized for pages environments.
+* B-trees are balanced, with a uniform path length in root-to-leaf searches. This guarantees uniformly efficient search.
+* B+ trees are different from traditional B-trees because they only stored user data in the leaves.
+* if a b-tree contains N records and L records per leaf, the B-tree required N/L leaf nodes.
+* The average number of children per parent is F, the number of branch levels is logF(N/L). often more than 99% of nodes in a B-tree are leaf nodes.
+* B-trees vs Hash indexes: hash indexes should save IO costs due to a single IO per look-up whereas B-trees require a complete root-to-leaf traversal for each search.
+* B-trees have advantages over hash indexes with respect to index creation, range predicates, sorted retrieval, phantom protection in concurrency control.
+* The strongest argument for B-trees over hashed indexes pertain to multi-field indexes and to nonuniform distributions of key values.
+* B-tree indexes are ubiquitous, whereas hash indexes are not, even though has indexes promise exact-match look up with direct address calculation in the hash directory and a single IO.
+* page/node size is access time x transfer bandwidth.
+* normalized keys - implementations of B-trees transform keys into a binary string such that simply binary comparisons suffice to sort the records during index creation and to guide a search in the B-tree to the correct record.
 * duplicate keys are not desirable in B-trees because they lead to ambiguities especially when navigating from a primary to secondary index or during a deletion.
 
 ### Litwin paper - Linear Hashing
-* if the hashing function is dynamically modified in the course of insertions or deletions we call it a virtual hashing function. 
+* if the hashing function is dynamically modified in the course of insertions or deletions we call it a virtual hashing function.
 * linear hashing is an algorithm that uses only a few bytes of core suffice now for a file of any size. for any number of insertions or deletions, the load of a file may therefore be high and record may be found, in general, in one access. a dynamic hashing function uses splits to reassign addresses to records.
 * splits are performed iff a collision occurs are called uncontrolled. Splits are called controlled if they also depend on other conditions or are performed even if there is no collision.  A useful control is called load control. This is where a split is performed when a collision occurs, but only if the load factor is superior to some threshold. the inverse of splitting is grouping. if allocation is contiguous then linear hashing is almost as simple and fast as classical hashing
 * if the bucket capacity is greater than 10 records, then almost any record is found in one access. vs trees linear hashing has simpler algorithms for search, for insertion and especially for deletion. also the case for concurrency control since only the key and the pointer must be locked, instead of a path in the tree.
 
 ### Stonebraker paper: Operating System Support for Database Management
 * Summary: Several operating system services are examined with a view toward their applicability to support of database management functions. These services include buffer pool management; the file system; scheduling, process management, and interprocess communication; and consistency control.
-* In order of an OS provided buffer pool manager to be attractive, the access overhead must be cut to a few hundred instructions (system call instructions). 
+* In order of an OS provided buffer pool manager to be attractive, the access overhead must be cut to a few hundred instructions (system call instructions).
 * Database access in INGRES is a combination of: 1) sequential access to blocks which will not be rereferenced 2) sequential access to blocks which will be cyclically rereferenced 3) random access to blocks which will not be rereferenced again 4) random access to blocks for which there is a nonzero probability of rereference.
 * There is no way for an OS to implement the correct prefetch strategy
 * DBMSs need to provide recovery from hard and soft crashes. The way a DBMS does this is through an intentions list. When the intentions list is complete, a commit flag is set. The last step of a transaction is to process the intentions list making the actual updates. During recovery from a crash the commit flag is examined. If it is set, the DBMS recovery utility processes the intentions list to correctly install the changes made by updates in progress at the time of the crash. If it is not set, the utility removes the intentions list, thereby backing out of the transaction. The page on which the commit flag exists must be forced to disk after all pages in the intentions list. The service required from an OS buffer manager is a selected force out which would push the intentions list and the commit flag to disk in the proper order.
-* DBMSs want a record management system, which is not efficient when contribute on top of a character array object. 
-* The simplest way to organize a multiuser database system is to have one OS process per user. The alternative organization is to allocate one run-time database process which acts as a server. The design of most operating systems strongly favors the first approach. Either way, both the server and per process model seem unattractive. 
+* DBMSs want a record management system, which is not efficient when contribute on top of a character array object.
+* The simplest way to organize a multiuser database system is to have one OS process per user. The alternative organization is to allocate one run-time database process which acts as a server. The design of most operating systems strongly favors the first approach. Either way, both the server and per process model seem unattractive.
 * Most operating systems provide locking for files, but not many provide finer locks such as those on records and pages.
 * DBMS prefers small efficient operating systems with only desired services. Real-time OSs are the only ones that get close to this ideal
 
@@ -189,10 +191,8 @@ map(String key, String value):
 * key features desired: 1) a flexible, semistructured data model for use cases ranging from “schema first” to “schema never” 2) a full query language with at least the power of SQL 3) an efficient parallel query runtime 4) support for data management and automatic indexing 5) support for a wide range of query sizes, with processing cost proportional to the task at hand 6) support for continuous data ingestion 7) the ability to scale gracefully in order to manage and query large volumes of data by using large clusters 8) support for today’s common “Big Data data types” (e.g. textural, temporal and spatial data)
 * open vs closed data types - open datatypes are allowed to have additional content, beyond what the type specifies, as long as they at least contain the information prescribed by the datatype definition.
 * each AsterixDB dataset is stored and indexed as a B+ tree key on primary key; secondary indexes point to indexed data by its primary key
-* offers external data adaptors to access local files that reside on the Node Controller of an AsterixDB cluster and to access data residing in HDFS. 
+* offers external data adaptors to access local files that reside on the Node Controller of an AsterixDB cluster and to access data residing in HDFS.
 * Data fees are a built-in mechanism to allow new data to be continuous ingest into one or more Datasets from external sources, incrementally populating the Datasets and their associated indexes.
 * query language for AsterixSB is Asterix Query language. It is an expression language (1+1 is allowed, etc). FLWR = for-let-where-order-by-return
 * Hyracks is the runtime layer whose responsibility is to accept and manage data-parallel computations requested either by one of the layers above it in the Asterix software stack or potentially by direct end-users of Hyracks.
 * supports record-level transactions across multiple LSM indexes in a Dataset. Concurrency control in AsterixDB is based on 2PL
-
-

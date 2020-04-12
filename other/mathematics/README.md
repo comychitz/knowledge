@@ -6,11 +6,11 @@ To mathematicians, prime numbers are equivalent to atoms - they can't be broken
 down to any smaller piece. Other natural numbers that can be broken down, known
 as *composites*, have been proven to have a *prime factorization*. In other
 words, they can be composed of only prime numbers - this is known as the
-*Fundamental thereom of arithmetic*. 
+*Fundamental theorem of arithmetic*. 
 
 There are many applications that make use of prime numbers in science and
 engineering, which is why unlocking the key to producing and/or verifying prime
-numbers is an important open problem in the world of mathematics. 
+numbers is an important open problem in the world of mathematics.
 
 Moreover, prime numbers have also shown to have interesting properties, such as:
 * (TODO)
@@ -42,12 +42,12 @@ visible when viewing on a linear scale.
 [[Logarithm (Wikipedia)](https://en.wikipedia.org/wiki/Logarithm)]
 
 ## number theory
-* A branch of mathematics that studies integers. 
+* A branch of mathematics that studies integers.
 
 ## permutations & combinations
-"A combination lock should really be called a permutation lock" :) 
+"A combination lock should really be called a permutation lock" :)
 
-* permutations 
+* permutations
     * are for lists (order matters)
     * possibilities of picking k out of n total items:
         `P(n,k) = n! / (n-k)!`
@@ -57,11 +57,11 @@ visible when viewing on a linear scale.
         * base case is when string is empty or size 1
         * then, insert the outter char in every spot of a permutation of the
             substring
-* combinations 
+* combinations
     * are for groups (order doesn't matter)
     `C(n,k) = P(n,k) / k! = n! / (n-k)!k!`
-    
-* *Combinations are always less than permutations* 
+
+* *Combinations are always less than permutations*
 
 * factorial
     * most commonly used to compute the total amount of ways to arrange n
@@ -84,8 +84,8 @@ visible when viewing on a linear scale.
 * sum can be calculated as: `n(a+b)/2` where a is the first number of the series
     and b is the last
 
-### geometic progression
-* a sequnece of numbers where the ration between any two consecutive numbers is
+### geometric progression
+* a sequence of numbers where the ration between any two consecutive numbers is
     constant
 * sum can be calculated as: `bk - a / k - 1` where a is the first number, b is
     the last number and k is the ration between consecutive numbers
@@ -105,6 +105,4 @@ visible when viewing on a linear scale.
     B) = 0.
 * When solving probability problems, it often helps to look at the opposite of
     what you're trying to solve. In other words, when solving for the chances of
-    something happening, often look at the chances of it not happening first. 
-
-
+    something happening, often look at the chances of it not happening first.

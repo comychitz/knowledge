@@ -1,7 +1,3 @@
-# productivity
-In life, being productive is a good thing, it increases the meaning of your life
-and helps achieve new heights you can never imagine. 
-
 # deep work
 Deep work is a self-help book written by Cal Newport. It discusses a concept of
 productivity known as *deep work*. He explains that today's society is full of
@@ -64,7 +60,7 @@ integrate deep work into his/her life.
             of skill can also generate a sense of sacredness.
         * The advice to "follow your passion*, for example, is motivated by the
             (flawed) idea that what matters most for your career satisfaction is
-            the specifics of the job you choose. 
+            the specifics of the job you choose.
         * You don't need a rarified job; you need instead a rarified approach to
             your work.
 ### Part 2: The Rules
@@ -83,7 +79,7 @@ integrate deep work into his/her life.
         * The Rhythmic Philosophy of Deep Work Scheduling
             * This philosophy argues that the easiset way to consitently start
                 deep work sessions is to transform them into a simple regular
-                habit. 
+                habit.
             * The goal, in other words, is to generate a rhythm for this work
                 that removes the need for you to invest energy in deciding if
                 and whn you're going to go deep.
