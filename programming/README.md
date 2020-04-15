@@ -30,6 +30,10 @@ For programming fundamentals see this page --> [fundamentals](https://github.com
   * should keep static procedure call depth to no more than four
 
 ## general notes
+* module vs library vs Framework
+    * in summary: a library is a collection of related functionality, wheras a module provides just a single piece of functionality (i.e. like part of a library)
+    * [Stack Overflow - Difference between a module, library and a framework
+](https://stackoverflow.com/questions/4099975/difference-between-a-module-library-and-a-framework)
 * syntax vs semantics
     * syntax is the grammar
     * semantics is the meaning
