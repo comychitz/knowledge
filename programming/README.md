@@ -115,6 +115,10 @@ For programming fundamentals see this page --> [fundamentals](https://github.com
     * a closure is a record storing a function together with an environment
     * "a technique for implementing lexically scoped name binding in a language
         with first-class functions."
+    * for example, when returning a function from a function, the returned function is in a closure,
+        managed by the language until it is called.
+* predicate
+    * the word is used for procedures that return true or false or expressions that evaluate true or false
 
 ## functional programming
 * There is no definite agreed upon definition of functional programming, other
