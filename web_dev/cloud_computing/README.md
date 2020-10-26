@@ -53,6 +53,9 @@ some notes about computing in the *cloud*.
     * [wikiArticle](https://en.wikipedia.org/wiki/Hypervisor)
     * [KVM - Kernel-based Virtual Machine](https://en.wikipedia.org/wiki/Kernel-based_Virtual_Machine)
 
+### dynamo db
+* https://www.youtube.com/watch?v=6yqfmXiZTlM
+
 ### ec2
 * elastic compute cloud
 * resizable compute capacity
