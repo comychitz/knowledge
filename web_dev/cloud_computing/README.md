@@ -54,7 +54,23 @@ some notes about computing in the *cloud*.
     * [KVM - Kernel-based Virtual Machine](https://en.wikipedia.org/wiki/Kernel-based_Virtual_Machine)
 
 ### dynamo db
-* https://www.youtube.com/watch?v=6yqfmXiZTlM
+* a primary key in DDB is either a partition key or a partition + sort key (aka composite key)
+  * the primary key has to be unique (whether composite or not)
+* A GSI (Global Secondary Index) can be defined to support more access patterns
+  * GSIs are eventually consistent. they are updated as the table changes
+  * the primary key of a GSI is not required to be unique
+  * because GSIs take up storage, it is best to minimize the number of them.
+* data is replicated to three availability zones in the region
+* cost (https://aws.amazon.com/dynamodb/pricing/)
+  * 1/2 Read Capacity Unit (RCU) = 4KB data read (eventually consistent)
+    * strong consistent read of 4KB = 1 RCUs
+    * strong consistent transaction read of 4KB = 2 RCUs
+  * 1 Write Capacity Unit (WCU) = 1KB data write
+    * transaction write of 1KB = 2 write units
+  * checkout the cost calculator to project monthly costs
+    * https://calculator.s3.amazonaws.com/index.html
+* good videos to watch
+  * https://www.youtube.com/watch?v=6yqfmXiZTlM
 
 ### ec2
 * elastic compute cloud
